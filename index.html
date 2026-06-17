@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Projectify Zone — Build The Future</title>
+<meta name="description" content="Premium engineering mentorship. Turn ideas into prototypes with IoT, Embedded Systems, and Robotics support in Bengaluru.">
+
+<link rel="icon" href="assets/img/logo.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+<div id="cursor"></div>
+
+<div id="canvas-container">
+  <canvas id="neuro"></canvas>
+</div>
+
+<div id="intro-overlay">
+  <div class="intro-text" id="greeting">Namaste 🙏</div>
+</div>
+
+<header>
+  <div class="nav-box">
+    <a href="#" class="brand hover-target">
+      <img src="assets/img/logo.jpg" alt="PZ"> Projectify Zone
+    </a>
+    <nav class="nav-links">
+      <a href="#services" class="hover-target">Services</a>
+      <a href="#work" class="hover-target">Case Studies</a>
+      <a href="#contact" class="hover-target">Support</a>
+    </nav>
+    <div style="display:flex; gap:15px; align-items:center;">
+      <button class="btn-icon hover-target" onclick="toggleTheme()" aria-label="Toggle Theme">☀️</button>
+      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" class="btn-glow hover-target" style="padding: 8px 20px; font-size: 0.85rem;">Start Project</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  
+  <div class="hero-wrapper">
+    <div class="hero-content">
+      <div class="container">
+        <h1 class="hero-title">
+          Engineering Ideas <br>into <span class="hero-highlight" id="dynamic-text">Reality.</span>
+        </h1>
+        <p class="hero-desc">
+          The gap between theory and working prototypes ends here. <br>
+          Expert mentorship for students and startups in Bengaluru.
+        </p>
+        <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" class="btn-glow hover-target">
+          Build Your Prototype &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-layer">
+    
+    <div class="ticker-wrap hover-target">
+      <div class="ticker">
+        <div class="ticker-item">IoT Systems ✦</div>
+        <div class="ticker-item">Embedded Engineering ✦</div>
+        <div class="ticker-item">PCB Design ✦</div>
+        <div class="ticker-item">Robotics ✦</div>
+        <div class="ticker-item">MVP Development ✦</div>
+        <div class="ticker-item">VTU Projects ✦</div>
+        <div class="ticker-item">IoT Systems ✦</div>
+        <div class="ticker-item">Embedded Engineering ✦</div>
+        <div class="ticker-item">PCB Design ✦</div>
+        <div class="ticker-item">Robotics ✦</div>
+        <div class="ticker-item">MVP Development ✦</div>
+        <div class="ticker-item">VTU Projects ✦</div>
+      </div>
+    </div>
+
+    <section id="services" class="container">
+      <div class="section-header">
+        <h2>System Architecture</h2>
+        <p style="color:var(--text-muted)">We don't just fix bugs. We engineer solutions.</p>
+      </div>
+
+      <div class="bento-grid" id="cards-container">
+        <div class="card hover-target">
+          <div class="card-content">
+            <span class="card-icon">⚡</span>
+            <h3>Embedded Systems</h3>
+            <p>Firmware for ESP32, STM32, and AVR. Real-time OS (RTOS) implementation and sensor fusion logic.</p>
+          </div>
+        </div>
+        <div class="card hover-target">
+          <div class="card-content">
+            <span class="card-icon">📡</span>
+            <h3>IoT & Cloud</h3>
+            <p>Full-stack IoT. MQTT/HTTP protocols, AWS IoT Core integration, and custom mobile dashboards.</p>
+          </div>
+        </div>
+        <div class="card hover-target">
+          <div class="card-content">
+            <span class="card-icon">🤖</span>
+            <h3>Advanced Robotics</h3>
+            <p>SLAM Navigation, Inverse Kinematics, and Motor Control algorithms for autonomous systems.</p>
+          </div>
+        </div>
+        <div class="card hover-target">
+          <div class="card-content">
+            <span class="card-icon">🎓</span>
+            <h3>Mentorship</h3>
+            <p>1-on-1 guidance for Final Year Projects. Understand your code, design your PCB, and ace the Viva.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container" style="margin-top: 100px;">
+      <div class="card hover-target" style="text-align:center; padding: 60px;">
+        <div class="card-content">
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to deploy?</h2>
+          <p style="margin-bottom: 40px; color: var(--text-muted);">Stop struggling with datasheets. Let's build it together.</p>
+          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" class="btn-glow">Initialize Project</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Projectify Zone. Engineered in Bengaluru.</p>
+    </footer>
+
+  </div>
+</main>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
