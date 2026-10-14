@@ -2,6 +2,22 @@
    Projectify Zone — main stylesheet
    ========================================================================== */
 
+/* ---------- Fonts (self-hosted, latin subset, variable weight) ---------- */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../fonts/inter-latin-var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('../fonts/space-grotesk-latin-var.woff2') format('woff2');
+}
+
 /* ---------- Design tokens ---------- */
 :root {
   --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -49,7 +65,7 @@
   --text-muted: #526075;
   --header-bg: rgba(247, 248, 251, .8);
   --shadow: 0 20px 45px -25px rgba(15, 23, 42, .25);
-  --accent-1: #0891b2;
+  --accent-1: #0e7490;
   --accent-2: #db2777;
   --canvas-node: 8, 145, 178;
   --canvas-line: 219, 39, 119;
@@ -99,6 +115,18 @@ a { color: inherit; text-decoration: none; }
 }
 
 ::selection { background: var(--accent-2); color: #fff; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 .skip-link {
   position: absolute;
@@ -443,7 +471,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 14px;
   background: linear-gradient(135deg, rgba(34, 211, 238, .15), rgba(236, 72, 153, .15));
   border: 1px solid var(--border);
-  font-size: 1.5rem;
+  color: var(--accent-1);
   margin-bottom: 22px;
 }
 .card h3 { font-size: 1.3rem; }
@@ -642,6 +670,7 @@ a { color: inherit; text-decoration: none; }
 .cta-panel > p { color: var(--text-muted); font-size: 1.1rem; max-width: 520px; margin: 0 auto 36px; }
 .cta-panel .hero-ctas { justify-content: center; }
 .cta-panel > .cta-note { margin: 18px auto 0; font-size: .875rem; }
+.cta-note a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -677,6 +706,26 @@ a { color: inherit; text-decoration: none; }
 }
 .footer-bottom p { margin: 0; }
 .footer-bottom a:hover { color: var(--text); }
+
+/* ---------- Mobile sticky call-to-action ---------- */
+.mobile-cta { display: none; }
+
+/* ---------- Legal pages ---------- */
+.legal-header {
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+}
+.legal-header .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.legal-header a:not(.brand) { color: var(--text-muted); font-size: .925rem; }
+.legal-header a:not(.brand):hover { color: var(--text); }
+.legal { padding: 64px 0 96px; }
+.legal h1 { font-size: clamp(2rem, 5vw, 2.8rem); }
+.legal h2 { font-size: 1.3rem; margin-top: 2.2em; }
+.legal p, .legal li { color: var(--text-muted); }
+.legal ul { padding-left: 1.2em; }
+.legal li { margin-bottom: .4em; }
+.legal a { color: var(--accent-1); text-decoration: underline; text-underline-offset: 3px; }
+.legal .updated { font-size: .9rem; }
 
 /* ---------- Reveal on scroll ---------- */
 .js .reveal {
@@ -733,6 +782,22 @@ a { color: inherit; text-decoration: none; }
   .site-header:has(.nav-links.open) { background: var(--bg); border-color: var(--border); }
 }
 
+@media (max-width: 900px) {
+  .mobile-cta {
+    display: block;
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    z-index: 40;
+    transform: translateY(160%);
+    visibility: hidden;
+    transition: transform .3s var(--ease), visibility .3s;
+  }
+  .mobile-cta.show { transform: none; visibility: visible; }
+  .mobile-cta .btn { width: 100%; padding: 15px 22px; box-shadow: 0 12px 30px -8px rgba(0, 0, 0, .45); }
+}
+
 @media (max-width: 640px) {
   .container { padding: 0 16px; }
   .grid-3, .steps { grid-template-columns: 1fr; }
@@ -752,4 +817,21 @@ a { color: inherit; text-decoration: none; }
     transition-duration: .01ms !important;
   }
   .js .reveal { opacity: 1; transform: none; }
+}
+
+@media print {
+  .site-header, .mobile-cta, #neuro, .ticker-wrap, .hero-ctas, .skip-link, #theme-toggle { display: none !important; }
+  :root, [data-theme] {
+    --bg: #fff; --bg-alt: #fff; --surface: #fff; --text: #000; --text-muted: #333;
+    --border: #ccc; --border-strong: #999; --brand-a: #0891b2; --brand-b: #db2777;
+  }
+  body { background: #fff; color: #000; }
+  .hero { min-height: 0; padding: 24px 0; }
+  .section { padding: 32px 0; }
+  .gradient-text, .step-num { background: none; color: #0e7490; -webkit-text-fill-color: #0e7490; }
+  h2, h3 { break-after: avoid; }
+  .js .reveal { opacity: 1 !important; transform: none !important; }
+  .card, .plan, .step, .work-card { box-shadow: none !important; break-inside: avoid; }
+  .faq details { break-inside: avoid; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .8em; color: #555; }
 }

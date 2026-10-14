@@ -1,21 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-IN" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found — Projectify Zone</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<title>Page not found | Projectify Zone</title>
 <meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark light">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/main.css">
-<script>
-  try {
-    var t = localStorage.getItem('pz-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-    document.documentElement.setAttribute('data-theme', t);
-  } catch (e) {}
-</script>
+<link rel="preload" href="/assets/fonts/space-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/main.css?v=3">
+<script src="/assets/js/theme-init.js?v=3"></script>
 </head>
 <body>
 <main class="notfound">

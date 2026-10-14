@@ -137,6 +137,20 @@
     }, 2600);
   }
 
+  /* ---------- Mobile sticky call-to-action ---------- */
+  var mobileCta = document.getElementById('mobile-cta');
+  if (mobileCta && 'IntersectionObserver' in window) {
+    var inView = new Set();
+    var watched = document.querySelectorAll('.hero, #contact, .site-footer');
+    var ctaObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) inView.add(entry.target); else inView.delete(entry.target);
+      });
+      mobileCta.classList.toggle('show', inView.size === 0);
+    });
+    watched.forEach(function (el) { ctaObserver.observe(el); });
+  }
+
   /* ---------- Footer year ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
@@ -155,6 +169,7 @@
   var visible = true;
   var rafId = null;
   var LINK_DIST = 140;
+  var ready = false; // animation waits until the page has finished loading
 
   function cssRGB(name) {
     return getComputedStyle(root).getPropertyValue(name).trim() || '34, 211, 238';
@@ -181,9 +196,10 @@
     }
   }
 
+  var nodeRGB = cssRGB('--canvas-node');
+  var lineRGB = cssRGB('--canvas-line');
+
   function draw() {
-    var nodeRGB = cssRGB('--canvas-node');
-    var lineRGB = cssRGB('--canvas-line');
     ctx.clearRect(0, 0, width, height);
 
     for (var i = 0; i < nodes.length; i++) {
@@ -236,7 +252,7 @@
   }
 
   function start() {
-    if (running || reduceMotion) return;
+    if (running || reduceMotion || !ready) return;
     running = true;
     rafId = requestAnimationFrame(step);
   }
@@ -265,7 +281,11 @@
   });
 
   // Redraw with the new palette when the theme changes
-  new MutationObserver(function () { if (!running) draw(); })
+  new MutationObserver(function () {
+    nodeRGB = cssRGB('--canvas-node');
+    lineRGB = cssRGB('--canvas-line');
+    if (!running) draw();
+  })
     .observe(root, { attributes: true, attributeFilter: ['data-theme'] });
 
   // Only animate while the hero is on screen and the tab is visible
@@ -281,4 +301,16 @@
   document.addEventListener('visibilitychange', function () {
     if (document.hidden) stop(); else if (visible) start();
   });
+
+  // Keep the main thread free for first paint; begin animating once idle
+  function begin() {
+    ready = true;
+    if (visible && !document.hidden) start();
+  }
+  function onLoaded() {
+    if ('requestIdleCallback' in window) requestIdleCallback(begin, { timeout: 2000 });
+    else setTimeout(begin, 300);
+  }
+  if (document.readyState === 'complete') onLoaded();
+  else window.addEventListener('load', onLoaded);
 })();

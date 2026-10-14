@@ -1,14 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-IN" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
-<title>Projectify Zone — IoT, Embedded &amp; Robotics Prototyping in Bengaluru</title>
+<title>Projectify Zone: IoT &amp; Embedded Prototyping, Bengaluru</title>
 <meta name="description" content="Projectify Zone turns ideas into working prototypes. Embedded firmware, IoT &amp; cloud, PCB design, robotics and final-year project mentorship for students and startups in Bengaluru.">
-<meta name="keywords" content="IoT projects Bengaluru, embedded systems freelancer, ESP32 developer, STM32 firmware, PCB design, robotics projects, VTU final year projects, prototype development, MVP hardware">
 <meta name="author" content="Projectify Zone">
-<meta name="theme-color" content="#07090f">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#07090f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
 <link rel="canonical" href="https://p-shreyas543.github.io/">
 
 <!-- Open Graph / social previews -->
@@ -20,6 +23,7 @@
 <meta property="og:image" content="https://p-shreyas543.github.io/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Projectify Zone logo with the tagline Engineering ideas into reality">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Projectify Zone — Engineering Ideas into Reality">
@@ -31,22 +35,10 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="assets/css/main.css">
-
-<!-- Apply the saved theme before first paint so there is no flash -->
-<script>
-  (function () {
-    try {
-      var saved = localStorage.getItem('pz-theme');
-      var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-      document.documentElement.setAttribute('data-theme', theme);
-    } catch (e) {}
-  })();
-</script>
+<link rel="preload" href="assets/fonts/space-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css?v=3">
+<script src="assets/js/theme-init.js?v=3"></script>
 
 <script type="application/ld+json">
 {
@@ -86,9 +78,9 @@
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#work">Work</a>
-      <a href="#engage">Engagements</a>
+      <a href="#engage">Packages</a>
       <a href="#faq">FAQ</a>
-      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary nav-cta-mobile">Start a project</a>
+      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary nav-cta-mobile">Start a project<span class="sr-only"> (opens in a new tab)</span></a>
     </nav>
 
     <div class="nav-actions">
@@ -96,7 +88,7 @@
         <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
       </button>
-      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cta">Start a project</a>
+      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cta">Start a project<span class="sr-only"> (opens in a new tab)</span></a>
       <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
@@ -121,7 +113,7 @@
       <div class="hero-ctas">
         <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
           Build your prototype <span aria-hidden="true">&rarr;</span>
-        </a>
+        <span class="sr-only"> (opens in a new tab)</span></a>
         <a href="#services" class="btn btn-ghost btn-lg">Explore services</a>
       </div>
       <ul class="hero-points">
@@ -151,7 +143,7 @@
 
       <div class="grid grid-3">
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true">⚡</div>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 10h4v4h-4zM9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></div>
           <h3>Embedded Systems</h3>
           <p>Firmware for ESP32, STM32 and AVR. RTOS implementation, low-power design and sensor fusion logic.</p>
           <ul class="ticks">
@@ -161,7 +153,7 @@
           </ul>
         </article>
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true">📡</div>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="18" r="1.4" fill="currentColor" stroke="none"/><path d="M8.5 14.5a5 5 0 0 1 7 0M5.5 11.5a9.2 9.2 0 0 1 13 0M2.5 8.5a13.4 13.4 0 0 1 19 0"/></svg></div>
           <h3>IoT &amp; Cloud</h3>
           <p>Full-stack IoT: MQTT/HTTP protocols, AWS IoT Core integration and custom web &amp; mobile dashboards.</p>
           <ul class="ticks">
@@ -171,7 +163,7 @@
           </ul>
         </article>
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true">🤖</div>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 8V5M2.5 12.5v3M21.5 12.5v3M9.5 16h5"/><circle cx="12" cy="3.8" r="1.2"/><circle cx="9.5" cy="12.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12.5" r="1.1" fill="currentColor" stroke="none"/></svg></div>
           <h3>Advanced Robotics</h3>
           <p>SLAM navigation, inverse kinematics and motor-control algorithms for autonomous systems.</p>
           <ul class="ticks">
@@ -181,7 +173,7 @@
           </ul>
         </article>
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true">🧩</div>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M8 8h4l4 4v4M8 13v3h3"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="16" r="1.5"/></svg></div>
           <h3>PCB Design</h3>
           <p>Schematic capture to manufacturable boards: clean layouts, sensible BOMs and fabrication-ready files.</p>
           <ul class="ticks">
@@ -191,7 +183,7 @@
           </ul>
         </article>
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true">🚀</div>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3 2.4 4.5 5.8 4.5 9.5v4h-9v-4c0-3.7 1.5-7.1 4.5-9.5z"/><circle cx="12" cy="10" r="1.8"/><path d="M7.5 13 5 15.5V19h2.5M16.5 13l2.5 2.5V19h-2.5M10.5 19.5v2M13.5 19.5v2"/></svg></div>
           <h3>MVP &amp; Prototyping</h3>
           <p>For founders: validate the idea fast with a demo-ready prototype you can put in front of users and investors.</p>
           <ul class="ticks">
@@ -201,7 +193,7 @@
           </ul>
         </article>
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true">🎓</div>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 4.5l10 5-10 5z"/><path d="M6 11.5v4.5c3.3 2.6 8.7 2.6 12 0v-4.5M22 9.5v5.5"/></svg></div>
           <h3>Project Mentorship</h3>
           <p>1-on-1 guidance for final-year and VTU projects. Understand your code, design your PCB and ace the viva.</p>
           <ul class="ticks">
@@ -290,7 +282,7 @@
         </article>
       </div>
 
-      <div class="stack reveal" aria-label="Technologies we work with">
+      <div class="stack reveal">
         <p class="stack-title">Tools &amp; platforms</p>
         <ul class="chips">
           <li>ESP32</li><li>STM32</li><li>Arduino / AVR</li><li>Raspberry Pi</li><li>FreeRTOS</li><li>C / C++</li>
@@ -319,7 +311,7 @@
             <li>Code walkthrough sessions</li>
             <li>Report, demo &amp; viva preparation</li>
           </ul>
-          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-ghost">Get a quote</a>
+          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-ghost">Get a quote<span class="sr-only"> (opens in a new tab)</span></a>
         </article>
         <article class="plan plan-featured reveal">
           <p class="plan-badge">End-to-end</p>
@@ -331,7 +323,7 @@
             <li>Milestone-based delivery</li>
             <li>Documentation &amp; handover</li>
           </ul>
-          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary">Start a project</a>
+          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary">Start a project<span class="sr-only"> (opens in a new tab)</span></a>
         </article>
         <article class="plan reveal">
           <h3>Consulting &amp; Debugging</h3>
@@ -342,7 +334,7 @@
             <li>Performance &amp; power tuning</li>
             <li>Flexible, session-based</li>
           </ul>
-          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-ghost">Book a session</a>
+          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-ghost">Book a session<span class="sr-only"> (opens in a new tab)</span></a>
         </article>
       </div>
     </div>
@@ -388,14 +380,18 @@
         <h2 id="contact-title">Ready to deploy?</h2>
         <p>Stop struggling with datasheets. Tell us what you're building, and let's build it together.</p>
         <div class="hero-ctas">
-          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Start your project <span aria-hidden="true">&rarr;</span></a>
+          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Start your project <span aria-hidden="true">&rarr;</span><span class="sr-only"> (opens in a new tab)</span></a>
         </div>
-        <p class="cta-note">Takes about 2 minutes. We'll get back to you shortly.</p>
+        <p class="cta-note">Takes about 2 minutes. Your details are only used to reply to you. <a href="privacy.html">Privacy policy</a></p>
       </div>
     </div>
   </section>
 
 </main>
+
+<div class="mobile-cta" id="mobile-cta">
+  <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary">Start your project <span aria-hidden="true">&rarr;</span><span class="sr-only"> (opens in a new tab)</span></a>
+</div>
 
 <footer class="site-footer">
   <div class="container footer-grid">
@@ -416,13 +412,14 @@
       <p class="footer-title">Explore</p>
       <a href="#process">Process</a>
       <a href="#work">Work</a>
-      <a href="#engage">Engagements</a>
+      <a href="#engage">Packages</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="footer-col">
       <p class="footer-title">Get in touch</p>
-      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener">Project enquiry form</a>
+      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener">Project enquiry form<span class="sr-only"> (opens in a new tab)</span></a>
       <span>Bengaluru, Karnataka, India</span>
+      <a href="privacy.html">Privacy policy</a>
     </div>
   </div>
   <div class="container footer-bottom">
@@ -431,6 +428,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/main.js?v=3" defer></script>
 </body>
 </html>
