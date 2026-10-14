@@ -151,6 +151,71 @@
     watched.forEach(function (el) { ctaObserver.observe(el); });
   }
 
+  /* ---------- Project brief form ---------- */
+  var form = document.getElementById('brief-form');
+  if (form && window.fetch && window.FormData) {
+    var statusEl = document.getElementById('form-status');
+    var submitBtn = form.querySelector('[type="submit"]');
+    var submitLabel = submitBtn.innerHTML;
+
+    function setStatus(msg, kind) {
+      statusEl.textContent = msg;
+      statusEl.className = 'form-status' + (kind ? ' ' + kind : '');
+    }
+
+    // Clear the error state as soon as a field is corrected
+    form.addEventListener('input', function (e) {
+      if (e.target.getAttribute('aria-invalid') === 'true' && e.target.checkValidity()) {
+        e.target.removeAttribute('aria-invalid');
+      }
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var invalid = Array.prototype.filter.call(form.elements, function (el) {
+        var bad = el.willValidate && !el.checkValidity();
+        if (bad) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+        return bad;
+      });
+      if (invalid.length) {
+        setStatus('Please fill in the highlighted fields.', 'err');
+        invalid[0].focus();
+        return;
+      }
+
+      var data = {};
+      new FormData(form).forEach(function (value, key) { data[key] = value; });
+      if (data._honey) return; // bot
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      setStatus('');
+
+      fetch(form.getAttribute('data-endpoint'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(function (res) {
+          return res.json().catch(function () { return {}; }).then(function (body) {
+            if (!res.ok || body.success === false || body.success === 'false') throw new Error(body.message || res.status);
+          });
+        })
+        .then(function () {
+          form.reset();
+          setStatus('Thanks! Your brief has been sent. I\'ll reply within one working day.', 'ok');
+        })
+        .catch(function () {
+          setStatus('Sorry, that didn\'t go through. Please email shreyas@projectifyzone.com or message on WhatsApp.', 'err');
+        })
+        .then(function () {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = submitLabel;
+        });
+    });
+  }
+
   /* ---------- Footer year ---------- */
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();

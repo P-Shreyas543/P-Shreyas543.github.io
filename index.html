@@ -3,32 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
-<title>Projectify Zone: IoT &amp; Embedded Prototyping, Bengaluru</title>
-<meta name="description" content="Projectify Zone turns ideas into working prototypes. Embedded firmware, IoT &amp; cloud, PCB design, robotics and final-year project mentorship for students and startups in Bengaluru.">
-<meta name="author" content="Projectify Zone">
+<title>Projectify Zone: Hardware Prototypes for Startup Founders</title>
+<meta name="description" content="From idea on paper to an investor-ready prototype. Firmware, electronics, PCB, IoT and enclosures for hardware startup founders, built in Bengaluru. NDA first, you own 100% of the IP.">
+<meta name="author" content="Shreyas P, Projectify Zone">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#07090f" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f7f8fb" media="(prefers-color-scheme: light)">
-<link rel="canonical" href="https://p-shreyas543.github.io/">
+<link rel="canonical" href="https://projectifyzone.com/">
 
 <!-- Open Graph / social previews -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Projectify Zone">
-<meta property="og:title" content="Projectify Zone — Engineering Ideas into Reality">
-<meta property="og:description" content="Embedded systems, IoT, PCB design and robotics prototyping, plus 1-on-1 project mentorship. Based in Bengaluru.">
-<meta property="og:url" content="https://p-shreyas543.github.io/">
-<meta property="og:image" content="https://p-shreyas543.github.io/assets/img/og-image.png">
+<meta property="og:title" content="Projectify Zone: From idea on paper to investor-ready prototype">
+<meta property="og:description" content="Hardware prototyping for startup founders: firmware, electronics, PCB, IoT and enclosures. NDA first, you own 100% of the IP.">
+<meta property="og:url" content="https://projectifyzone.com/">
+<meta property="og:image" content="https://projectifyzone.com/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Projectify Zone logo with the tagline Engineering ideas into reality">
+<meta property="og:image:alt" content="Projectify Zone logo with the line From idea on paper to investor-ready prototype">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Projectify Zone — Engineering Ideas into Reality">
-<meta name="twitter:description" content="Embedded systems, IoT, PCB design and robotics prototyping, plus 1-on-1 project mentorship. Based in Bengaluru.">
-<meta name="twitter:image" content="https://p-shreyas543.github.io/assets/img/og-image.png">
+<meta name="twitter:title" content="Projectify Zone: From idea on paper to investor-ready prototype">
+<meta name="twitter:description" content="Hardware prototyping for startup founders: firmware, electronics, PCB, IoT and enclosures. NDA first, you own 100% of the IP.">
+<meta name="twitter:image" content="https://projectifyzone.com/assets/img/og-image.png">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -37,18 +37,21 @@
 
 <link rel="preload" href="assets/fonts/space-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/main.css?v=3">
-<script src="assets/js/theme-init.js?v=3"></script>
+<link rel="stylesheet" href="assets/css/main.css?v=4">
+<script src="assets/js/theme-init.js?v=4"></script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Projectify Zone",
-  "url": "https://p-shreyas543.github.io/",
-  "logo": "https://p-shreyas543.github.io/assets/img/icon-512.png",
-  "image": "https://p-shreyas543.github.io/assets/img/og-image.png",
-  "description": "Embedded systems, IoT, PCB design and robotics prototyping, plus 1-on-1 engineering project mentorship.",
+  "url": "https://projectifyzone.com/",
+  "logo": "https://projectifyzone.com/assets/img/icon-512.png",
+  "image": "https://projectifyzone.com/assets/img/og-image.png",
+  "description": "Hardware prototyping for startup founders: from idea on paper to an investor-ready working prototype.",
+  "email": "shreyas@projectifyzone.com",
+  "telephone": "+91-99866-52218",
+  "founder": { "@type": "Person", "name": "Shreyas P", "jobTitle": "Founder & Lead Engineer" },
   "areaServed": [
     { "@type": "City", "name": "Bengaluru" },
     { "@type": "Country", "name": "India" }
@@ -59,7 +62,7 @@
     "addressRegion": "Karnataka",
     "addressCountry": "IN"
   },
-  "knowsAbout": ["Embedded Systems", "Internet of Things", "PCB Design", "Robotics", "Firmware Development", "Prototype Development"]
+  "knowsAbout": ["Embedded Systems", "Internet of Things", "PCB Design", "Firmware Development", "Robotics", "Hardware Prototyping"]
 }
 </script>
 </head>
@@ -75,12 +78,12 @@
     </a>
 
     <nav class="nav-links" id="nav-links" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#work">Work</a>
-      <a href="#engage">Packages</a>
+      <a href="#process">How it works</a>
+      <a href="#phases">Pricing</a>
+      <a href="#who">Who it's for</a>
+      <a href="#about">About</a>
       <a href="#faq">FAQ</a>
-      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary nav-cta-mobile">Start a project<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="#contact" class="btn btn-primary nav-cta-mobile">Start your project</a>
     </nav>
 
     <div class="nav-actions">
@@ -88,7 +91,7 @@
         <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
       </button>
-      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cta">Start a project<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Start your project</a>
       <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
       </button>
@@ -102,24 +105,22 @@
   <section class="hero" aria-labelledby="hero-title">
     <canvas id="neuro" aria-hidden="true"></canvas>
     <div class="container hero-inner">
-      <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>Namaste 🙏 · Engineering studio in Bengaluru</p>
+      <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>Namaste 🙏 · Hardware prototyping for founders · Bengaluru</p>
       <h1 id="hero-title" class="hero-title">
-        Engineering ideas<br>into <span class="gradient-text" id="dynamic-text">reality.</span>
+        From idea on paper to an <span class="gradient-text">investor&#8209;ready prototype.</span>
       </h1>
       <p class="hero-desc">
-        From a sketch on paper to a working prototype. We design firmware, circuits, IoT backends and robots,
-        and mentor students and startups so they understand every line of what they ship.
+        You bring the idea. I engineer the firmware, electronics, PCB and enclosure, and hand you a working
+        device you can demo to investors, customers and grant committees, while you focus on building the company.
       </p>
       <div class="hero-ctas">
-        <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-          Build your prototype <span aria-hidden="true">&rarr;</span>
-        <span class="sr-only"> (opens in a new tab)</span></a>
-        <a href="#services" class="btn btn-ghost btn-lg">Explore services</a>
+        <a href="#contact" class="btn btn-primary btn-lg">Start your project <span aria-hidden="true">&rarr;</span></a>
+        <a href="#process" class="btn btn-ghost btn-lg">See how it works</a>
       </div>
       <ul class="hero-points">
-        <li><span aria-hidden="true">✓</span> Hardware, firmware &amp; cloud under one roof</li>
-        <li><span aria-hidden="true">✓</span> Documented source code you own</li>
-        <li><span aria-hidden="true">✓</span> Demo &amp; viva preparation included</li>
+        <li><span aria-hidden="true">✓</span> NDA before you share details</li>
+        <li><span aria-hidden="true">✓</span> You own 100% of the IP</li>
+        <li><span aria-hidden="true">✓</span> Fixed prices, milestone payments</li>
       </ul>
     </div>
   </section>
@@ -127,80 +128,35 @@
   <!-- TICKER -->
   <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker">
-      <span>IoT Systems</span><span>Embedded Engineering</span><span>PCB Design</span><span>Robotics</span><span>MVP Development</span><span>VTU Projects</span><span>Firmware</span><span>Sensor Fusion</span>
-      <span>IoT Systems</span><span>Embedded Engineering</span><span>PCB Design</span><span>Robotics</span><span>MVP Development</span><span>VTU Projects</span><span>Firmware</span><span>Sensor Fusion</span>
+      <span>Firmware</span><span>Electronics</span><span>PCB Design</span><span>IoT &amp; Cloud</span><span>Sensors</span><span>Low-Power Design</span><span>Robotics</span><span>Investor Demos</span>
+      <span>Firmware</span><span>Electronics</span><span>PCB Design</span><span>IoT &amp; Cloud</span><span>Sensors</span><span>Low-Power Design</span><span>Robotics</span><span>Investor Demos</span>
     </div>
   </div>
 
-  <!-- SERVICES -->
-  <section id="services" class="section" aria-labelledby="services-title">
+  <!-- WHY -->
+  <section id="why" class="section" aria-labelledby="why-title">
     <div class="container">
       <div class="section-head reveal">
-        <p class="kicker">Services</p>
-        <h2 id="services-title">We don't just fix bugs. We engineer solutions.</h2>
-        <p class="lead">End-to-end support across the full hardware product stack, or just the piece you're stuck on.</p>
+        <p class="kicker">Why founders get stuck</p>
+        <h2 id="why-title">Hardware is the hardest part of a hardware startup.</h2>
+        <p class="lead">Investors want to see it work. Building it is where most early founders stall.</p>
       </div>
 
       <div class="grid grid-3">
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 10h4v4h-4zM9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></div>
-          <h3>Embedded Systems</h3>
-          <p>Firmware for ESP32, STM32 and AVR. RTOS implementation, low-power design and sensor fusion logic.</p>
-          <ul class="ticks">
-            <li>Bare-metal &amp; FreeRTOS</li>
-            <li>I²C, SPI, UART, CAN drivers</li>
-            <li>Bootloaders &amp; OTA updates</li>
-          </ul>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 8.5l5 5M21 8.5l-5 5"/></svg></div>
+          <h3>No engineering co-founder</h3>
+          <p>You know the market and the problem, but not firmware, circuits or PCB layout, and hiring a full-time engineer before funding isn't realistic.</p>
         </article>
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="18" r="1.4" fill="currentColor" stroke="none"/><path d="M8.5 14.5a5 5 0 0 1 7 0M5.5 11.5a9.2 9.2 0 0 1 13 0M2.5 8.5a13.4 13.4 0 0 1 19 0"/></svg></div>
-          <h3>IoT &amp; Cloud</h3>
-          <p>Full-stack IoT: MQTT/HTTP protocols, AWS IoT Core integration and custom web &amp; mobile dashboards.</p>
-          <ul class="ticks">
-            <li>Device provisioning &amp; security</li>
-            <li>Real-time telemetry dashboards</li>
-            <li>Alerts, automation &amp; data logging</li>
-          </ul>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10M7 8.5h10M7 4c3.3 0 5.5 1.8 5.5 4.5S10.3 13 7 13l7.5 7"/></svg></div>
+          <h3>Agencies built for big budgets</h3>
+          <p>Product design firms quote for corporate projects. You need an early prototype that proves the idea, scoped and priced for a startup.</p>
         </article>
         <article class="card reveal">
-          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 8V5M2.5 12.5v3M21.5 12.5v3M9.5 16h5"/><circle cx="12" cy="3.8" r="1.2"/><circle cx="9.5" cy="12.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12.5" r="1.1" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Advanced Robotics</h3>
-          <p>SLAM navigation, inverse kinematics and motor-control algorithms for autonomous systems.</p>
-          <ul class="ticks">
-            <li>ROS-based architectures</li>
-            <li>PID &amp; closed-loop motor control</li>
-            <li>Computer vision integration</li>
-          </ul>
-        </article>
-        <article class="card reveal">
-          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M8 8h4l4 4v4M8 13v3h3"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="16" r="1.5"/></svg></div>
-          <h3>PCB Design</h3>
-          <p>Schematic capture to manufacturable boards: clean layouts, sensible BOMs and fabrication-ready files.</p>
-          <ul class="ticks">
-            <li>Schematic &amp; multi-layer layout</li>
-            <li>DFM checks &amp; Gerber export</li>
-            <li>Bring-up &amp; debugging support</li>
-          </ul>
-        </article>
-        <article class="card reveal">
-          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5c3 2.4 4.5 5.8 4.5 9.5v4h-9v-4c0-3.7 1.5-7.1 4.5-9.5z"/><circle cx="12" cy="10" r="1.8"/><path d="M7.5 13 5 15.5V19h2.5M16.5 13l2.5 2.5V19h-2.5M10.5 19.5v2M13.5 19.5v2"/></svg></div>
-          <h3>MVP &amp; Prototyping</h3>
-          <p>For founders: validate the idea fast with a demo-ready prototype you can put in front of users and investors.</p>
-          <ul class="ticks">
-            <li>Feasibility &amp; component selection</li>
-            <li>Rapid iterations with weekly demos</li>
-            <li>Path to production planning</li>
-          </ul>
-        </article>
-        <article class="card reveal">
-          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 4.5l10 5-10 5z"/><path d="M6 11.5v4.5c3.3 2.6 8.7 2.6 12 0v-4.5M22 9.5v5.5"/></svg></div>
-          <h3>Project Mentorship</h3>
-          <p>1-on-1 guidance for final-year and VTU projects. Understand your code, design your PCB and ace the viva.</p>
-          <ul class="ticks">
-            <li>Concept &amp; abstract finalisation</li>
-            <li>Guided build, not just hand-off</li>
-            <li>Report, demo &amp; viva prep</li>
-          </ul>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8M7 12.5l3-3 2.5 2 4-4.5"/></svg></div>
+          <h3>"Show me it working"</h3>
+          <p>Slides and renders only go so far. A device on the table answers the investor's first question before it's asked.</p>
         </article>
       </div>
     </div>
@@ -211,186 +167,450 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="kicker">How it works</p>
-        <h2 id="process-title">A clear process, from first call to final demo.</h2>
-        <p class="lead">No black boxes. You know what's being built, when, and why.</p>
+        <h2 id="process-title">You stay focused on the company. I build the device.</h2>
+        <p class="lead">Your time commitment: one 30-minute demo call a week. Everything else is handled.</p>
       </div>
 
       <ol class="steps">
         <li class="step reveal">
           <span class="step-num">01</span>
-          <h3>Discovery</h3>
-          <p>Tell us your idea through the project form. We follow up to understand goals, constraints and deadlines.</p>
+          <h3>Free discovery call</h3>
+          <p>Thirty minutes to understand your idea, users and deadline. NDA signed before you share anything sensitive.</p>
         </li>
         <li class="step reveal">
           <span class="step-num">02</span>
-          <h3>Proposal</h3>
-          <p>You get a scoped plan: architecture, components, milestones and a clear quote before any work begins.</p>
+          <h3>Feasibility sprint</h3>
+          <p>Architecture, component choices, cost estimate and risks, ending in a clear go/no-go and a fixed quote for the build.</p>
         </li>
         <li class="step reveal">
           <span class="step-num">03</span>
-          <h3>Build</h3>
-          <p>We develop in milestones with regular progress updates, so you can give feedback early and often.</p>
+          <h3>Build &amp; weekly demos</h3>
+          <p>Milestone-based development. Every week you see real progress on a short video call and give feedback early.</p>
         </li>
         <li class="step reveal">
           <span class="step-num">04</span>
           <h3>Handover</h3>
-          <p>Working prototype, documented source code and a walkthrough so you can explain and extend it yourself.</p>
+          <p>A working prototype plus your Investor Demo Kit, source code and design files. Everything you need to raise.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- WORK -->
-  <section id="work" class="section" aria-labelledby="work-title">
+  <!-- PHASES / PRICING -->
+  <section id="phases" class="section" aria-labelledby="phases-title">
     <div class="container">
       <div class="section-head reveal">
-        <p class="kicker">What we build</p>
-        <h2 id="work-title">The kind of systems we bring to life.</h2>
-        <p class="lead">A sample of project types we take on, from sensor nodes to autonomous robots.</p>
+        <p class="kicker">Phases &amp; pricing</p>
+        <h2 id="phases-title">Start small. Commit only when the idea is proven feasible.</h2>
+        <p class="lead">Every phase has a fixed price agreed upfront. Components and fabrication are billed at cost, with receipts.</p>
+      </div>
+
+      <div class="grid grid-3 plans">
+        <article class="plan reveal">
+          <h3>Feasibility Sprint</h3>
+          <p class="plan-for">Typically 1–2 weeks</p>
+          <p class="plan-price"><span>from</span> ₹15,000</p>
+          <ul class="ticks">
+            <li>System architecture &amp; block diagram</li>
+            <li>Component selection &amp; prototype BOM</li>
+            <li>Cost &amp; timeline estimate for the build</li>
+            <li>Technical risks and how to retire them</li>
+            <li>Go/no-go recommendation</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost">Book a sprint</a>
+        </article>
+        <article class="plan reveal">
+          <h3>Proof of Concept</h3>
+          <p class="plan-for">Typically 3–6 weeks</p>
+          <p class="plan-price"><span>from</span> ₹50,000</p>
+          <ul class="ticks">
+            <li>Core function working on the bench</li>
+            <li>Firmware for the key features</li>
+            <li>Sensor, connectivity &amp; power validation</li>
+            <li>Test results you can share</li>
+            <li>Recommendations for the prototype</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost">Discuss a PoC</a>
+        </article>
+        <article class="plan plan-featured reveal">
+          <p class="plan-badge">Built for fundraising</p>
+          <h3>Investor-Ready Prototype</h3>
+          <p class="plan-for">Typically 6–12 weeks</p>
+          <p class="plan-price"><span>from</span> ₹1,50,000</p>
+          <ul class="ticks">
+            <li>Custom PCB &amp; production-style firmware</li>
+            <li>Enclosure so it looks like a product</li>
+            <li>App or cloud dashboard where needed</li>
+            <li>Complete Investor Demo Kit</li>
+            <li>Full source code &amp; design files</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Start your project</a>
+        </article>
+      </div>
+      <p class="plans-note reveal">Grant-funded (Startup India Seed Fund, Karnataka ELEVATE and others)? Milestones and documentation can be structured to match your grant's milestones.</p>
+    </div>
+  </section>
+
+  <!-- INVESTOR DEMO KIT -->
+  <section id="demo-kit" class="section section-alt" aria-labelledby="kit-title">
+    <div class="container kit">
+      <div class="kit-copy reveal">
+        <p class="kicker">The Investor Demo Kit</p>
+        <h2 id="kit-title">More than a prototype. Answers to the questions investors ask.</h2>
+        <p class="lead">Investors don't just ask "does it work?" They ask what it will cost to make, how it gets certified and how it reaches production. Every investor-ready prototype ships with the answers.</p>
+      </div>
+      <ul class="kit-list reveal">
+        <li><strong>Working prototype</strong><span>Demo-ready, reliable enough to hand to an investor.</span></li>
+        <li><strong>Demo video</strong><span>A short, clean video of the device in action for your deck and emails.</span></li>
+        <li><strong>One-page spec sheet</strong><span>Features, specs and architecture, in plain language.</span></li>
+        <li><strong>Unit cost estimate</strong><span>Bill of materials priced at 100 and 1,000 units.</span></li>
+        <li><strong>Certification path</strong><span>Which approvals apply (e.g. BIS, WPC, CE) and what they involve.</span></li>
+        <li><strong>Manufacturing roadmap</strong><span>What changes between prototype and production, and what it costs.</span></li>
+        <li><strong>Technical walkthrough</strong><span>A session that prepares you to answer technical questions confidently.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section id="services" class="section" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">Capabilities</p>
+        <h2 id="services-title">Everything between the idea and the device.</h2>
+        <p class="lead">One engineer across the whole stack means no hand-offs and nothing lost between teams.</p>
       </div>
 
       <div class="grid grid-3">
-        <article class="work-card reveal">
-          <div class="work-visual work-visual-1" aria-hidden="true">
-            <svg viewBox="0 0 120 80"><rect x="18" y="16" width="44" height="48" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M62 40h18m0 0a12 12 0 1 0 24 0a12 12 0 1 0 -24 0" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M30 30h20M30 40h20M30 50h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-          </div>
-          <div class="work-body">
-            <p class="work-tag">IoT · Cloud</p>
-            <h3>Smart energy &amp; environment monitors</h3>
-            <p>ESP32 sensor nodes streaming over MQTT to a live dashboard with alerts and historical charts.</p>
-          </div>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 10h4v4h-4zM9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></div>
+          <h3>Embedded firmware</h3>
+          <p>Reliable firmware for ESP32, STM32, nRF and AVR, from bare-metal to FreeRTOS.</p>
+          <ul class="ticks">
+            <li>Drivers for sensors &amp; peripherals</li>
+            <li>Low-power &amp; battery-operated design</li>
+            <li>Bootloaders &amp; over-the-air updates</li>
+          </ul>
         </article>
-        <article class="work-card reveal">
-          <div class="work-visual work-visual-2" aria-hidden="true">
-            <svg viewBox="0 0 120 80"><rect x="30" y="22" width="60" height="32" rx="8" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="42" cy="62" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="78" cy="62" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M60 22V10m-8 0h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="48" cy="38" r="3" fill="currentColor"/><circle cx="72" cy="38" r="3" fill="currentColor"/></svg>
-          </div>
-          <div class="work-body">
-            <p class="work-tag">Robotics</p>
-            <h3>Autonomous &amp; mobile robots</h3>
-            <p>Line-followers to SLAM-capable rovers, with motor control, obstacle avoidance and path planning.</p>
-          </div>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M8 8h4l4 4v4M8 13v3h3"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="16" r="1.5"/></svg></div>
+          <h3>Electronics &amp; PCB</h3>
+          <p>Schematics and custom boards in KiCad, designed to be assembled and debugged easily.</p>
+          <ul class="ticks">
+            <li>Schematic &amp; multi-layer layout</li>
+            <li>Design-rule checks &amp; fab-ready files</li>
+            <li>Board bring-up &amp; testing</li>
+          </ul>
         </article>
-        <article class="work-card reveal">
-          <div class="work-visual work-visual-3" aria-hidden="true">
-            <svg viewBox="0 0 120 80"><rect x="20" y="12" width="80" height="56" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="48" y="28" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M20 30h28M20 50h28M72 30h28M72 50h28M60 12v16M60 52v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <div class="work-body">
-            <p class="work-tag">PCB · Embedded</p>
-            <h3>Custom boards &amp; firmware</h3>
-            <p>Purpose-built PCBs with STM32/ESP32 firmware: data loggers, controllers and wearable devices.</p>
-          </div>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="18" r="1.4" fill="currentColor" stroke="none"/><path d="M8.5 14.5a5 5 0 0 1 7 0M5.5 11.5a9.2 9.2 0 0 1 13 0M2.5 8.5a13.4 13.4 0 0 1 19 0"/></svg></div>
+          <h3>IoT &amp; cloud</h3>
+          <p>Wi-Fi, BLE, LoRa and cellular devices connected to dashboards your users can see.</p>
+          <ul class="ticks">
+            <li>MQTT/HTTP &amp; AWS IoT Core</li>
+            <li>Live dashboards &amp; alerts</li>
+            <li>Device provisioning &amp; security</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6.3 6.3l2 2M15.7 15.7l2 2M6.3 17.7l2-2M15.7 8.3l2-2"/></svg></div>
+          <h3>Sensors &amp; edge intelligence</h3>
+          <p>Getting clean, trustworthy data from the real world, and acting on it locally.</p>
+          <ul class="ticks">
+            <li>Sensor selection &amp; calibration</li>
+            <li>Radar, vision &amp; motion sensing</li>
+            <li>On-device processing</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 8V5M2.5 12.5v3M21.5 12.5v3M9.5 16h5"/><circle cx="12" cy="3.8" r="1.2"/><circle cx="9.5" cy="12.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12.5" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Robotics &amp; motion</h3>
+          <p>Motors, actuators and control loops for devices that move.</p>
+          <ul class="ticks">
+            <li>Motor control &amp; PID tuning</li>
+            <li>Mobile robots &amp; robotic arms</li>
+            <li>ROS-based architectures</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20.5 7v10L12 21.5 3.5 17V7z"/><path d="M3.5 7 12 11.5 20.5 7M12 11.5v10"/></svg></div>
+          <h3>Demo-ready packaging</h3>
+          <p>So the prototype looks like a product, not a breadboard, on the investor's table.</p>
+          <ul class="ticks">
+            <li>3D-printed enclosures</li>
+            <li>Clean assembly &amp; wiring</li>
+            <li>Portable, battery-powered builds</li>
+          </ul>
         </article>
       </div>
 
       <div class="stack reveal">
         <p class="stack-title">Tools &amp; platforms</p>
         <ul class="chips">
-          <li>ESP32</li><li>STM32</li><li>Arduino / AVR</li><li>Raspberry Pi</li><li>FreeRTOS</li><li>C / C++</li>
-          <li>Python</li><li>MicroPython</li><li>ROS</li><li>KiCad</li><li>MQTT</li><li>AWS IoT Core</li><li>Node-RED</li><li>OpenCV</li>
+          <li>ESP32</li><li>STM32</li><li>nRF52</li><li>Arduino / AVR</li><li>MSP430</li><li>Raspberry Pi</li><li>FreeRTOS</li>
+          <li>C / C++</li><li>Python</li><li>KiCad</li><li>MATLAB / Simulink</li><li>MQTT</li><li>Modbus / RS485</li><li>AWS IoT Core</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ENGAGEMENTS -->
-  <section id="engage" class="section section-alt" aria-labelledby="engage-title">
+  <!-- WHO IT'S FOR -->
+  <section id="who" class="section section-alt" aria-labelledby="who-title">
     <div class="container">
       <div class="section-head reveal">
-        <p class="kicker">Ways to work together</p>
-        <h2 id="engage-title">Pick the engagement that fits.</h2>
-        <p class="lead">Every project is quoted individually after a short discovery conversation.</p>
+        <p class="kicker">Who it's for</p>
+        <h2 id="who-title">Founders building physical products.</h2>
+        <p class="lead">Early-stage, incubated or grant-funded startups that need a working device to move forward.</p>
       </div>
 
-      <div class="grid grid-3 plans">
-        <article class="plan reveal">
-          <h3>Student Projects</h3>
-          <p class="plan-for">Final-year, mini &amp; VTU projects</p>
-          <ul class="ticks">
-            <li>Topic &amp; abstract guidance</li>
-            <li>Hardware + software build support</li>
-            <li>Code walkthrough sessions</li>
-            <li>Report, demo &amp; viva preparation</li>
-          </ul>
-          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-ghost">Get a quote<span class="sr-only"> (opens in a new tab)</span></a>
-        </article>
-        <article class="plan plan-featured reveal">
-          <p class="plan-badge">End-to-end</p>
-          <h3>Startup Prototype</h3>
-          <p class="plan-for">Founders &amp; early-stage teams</p>
-          <ul class="ticks">
-            <li>Feasibility &amp; architecture plan</li>
-            <li>Firmware, PCB &amp; cloud as needed</li>
-            <li>Milestone-based delivery</li>
-            <li>Documentation &amp; handover</li>
-          </ul>
-          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary">Start a project<span class="sr-only"> (opens in a new tab)</span></a>
-        </article>
-        <article class="plan reveal">
-          <h3>Consulting &amp; Debugging</h3>
-          <p class="plan-for">Stuck on a specific problem</p>
-          <ul class="ticks">
-            <li>Code &amp; schematic reviews</li>
-            <li>Hardware bring-up help</li>
-            <li>Performance &amp; power tuning</li>
-            <li>Flexible, session-based</li>
-          </ul>
-          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-ghost">Book a session<span class="sr-only"> (opens in a new tab)</span></a>
-        </article>
+      <ul class="who-grid">
+        <li class="who reveal">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11 12 4l8.5 7M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg>
+          <div><h3>Consumer IoT &amp; smart home</h3><p>Connected devices, trackers and appliances.</p></div>
+        </li>
+        <li class="who reveal">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-9M12 12c0-4.5 3-7.5 8-8-.5 5-3.5 8-8 8zM12 15c0-3-2-5-6-5.5.3 3.4 2.5 5.5 6 5.5z"/></svg>
+          <div><h3>Agritech</h3><p>Field sensors, irrigation control and farm monitoring.</p></div>
+        </li>
+        <li class="who reveal">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.5-7.5-10A4.3 4.3 0 0 1 12 7.6 4.3 4.3 0 0 1 19.5 10c0 5.5-7.5 10-7.5 10z"/><path d="M6 12h3l1.5-2.5 2 5L14 12h4"/></svg>
+          <div><h3>Healthtech &amp; wellness</h3><p>Wearables and monitoring devices at the prototype stage.</p></div>
+        </li>
+        <li class="who reveal">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20V10l5 3V10l5 3V6h4l1 14z"/><path d="M3 20h18"/></svg>
+          <div><h3>Industrial IoT</h3><p>Machine monitoring and retrofits for factories and SMEs.</p></div>
+        </li>
+        <li class="who reveal">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><path d="M8 18h8M6 16V9h7l3 4h2v3M9 9V6h3"/></svg>
+          <div><h3>Robotics &amp; automation</h3><p>Mobile robots, actuated mechanisms and smart machines.</p></div>
+        </li>
+        <li class="who reveal">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5V16h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>
+          <div><h3>Logistics &amp; cold chain</h3><p>Asset tracking and condition monitoring in transit.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="container about">
+      <div class="about-card reveal">
+        <div class="avatar" aria-hidden="true">S</div>
+        <p class="about-name">Shreyas P</p>
+        <p class="about-role">Founder &amp; Lead Engineer</p>
+        <p class="about-loc">Bengaluru, India</p>
+      </div>
+      <div class="about-copy reveal">
+        <p class="kicker">About</p>
+        <h2 id="about-title">You work directly with the engineer building your product.</h2>
+        <p>
+          I'm Shreyas, an embedded systems engineer in Bengaluru. I've built firmware on ESP32, STM32, MSP430 and ARM
+          microcontrollers, designed PCBs in KiCad, connected devices to the cloud, worked with radar and vision sensors,
+          and written the desktop tools used to test and monitor hardware.
+        </p>
+        <p>
+          I started Projectify Zone for founders who have a strong idea and need it working in their hands. There are no
+          account managers or hand-offs: the person on your weekly call is the person writing the firmware and laying
+          out the board. To keep it that way, I take on a limited number of projects at a time.
+        </p>
+        <ul class="about-links">
+          <li><a href="mailto:shreyas@projectifyzone.com">shreyas@projectifyzone.com</a></li>
+          <li><a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener">WhatsApp<span class="sr-only"> (opens in a new tab)</span></a></li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="section" aria-labelledby="faq-title">
+  <section id="faq" class="section section-alt" aria-labelledby="faq-title">
     <div class="container container-narrow">
       <div class="section-head reveal">
         <p class="kicker">FAQ</p>
-        <h2 id="faq-title">Questions, answered.</h2>
+        <h2 id="faq-title">Questions founders ask.</h2>
       </div>
 
       <div class="faq reveal">
         <details>
-          <summary>How much does a project cost?</summary>
-          <p>It depends on scope, complexity and timeline. After understanding your requirements we share a clear, itemised quote, so there are no surprises later.</p>
+          <summary>I'm not technical. Is that a problem?</summary>
+          <p>Not at all. Most founders I work with aren't. You explain the problem and who it's for; I translate that into a technical plan and explain every decision in plain language.</p>
         </details>
         <details>
-          <summary>Will I actually understand the project?</summary>
-          <p>Yes. That's the point. Every engagement includes code walkthroughs and documentation, and student projects include dedicated demo and viva preparation.</p>
+          <summary>How involved do I need to be?</summary>
+          <p>About 30 minutes a week for a demo and feedback call, plus quick answers on WhatsApp when a decision needs you. Everything else, from component sourcing to firmware and PCB, is handled.</p>
         </details>
         <details>
-          <summary>How long does it take?</summary>
-          <p>Small fixes can take days; full prototypes usually take a few weeks. You'll get a milestone timeline with your proposal.</p>
+          <summary>Who owns the idea and the design?</summary>
+          <p>You do. An NDA is signed before you share sensitive details, and on final payment you receive full ownership of the source code, design files and documentation.</p>
         </details>
         <details>
-          <summary>Do you work remotely?</summary>
-          <p>We're based in Bengaluru and happy to meet locally. Firmware, PCB, cloud and mentorship work can also be done fully online.</p>
+          <summary>What will it cost?</summary>
+          <p>Feasibility sprints start at ₹15,000, proofs of concept at ₹50,000 and investor-ready prototypes at ₹1,50,000. You get a fixed quote before each phase. Components and fabrication are billed at cost with receipts.</p>
         </details>
         <details>
-          <summary>Who owns the code and designs?</summary>
-          <p>You do. On delivery you receive the full source code, design files and documentation for your project.</p>
+          <summary>What if my idea isn't technically feasible?</summary>
+          <p>That's exactly what the feasibility sprint is for. You find out early, for a small fixed fee, before committing a large budget. If there's a better way to achieve the same goal, you'll hear about it.</p>
+        </details>
+        <details>
+          <summary>Can you work with grant milestones?</summary>
+          <p>Yes. If your prototype is funded by a grant such as the Startup India Seed Fund or Karnataka ELEVATE, milestones and progress documentation can be structured to match what your incubator needs.</p>
+        </details>
+        <details>
+          <summary>Do you handle manufacturing?</summary>
+          <p>The focus is prototypes. Every investor-ready prototype includes a manufacturing roadmap and design-for-manufacture guidance so you know the path to production and its likely cost.</p>
+        </details>
+        <details>
+          <summary>Do you only work with founders in Bengaluru?</summary>
+          <p>No. Bengaluru founders can meet in person, and founders anywhere in India can work fully online, with prototypes shipped to you.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT CTA -->
+  <!-- CONTACT -->
   <section id="contact" class="section" aria-labelledby="contact-title">
-    <div class="container">
-      <div class="cta-panel reveal">
-        <h2 id="contact-title">Ready to deploy?</h2>
-        <p>Stop struggling with datasheets. Tell us what you're building, and let's build it together.</p>
-        <div class="hero-ctas">
-          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Start your project <span aria-hidden="true">&rarr;</span><span class="sr-only"> (opens in a new tab)</span></a>
-        </div>
-        <p class="cta-note">Takes about 2 minutes. Your details are only used to reply to you. <a href="privacy.html">Privacy policy</a></p>
+    <div class="container contact">
+      <div class="contact-info reveal">
+        <p class="kicker">Start your project</p>
+        <h2 id="contact-title">Tell me what you're building.</h2>
+        <p class="lead">Share a short brief and I'll reply within one working day to set up a free 30-minute discovery call.</p>
+
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+            <a href="mailto:shreyas@projectifyzone.com">shreyas@projectifyzone.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8.5 8.5 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.8-1-1 .8a3.6 3.6 0 0 1-2.4-2.4l.8-1-1-1.8z"/></svg>
+            <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener">WhatsApp: +91&nbsp;99866&nbsp;52218<span class="sr-only"> (opens in a new tab)</span></a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+            <a href="tel:+919986652218">Call:&nbsp;+91&nbsp;99866&nbsp;52218</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            <span>Bengaluru, Karnataka · Working with founders across India</span>
+          </li>
+        </ul>
+        <p class="contact-nda">Prefer to sign an NDA first? Just ask, and keep the brief high-level until it's signed.</p>
       </div>
+
+      <form class="brief reveal" id="brief-form" action="https://formsubmit.co/shreyas@projectifyzone.com" method="POST" data-endpoint="https://formsubmit.co/ajax/shreyas@projectifyzone.com" novalidate>
+        <input type="hidden" name="_subject" value="New project brief from projectifyzone.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://projectifyzone.com/thanks.html">
+        <div class="hp" aria-hidden="true">
+          <label for="f-honey">Leave this field empty</label>
+          <input type="text" id="f-honey" name="_honey" tabindex="-1" autocomplete="off">
+        </div>
+
+        <fieldset>
+          <legend>About you</legend>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-company">Startup / company</label>
+              <input id="f-company" name="company" type="text" autocomplete="organization">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone / WhatsApp</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About the project</legend>
+          <div class="field">
+            <label for="f-idea">What are you building? <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="f-idea" name="idea" rows="4" required aria-describedby="f-idea-hint"></textarea>
+            <p class="hint" id="f-idea-hint">A few lines on the problem, who it's for and what the device should do. Keep it high-level if you'd like an NDA first.</p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-stage">Where are you today?</label>
+              <select id="f-stage" name="stage">
+                <option value="">Select…</option>
+                <option>Just an idea</option>
+                <option>Sketches or a spec</option>
+                <option>Early proof of concept exists</option>
+                <option>Prototype exists, needs rework</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-phase">What do you need?</label>
+              <select id="f-phase" name="phase">
+                <option value="">Select…</option>
+                <option>Feasibility sprint</option>
+                <option>Proof of concept</option>
+                <option>Investor-ready prototype</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-timeline">Timeline</label>
+              <select id="f-timeline" name="timeline">
+                <option value="">Select…</option>
+                <option>Under 1 month</option>
+                <option>1–3 months</option>
+                <option>3–6 months</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-budget">Budget range</label>
+              <select id="f-budget" name="budget">
+                <option value="">Select…</option>
+                <option>Under ₹50,000</option>
+                <option>₹50,000 – ₹1.5 lakh</option>
+                <option>₹1.5 – 5 lakh</option>
+                <option>Above ₹5 lakh</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-funding">How is the project funded?</label>
+            <select id="f-funding" name="funding">
+              <option value="">Select…</option>
+              <option>Self-funded</option>
+              <option>Government grant / incubator</option>
+              <option>Angel or pre-seed investment</option>
+              <option>Raising now</option>
+              <option>Prefer not to say</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <div class="field field-check">
+          <input id="f-consent" name="consent" type="checkbox" value="Agreed to privacy policy" required>
+          <label for="f-consent">I agree that my details will be used to respond to this enquiry, as described in the <a href="privacy.html">privacy policy</a>. <span class="req" aria-hidden="true">*</span></label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg brief-submit">Send project brief <span aria-hidden="true">&rarr;</span></button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 
 </main>
 
 <div class="mobile-cta" id="mobile-cta">
-  <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary">Start your project <span aria-hidden="true">&rarr;</span><span class="sr-only"> (opens in a new tab)</span></a>
+  <a href="#contact" class="btn btn-primary">Start your project <span aria-hidden="true">&rarr;</span></a>
+  <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener" class="btn btn-whatsapp" aria-label="Chat on WhatsApp (opens in a new tab)">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8.5 8.5 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.8-1-1 .8a3.6 3.6 0 0 1-2.4-2.4l.8-1-1-1.8z"/></svg>
+  </a>
 </div>
 
 <footer class="site-footer">
@@ -399,28 +619,28 @@
       <a href="#top" class="brand" aria-label="Projectify Zone home">
         <svg class="logo logo-sm" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -17 592.5 74" aria-hidden="true" focusable="false"><g transform="translate(0 -12)"><rect width="64" height="64" rx="14" fill="#0b0f19"/><g fill="none" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#22d3ee" d="M10 50V14H20L26 20V28L20 34H10"/><circle fill="#22d3ee" cx="10" cy="50" r="4.6"/><path stroke="#f472b6" d="M35 14H54V19L35 45V50H54"/><circle fill="#f472b6" cx="54" cy="14" r="4.6"/></g></g><g transform="translate(86 0) scale(1)"><g class="a" transform="translate(0 0)"><path d="M0 40V0H20L28 8V14L20 22H0"/><circle cx="0" cy="40" r="4.4"/></g><g class="a" transform="translate(38 0)"><path d="M0 40V0H20L28 8V14L20 22H0M15 22L28 35V40"/><circle cx="0" cy="40" r="4.4"/></g><g class="a" transform="translate(76 0)"><path d="M8 0H20L28 8V32L20 40H8L0 32V8Z"/></g><g class="a" transform="translate(114 0)"><path d="M8 0H24V32L16 40H8L0 32V28"/><circle cx="0" cy="28" r="4.4"/></g><g class="a" transform="translate(148 0)"><path d="M26 0H0V40H26M0 20H18"/></g><g class="a" transform="translate(184 0)"><path d="M27 0H8L0 8V32L8 40H27"/></g><g class="a" transform="translate(221 0)"><path d="M0 0H28M14 0V40"/><circle cx="14" cy="40" r="4.4"/></g><g class="b" transform="translate(256 0)"><path d="M0 0V40"/></g><g class="b" transform="translate(268.5 0)"><path d="M26 0H0V40M0 20H18"/><circle cx="0" cy="40" r="4.4"/></g><g class="b" transform="translate(304.5 0)"><path d="M0 0V6L14 20L28 6V0M14 20V40"/><circle cx="14" cy="40" r="4.4"/></g></g><g transform="translate(442.5 0) scale(1)"><g class="a" transform="translate(0 0)"><path d="M0 0H28V6L0 34V40H28"/></g><g class="b" transform="translate(38 0)"><path d="M8 0H20L28 8V32L20 40H8L0 32V8Z"/></g><g class="b" transform="translate(76 0)"><path d="M0 40V0H3L25 40H28V0"/></g><g class="b" transform="translate(114 0)"><path d="M26 0H0V40H26M0 20H18"/></g></g></svg>
       </a>
-      <p>Engineering ideas into reality. Embedded, IoT, PCB and robotics prototyping from Bengaluru.</p>
+      <p>From idea on paper to investor-ready prototype. Hardware prototyping for startup founders, from Bengaluru.</p>
     </div>
-    <nav class="footer-col" aria-label="Footer: services">
-      <p class="footer-title">Services</p>
-      <a href="#services">Embedded Systems</a>
-      <a href="#services">IoT &amp; Cloud</a>
-      <a href="#services">PCB Design</a>
-      <a href="#services">Robotics</a>
-    </nav>
-    <nav class="footer-col" aria-label="Footer: company">
+    <nav class="footer-col" aria-label="Footer: explore">
       <p class="footer-title">Explore</p>
-      <a href="#process">Process</a>
-      <a href="#work">Work</a>
-      <a href="#engage">Packages</a>
+      <a href="#process">How it works</a>
+      <a href="#phases">Pricing</a>
+      <a href="#demo-kit">Investor Demo Kit</a>
+      <a href="#about">About</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="footer-col">
-      <p class="footer-title">Get in touch</p>
-      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener">Project enquiry form<span class="sr-only"> (opens in a new tab)</span></a>
+      <p class="footer-title">Contact</p>
+      <a href="mailto:shreyas@projectifyzone.com">shreyas@projectifyzone.com</a>
+      <a href="tel:+919986652218">+91&nbsp;99866&nbsp;52218</a>
+      <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener">WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
       <span>Bengaluru, Karnataka, India</span>
-      <a href="privacy.html">Privacy policy</a>
     </div>
+    <nav class="footer-col" aria-label="Footer: more">
+      <p class="footer-title">More</p>
+      <a href="students.html">Student mentorship</a>
+      <a href="privacy.html">Privacy policy</a>
+    </nav>
   </div>
   <div class="container footer-bottom">
     <p>&copy; <span id="year">2026</span> Projectify Zone. Engineered in Bengaluru.</p>
@@ -428,6 +648,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=3" defer></script>
+<script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>

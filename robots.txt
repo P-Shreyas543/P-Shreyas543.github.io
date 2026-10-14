@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://p-shreyas543.github.io/sitemap.xml
+Sitemap: https://projectifyzone.com/sitemap.xml
