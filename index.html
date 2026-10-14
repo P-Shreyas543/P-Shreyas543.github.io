@@ -1,145 +1,438 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN" data-theme="dark">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Projectify Zone — Build The Future</title>
-<meta name="description" content="Premium engineering mentorship. Turn ideas into prototypes with IoT, Embedded Systems, and Robotics support in Bengaluru.">
+<title>Projectify Zone — IoT, Embedded &amp; Robotics Prototyping in Bengaluru</title>
+<meta name="description" content="Projectify Zone turns ideas into working prototypes. Embedded firmware, IoT &amp; cloud, PCB design, robotics and final-year project mentorship for students and startups in Bengaluru.">
+<meta name="keywords" content="IoT projects Bengaluru, embedded systems freelancer, ESP32 developer, STM32 firmware, PCB design, robotics projects, VTU final year projects, prototype development, MVP hardware">
+<meta name="author" content="Projectify Zone">
+<meta name="theme-color" content="#07090f">
+<link rel="canonical" href="https://p-shreyas543.github.io/">
 
-<link rel="icon" href="assets/img/logo.jpg">
+<!-- Open Graph / social previews -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Projectify Zone">
+<meta property="og:title" content="Projectify Zone — Engineering Ideas into Reality">
+<meta property="og:description" content="Embedded systems, IoT, PCB design and robotics prototyping, plus 1-on-1 project mentorship. Based in Bengaluru.">
+<meta property="og:url" content="https://p-shreyas543.github.io/">
+<meta property="og:image" content="https://p-shreyas543.github.io/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projectify Zone — Engineering Ideas into Reality">
+<meta name="twitter:description" content="Embedded systems, IoT, PCB design and robotics prototyping, plus 1-on-1 project mentorship. Based in Bengaluru.">
+<meta name="twitter:image" content="https://p-shreyas543.github.io/assets/img/og-image.png">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/main.css">
 
+<!-- Apply the saved theme before first paint so there is no flash -->
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('pz-theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Projectify Zone",
+  "url": "https://p-shreyas543.github.io/",
+  "logo": "https://p-shreyas543.github.io/assets/img/logo.svg",
+  "image": "https://p-shreyas543.github.io/assets/img/og-image.png",
+  "description": "Embedded systems, IoT, PCB design and robotics prototyping, plus 1-on-1 engineering project mentorship.",
+  "areaServed": [
+    { "@type": "City", "name": "Bengaluru" },
+    { "@type": "Country", "name": "India" }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "addressCountry": "IN"
+  },
+  "knowsAbout": ["Embedded Systems", "Internet of Things", "PCB Design", "Robotics", "Firmware Development", "Prototype Development"]
+}
+</script>
 </head>
 
 <body>
 
-<div id="cursor"></div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<div id="canvas-container">
-  <canvas id="neuro"></canvas>
-</div>
-
-<div id="intro-overlay">
-  <div class="intro-text" id="greeting">Namaste 🙏</div>
-</div>
-
-<header>
-  <div class="nav-box">
-    <a href="#" class="brand hover-target">
-      <img src="assets/img/logo.jpg" alt="PZ"> Projectify Zone
+<header class="site-header" id="top">
+  <div class="container nav">
+    <a href="#top" class="brand" aria-label="Projectify Zone home">
+      <img src="assets/img/logo.svg" alt="" width="36" height="36">
+      <span>Projectify Zone</span>
     </a>
-    <nav class="nav-links">
-      <a href="#services" class="hover-target">Services</a>
-      <a href="#work" class="hover-target">Case Studies</a>
-      <a href="#contact" class="hover-target">Support</a>
+
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#work">Work</a>
+      <a href="#engage">Engagements</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary nav-cta-mobile">Start a project</a>
     </nav>
-    <div style="display:flex; gap:15px; align-items:center;">
-      <button class="btn-icon hover-target" onclick="toggleTheme()" aria-label="Toggle Theme">☀️</button>
-      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" class="btn-glow hover-target" style="padding: 8px 20px; font-size: 0.85rem;">Start Project</a>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-sm nav-cta">Start a project</a>
+      <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
 
-<main>
-  
-  <div class="hero-wrapper">
-    <div class="hero-content">
-      <div class="container">
-        <h1 class="hero-title">
-          Engineering Ideas <br>into <span class="hero-highlight" id="dynamic-text">Reality.</span>
-        </h1>
-        <p class="hero-desc">
-          The gap between theory and working prototypes ends here. <br>
-          Expert mentorship for students and startups in Bengaluru.
-        </p>
-        <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" class="btn-glow hover-target">
-          Build Your Prototype &rarr;
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <canvas id="neuro" aria-hidden="true"></canvas>
+    <div class="container hero-inner">
+      <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>Namaste 🙏 · Engineering studio in Bengaluru</p>
+      <h1 id="hero-title" class="hero-title">
+        Engineering ideas<br>into <span class="gradient-text" id="dynamic-text">reality.</span>
+      </h1>
+      <p class="hero-desc">
+        From a sketch on paper to a working prototype. We design firmware, circuits, IoT backends and robots,
+        and mentor students and startups so they understand every line of what they ship.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          Build your prototype <span aria-hidden="true">&rarr;</span>
         </a>
+        <a href="#services" class="btn btn-ghost btn-lg">Explore services</a>
       </div>
+      <ul class="hero-points">
+        <li><span aria-hidden="true">✓</span> Hardware, firmware &amp; cloud under one roof</li>
+        <li><span aria-hidden="true">✓</span> Documented source code you own</li>
+        <li><span aria-hidden="true">✓</span> Demo &amp; viva preparation included</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span>IoT Systems</span><span>Embedded Engineering</span><span>PCB Design</span><span>Robotics</span><span>MVP Development</span><span>VTU Projects</span><span>Firmware</span><span>Sensor Fusion</span>
+      <span>IoT Systems</span><span>Embedded Engineering</span><span>PCB Design</span><span>Robotics</span><span>MVP Development</span><span>VTU Projects</span><span>Firmware</span><span>Sensor Fusion</span>
     </div>
   </div>
 
-  <div class="content-layer">
-    
-    <div class="ticker-wrap hover-target">
-      <div class="ticker">
-        <div class="ticker-item">IoT Systems ✦</div>
-        <div class="ticker-item">Embedded Engineering ✦</div>
-        <div class="ticker-item">PCB Design ✦</div>
-        <div class="ticker-item">Robotics ✦</div>
-        <div class="ticker-item">MVP Development ✦</div>
-        <div class="ticker-item">VTU Projects ✦</div>
-        <div class="ticker-item">IoT Systems ✦</div>
-        <div class="ticker-item">Embedded Engineering ✦</div>
-        <div class="ticker-item">PCB Design ✦</div>
-        <div class="ticker-item">Robotics ✦</div>
-        <div class="ticker-item">MVP Development ✦</div>
-        <div class="ticker-item">VTU Projects ✦</div>
+  <!-- SERVICES -->
+  <section id="services" class="section" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">Services</p>
+        <h2 id="services-title">We don't just fix bugs. We engineer solutions.</h2>
+        <p class="lead">End-to-end support across the full hardware product stack, or just the piece you're stuck on.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">⚡</div>
+          <h3>Embedded Systems</h3>
+          <p>Firmware for ESP32, STM32 and AVR. RTOS implementation, low-power design and sensor fusion logic.</p>
+          <ul class="ticks">
+            <li>Bare-metal &amp; FreeRTOS</li>
+            <li>I²C, SPI, UART, CAN drivers</li>
+            <li>Bootloaders &amp; OTA updates</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">📡</div>
+          <h3>IoT &amp; Cloud</h3>
+          <p>Full-stack IoT: MQTT/HTTP protocols, AWS IoT Core integration and custom web &amp; mobile dashboards.</p>
+          <ul class="ticks">
+            <li>Device provisioning &amp; security</li>
+            <li>Real-time telemetry dashboards</li>
+            <li>Alerts, automation &amp; data logging</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🤖</div>
+          <h3>Advanced Robotics</h3>
+          <p>SLAM navigation, inverse kinematics and motor-control algorithms for autonomous systems.</p>
+          <ul class="ticks">
+            <li>ROS-based architectures</li>
+            <li>PID &amp; closed-loop motor control</li>
+            <li>Computer vision integration</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🧩</div>
+          <h3>PCB Design</h3>
+          <p>Schematic capture to manufacturable boards: clean layouts, sensible BOMs and fabrication-ready files.</p>
+          <ul class="ticks">
+            <li>Schematic &amp; multi-layer layout</li>
+            <li>DFM checks &amp; Gerber export</li>
+            <li>Bring-up &amp; debugging support</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🚀</div>
+          <h3>MVP &amp; Prototyping</h3>
+          <p>For founders: validate the idea fast with a demo-ready prototype you can put in front of users and investors.</p>
+          <ul class="ticks">
+            <li>Feasibility &amp; component selection</li>
+            <li>Rapid iterations with weekly demos</li>
+            <li>Path to production planning</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">🎓</div>
+          <h3>Project Mentorship</h3>
+          <p>1-on-1 guidance for final-year and VTU projects. Understand your code, design your PCB and ace the viva.</p>
+          <ul class="ticks">
+            <li>Concept &amp; abstract finalisation</li>
+            <li>Guided build, not just hand-off</li>
+            <li>Report, demo &amp; viva prep</li>
+          </ul>
+        </article>
       </div>
     </div>
+  </section>
 
-    <section id="services" class="container">
-      <div class="section-header">
-        <h2>System Architecture</h2>
-        <p style="color:var(--text-muted)">We don't just fix bugs. We engineer solutions.</p>
+  <!-- PROCESS -->
+  <section id="process" class="section section-alt" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">How it works</p>
+        <h2 id="process-title">A clear process, from first call to final demo.</h2>
+        <p class="lead">No black boxes. You know what's being built, when, and why.</p>
       </div>
 
-      <div class="bento-grid" id="cards-container">
-        <div class="card hover-target">
-          <div class="card-content">
-            <span class="card-icon">⚡</span>
-            <h3>Embedded Systems</h3>
-            <p>Firmware for ESP32, STM32, and AVR. Real-time OS (RTOS) implementation and sensor fusion logic.</p>
-          </div>
-        </div>
-        <div class="card hover-target">
-          <div class="card-content">
-            <span class="card-icon">📡</span>
-            <h3>IoT & Cloud</h3>
-            <p>Full-stack IoT. MQTT/HTTP protocols, AWS IoT Core integration, and custom mobile dashboards.</p>
-          </div>
-        </div>
-        <div class="card hover-target">
-          <div class="card-content">
-            <span class="card-icon">🤖</span>
-            <h3>Advanced Robotics</h3>
-            <p>SLAM Navigation, Inverse Kinematics, and Motor Control algorithms for autonomous systems.</p>
-          </div>
-        </div>
-        <div class="card hover-target">
-          <div class="card-content">
-            <span class="card-icon">🎓</span>
-            <h3>Mentorship</h3>
-            <p>1-on-1 guidance for Final Year Projects. Understand your code, design your PCB, and ace the Viva.</p>
-          </div>
-        </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num">01</span>
+          <h3>Discovery</h3>
+          <p>Tell us your idea through the project form. We follow up to understand goals, constraints and deadlines.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">02</span>
+          <h3>Proposal</h3>
+          <p>You get a scoped plan: architecture, components, milestones and a clear quote before any work begins.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">03</span>
+          <h3>Build</h3>
+          <p>We develop in milestones with regular progress updates, so you can give feedback early and often.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">04</span>
+          <h3>Handover</h3>
+          <p>Working prototype, documented source code and a walkthrough so you can explain and extend it yourself.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section" aria-labelledby="work-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">What we build</p>
+        <h2 id="work-title">The kind of systems we bring to life.</h2>
+        <p class="lead">A sample of project types we take on, from sensor nodes to autonomous robots.</p>
       </div>
-    </section>
 
-    <section id="contact" class="container" style="margin-top: 100px;">
-      <div class="card hover-target" style="text-align:center; padding: 60px;">
-        <div class="card-content">
-          <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to deploy?</h2>
-          <p style="margin-bottom: 40px; color: var(--text-muted);">Stop struggling with datasheets. Let's build it together.</p>
-          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" class="btn-glow">Initialize Project</a>
-        </div>
+      <div class="grid grid-3">
+        <article class="work-card reveal">
+          <div class="work-visual work-visual-1" aria-hidden="true">
+            <svg viewBox="0 0 120 80"><rect x="18" y="16" width="44" height="48" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M62 40h18m0 0a12 12 0 1 0 24 0a12 12 0 1 0 -24 0" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M30 30h20M30 40h20M30 50h12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="work-body">
+            <p class="work-tag">IoT · Cloud</p>
+            <h3>Smart energy &amp; environment monitors</h3>
+            <p>ESP32 sensor nodes streaming over MQTT to a live dashboard with alerts and historical charts.</p>
+          </div>
+        </article>
+        <article class="work-card reveal">
+          <div class="work-visual work-visual-2" aria-hidden="true">
+            <svg viewBox="0 0 120 80"><rect x="30" y="22" width="60" height="32" rx="8" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="42" cy="62" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="78" cy="62" r="8" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M60 22V10m-8 0h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="48" cy="38" r="3" fill="currentColor"/><circle cx="72" cy="38" r="3" fill="currentColor"/></svg>
+          </div>
+          <div class="work-body">
+            <p class="work-tag">Robotics</p>
+            <h3>Autonomous &amp; mobile robots</h3>
+            <p>Line-followers to SLAM-capable rovers, with motor control, obstacle avoidance and path planning.</p>
+          </div>
+        </article>
+        <article class="work-card reveal">
+          <div class="work-visual work-visual-3" aria-hidden="true">
+            <svg viewBox="0 0 120 80"><rect x="20" y="12" width="80" height="56" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="48" y="28" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M20 30h28M20 50h28M72 30h28M72 50h28M60 12v16M60 52v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="work-body">
+            <p class="work-tag">PCB · Embedded</p>
+            <h3>Custom boards &amp; firmware</h3>
+            <p>Purpose-built PCBs with STM32/ESP32 firmware: data loggers, controllers and wearable devices.</p>
+          </div>
+        </article>
       </div>
-    </section>
 
-    <footer>
-      <p>&copy; 2026 Projectify Zone. Engineered in Bengaluru.</p>
-    </footer>
+      <div class="stack reveal" aria-label="Technologies we work with">
+        <p class="stack-title">Tools &amp; platforms</p>
+        <ul class="chips">
+          <li>ESP32</li><li>STM32</li><li>Arduino / AVR</li><li>Raspberry Pi</li><li>FreeRTOS</li><li>C / C++</li>
+          <li>Python</li><li>MicroPython</li><li>ROS</li><li>KiCad</li><li>MQTT</li><li>AWS IoT Core</li><li>Node-RED</li><li>OpenCV</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <!-- ENGAGEMENTS -->
+  <section id="engage" class="section section-alt" aria-labelledby="engage-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">Ways to work together</p>
+        <h2 id="engage-title">Pick the engagement that fits.</h2>
+        <p class="lead">Every project is quoted individually after a short discovery conversation.</p>
+      </div>
+
+      <div class="grid grid-3 plans">
+        <article class="plan reveal">
+          <h3>Student Projects</h3>
+          <p class="plan-for">Final-year, mini &amp; VTU projects</p>
+          <ul class="ticks">
+            <li>Topic &amp; abstract guidance</li>
+            <li>Hardware + software build support</li>
+            <li>Code walkthrough sessions</li>
+            <li>Report, demo &amp; viva preparation</li>
+          </ul>
+          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-ghost">Get a quote</a>
+        </article>
+        <article class="plan plan-featured reveal">
+          <p class="plan-badge">End-to-end</p>
+          <h3>Startup Prototype</h3>
+          <p class="plan-for">Founders &amp; early-stage teams</p>
+          <ul class="ticks">
+            <li>Feasibility &amp; architecture plan</li>
+            <li>Firmware, PCB &amp; cloud as needed</li>
+            <li>Milestone-based delivery</li>
+            <li>Documentation &amp; handover</li>
+          </ul>
+          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary">Start a project</a>
+        </article>
+        <article class="plan reveal">
+          <h3>Consulting &amp; Debugging</h3>
+          <p class="plan-for">Stuck on a specific problem</p>
+          <ul class="ticks">
+            <li>Code &amp; schematic reviews</li>
+            <li>Hardware bring-up help</li>
+            <li>Performance &amp; power tuning</li>
+            <li>Flexible, session-based</li>
+          </ul>
+          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-ghost">Book a session</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section" aria-labelledby="faq-title">
+    <div class="container container-narrow">
+      <div class="section-head reveal">
+        <p class="kicker">FAQ</p>
+        <h2 id="faq-title">Questions, answered.</h2>
+      </div>
+
+      <div class="faq reveal">
+        <details>
+          <summary>How much does a project cost?</summary>
+          <p>It depends on scope, complexity and timeline. After understanding your requirements we share a clear, itemised quote, so there are no surprises later.</p>
+        </details>
+        <details>
+          <summary>Will I actually understand the project?</summary>
+          <p>Yes. That's the point. Every engagement includes code walkthroughs and documentation, and student projects include dedicated demo and viva preparation.</p>
+        </details>
+        <details>
+          <summary>How long does it take?</summary>
+          <p>Small fixes can take days; full prototypes usually take a few weeks. You'll get a milestone timeline with your proposal.</p>
+        </details>
+        <details>
+          <summary>Do you work remotely?</summary>
+          <p>We're based in Bengaluru and happy to meet locally. Firmware, PCB, cloud and mentorship work can also be done fully online.</p>
+        </details>
+        <details>
+          <summary>Who owns the code and designs?</summary>
+          <p>You do. On delivery you receive the full source code, design files and documentation for your project.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="cta-panel reveal">
+        <h2 id="contact-title">Ready to deploy?</h2>
+        <p>Stop struggling with datasheets. Tell us what you're building, and let's build it together.</p>
+        <div class="hero-ctas">
+          <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Start your project <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <p class="cta-note">Takes about 2 minutes. We'll get back to you shortly.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<script src="assets/js/main.js"></script>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="brand">
+        <img src="assets/img/logo.svg" alt="" width="32" height="32">
+        <span>Projectify Zone</span>
+      </a>
+      <p>Engineering ideas into reality. Embedded, IoT, PCB and robotics prototyping from Bengaluru.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer: services">
+      <p class="footer-title">Services</p>
+      <a href="#services">Embedded Systems</a>
+      <a href="#services">IoT &amp; Cloud</a>
+      <a href="#services">PCB Design</a>
+      <a href="#services">Robotics</a>
+    </nav>
+    <nav class="footer-col" aria-label="Footer: company">
+      <p class="footer-title">Explore</p>
+      <a href="#process">Process</a>
+      <a href="#work">Work</a>
+      <a href="#engage">Engagements</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="footer-col">
+      <p class="footer-title">Get in touch</p>
+      <a href="https://forms.gle/QDNKKc8QvhYjbJha7" target="_blank" rel="noopener">Project enquiry form</a>
+      <span>Bengaluru, Karnataka, India</span>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> Projectify Zone. Engineered in Bengaluru.</p>
+    <a href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
 
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
