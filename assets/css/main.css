@@ -8,7 +8,7 @@
   --font-display: 'Space Grotesk', var(--font-body);
 
   --accent-1: #22d3ee;
-  --accent-2: #8b5cf6;
+  --accent-2: #f472b6;
   --gradient: linear-gradient(120deg, var(--accent-1), var(--accent-2));
 
   --radius: 18px;
@@ -31,7 +31,10 @@
   --header-bg: rgba(7, 9, 15, .72);
   --shadow: 0 20px 50px -20px rgba(0, 0, 0, .7);
   --canvas-node: 34, 211, 238;
-  --canvas-line: 139, 92, 246;
+  --canvas-line: 244, 114, 182;
+  --brand-a: #22d3ee;
+  --brand-b: #f472b6;
+  --on-accent: #06121a;
 }
 
 [data-theme='light'] {
@@ -47,9 +50,12 @@
   --header-bg: rgba(247, 248, 251, .8);
   --shadow: 0 20px 45px -25px rgba(15, 23, 42, .25);
   --accent-1: #0891b2;
-  --accent-2: #7c3aed;
+  --accent-2: #db2777;
   --canvas-node: 8, 145, 178;
-  --canvas-line: 124, 58, 237;
+  --canvas-line: 219, 39, 119;
+  --brand-a: #0891b2;
+  --brand-b: #db2777;
+  --on-accent: #ffffff;
 }
 
 /* ---------- Base ---------- */
@@ -142,8 +148,8 @@ a { color: inherit; text-decoration: none; }
 
 .btn-primary {
   background: var(--gradient);
-  color: #fff;
-  box-shadow: 0 10px 30px -10px rgba(139, 92, 246, .6);
+  color: var(--on-accent);
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, .55);
 }
 .btn-primary:hover { box-shadow: 0 14px 34px -10px rgba(34, 211, 238, .55); }
 
@@ -207,7 +213,13 @@ a { color: inherit; text-decoration: none; }
   font-size: 1.15rem;
   letter-spacing: -.01em;
 }
-.brand img { border-radius: 10px; }
+.logo { display: block; height: 34px; width: auto; }
+.logo-sm { height: 28px; }
+.logo .a, .logo .b { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.logo .a { stroke: var(--brand-a); }
+.logo .b { stroke: var(--brand-b); }
+.logo .a circle { fill: var(--brand-a); stroke: none; }
+.logo .b circle { fill: var(--brand-b); stroke: none; }
 
 .nav-links {
   display: flex;
@@ -263,7 +275,7 @@ a { color: inherit; text-decoration: none; }
   height: 80%;
   background:
     radial-gradient(40% 50% at 25% 40%, rgba(34, 211, 238, .14), transparent 70%),
-    radial-gradient(40% 50% at 75% 30%, rgba(139, 92, 246, .16), transparent 70%);
+    radial-gradient(40% 50% at 75% 30%, rgba(236, 72, 153, .14), transparent 70%);
   z-index: -2;
   pointer-events: none;
 }
@@ -429,7 +441,7 @@ a { color: inherit; text-decoration: none; }
   width: 52px;
   height: 52px;
   border-radius: 14px;
-  background: linear-gradient(135deg, rgba(34, 211, 238, .15), rgba(139, 92, 246, .15));
+  background: linear-gradient(135deg, rgba(34, 211, 238, .15), rgba(236, 72, 153, .15));
   border: 1px solid var(--border);
   font-size: 1.5rem;
   margin-bottom: 22px;
@@ -508,8 +520,8 @@ a { color: inherit; text-decoration: none; }
 }
 .work-visual svg { width: 46%; opacity: .95; transition: transform .4s var(--ease); }
 .work-card:hover .work-visual svg { transform: scale(1.06); }
-.work-visual-1 { background: linear-gradient(135deg, #0e7490, #6d28d9); }
-.work-visual-2 { background: linear-gradient(135deg, #7c3aed, #db2777); }
+.work-visual-1 { background: linear-gradient(135deg, #0e7490, #be185d); }
+.work-visual-2 { background: linear-gradient(135deg, #be185d, #6d28d9); }
 .work-visual-3 { background: linear-gradient(135deg, #0f766e, #0369a1); }
 
 .work-body { padding: 24px 26px 28px; }
@@ -575,7 +587,7 @@ a { color: inherit; text-decoration: none; }
   padding: 4px 12px;
   border-radius: 999px;
   background: var(--gradient);
-  color: #fff;
+  color: var(--on-accent);
   font-size: .75rem;
   font-weight: 600;
   margin: 0;
@@ -622,7 +634,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--border);
   background:
     radial-gradient(60% 80% at 20% 0%, rgba(34, 211, 238, .16), transparent 70%),
-    radial-gradient(60% 80% at 80% 100%, rgba(139, 92, 246, .2), transparent 70%),
+    radial-gradient(60% 80% at 80% 100%, rgba(236, 72, 153, .18), transparent 70%),
     var(--surface);
   overflow: hidden;
 }
@@ -729,7 +741,7 @@ a { color: inherit; text-decoration: none; }
   .hero-points { flex-direction: column; margin-top: 32px; }
   .card, .plan { padding: 26px 22px; }
   .eyebrow { font-size: .8rem; }
-  .brand span { font-size: 1.05rem; }
+  .logo { height: 28px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
