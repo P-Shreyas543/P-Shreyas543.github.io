@@ -32,7 +32,7 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 - **Brand colours**: change `--accent-1` / `--accent-2` in `assets/css/main.css` (once for dark, once for light).
 - **Logo**: the header/footer logo is inline SVG in `index.html`; its colours come from `--brand-a` / `--brand-b` in `main.css`. Source files live in `brand/`.
 - **After content changes**: update `<lastmod>` in `sitemap.xml`.
-- **After editing CSS or JS**: bump the `?v=3` suffix on the `main.css`, `main.js` and `theme-init.js`
+- **After editing CSS or JS**: bump the `?v=4` suffix on the `main.css`, `main.js` and `theme-init.js`
   links in every HTML page so returning visitors don't get a stale cached copy.
 
 ## Engineering notes
