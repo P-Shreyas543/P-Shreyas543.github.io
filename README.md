@@ -7,9 +7,9 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The landing page (all content lives here) |
-| `assets/css/main.css` | Styles; colours and fonts are tokens at the top of the file |
-| `assets/js/main.js` | Theme toggle, mobile menu, scroll effects, sticky mobile CTA, hero animation |
+| `index.html` | The landing page (all homepage content lives here) |
+| `assets/css/main.css` | The design system: tokens at the top, then components, responsive rules and print |
+| `assets/js/main.js` | Theme toggle, mobile menu, active nav link, sticky mobile CTA, project brief form |
 | `assets/js/theme-init.js` | Tiny script in `<head>` that applies the saved theme before first paint |
 | `assets/fonts/` | Self-hosted Inter and Space Grotesk (SIL Open Font License, see `LICENSE.txt`) |
 | `assets/img/` | Favicons, app icons and the social-share image (`og-image.png`) |
@@ -32,7 +32,8 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 - **Brand colours**: change `--accent-1` / `--accent-2` in `assets/css/main.css` (once for dark, once for light).
 - **Logo**: the header/footer logo is inline SVG in `index.html`; its colours come from `--brand-a` / `--brand-b` in `main.css`. Source files live in `brand/`.
 - **After content changes**: update `<lastmod>` in `sitemap.xml`.
-- **After editing CSS or JS**: bump the `?v=4` suffix on the `main.css`, `main.js` and `theme-init.js`
+- **Header or footer**: the same markup is repeated in all five HTML pages (no build step), so change it in each.
+- **After editing CSS or JS**: bump the `?v=5` suffix on the `main.css`, `main.js` and `theme-init.js`
   links in every HTML page so returning visitors don't get a stale cached copy.
 
 ## Engineering notes
@@ -43,7 +44,22 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
   `assets/js/` and styles in `main.css`. If you add an external service (analytics, a chat widget, an embedded
   form), add its domain to the policy on each page.
 - **Accessibility target: WCAG 2.2 AA.** Checked with axe-core in both themes on desktop and mobile.
-- **Animation** respects the visitor's "reduce motion" setting and pauses when off-screen or in a background tab.
+- **Motion** is limited to short hover/focus transitions and the menu fade; all of it is disabled for visitors who ask for reduced motion.
+
+## Design system
+
+The look is an engineering drawing, derived from the circuit-trace logo:
+
+- **Colour roles:** cyan (`--brand-a`, `--accent`) for traces, links and primary actions; pink (`--brand-b`) only for
+  small "pads": highlights, the featured-tier flag, required markers. Neutrals carry everything else. No gradients.
+- **Structure:** hairline rules (`--line`) separate content instead of cards with shadows. Cards with a border are
+  reserved for things that really are objects: the pricing table, the profile and the form.
+- **Type:** Space Grotesk for headings, Inter for text, the system monospace for datasheet-style labels
+  (`.overline`, step numbers, form legends). Sizes come from the `--fs-*` scale; body text is capped at `--measure`.
+- **Spacing:** the `--space-*` scale and `--section-y` for section padding.
+- **Controls:** 6px radius (`--radius`), at least 44px tall, visible focus ring from `--accent`.
+- **Hero drawing:** inline SVG (exploded view of a prototype) coloured by the `.d-*` classes, so it follows the theme.
+- **Breakpoints:** 1080px (tablet), 900px (navigation collapses, single-column hero), 640px (phone).
 
 ## Going live on projectifyzone.com
 
