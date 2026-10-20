@@ -2,6 +2,7 @@
 
 Marketing site for Projectify Zone, served by GitHub Pages at <https://projectifyzone.com/>.
 Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
+(The one generated part is the hero drawing: see [Hero figure](#hero-figure) below.)
 
 ## Structure
 
@@ -11,6 +12,9 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 | `assets/css/main.css` | The design system: tokens at the top, then components, responsive rules and print |
 | `assets/js/main.js` | Theme toggle, mobile menu, active nav link, sticky mobile CTA, project brief form |
 | `assets/js/theme-init.js` | Tiny script in `<head>` that applies the saved theme before first paint |
+| `assets/css/figure.css` | Styles for the hero figure (line weights, theme colours, corner labels, legend buttons) |
+| `assets/js/hero-figure.js` | Hero figure motion: takes the prototype apart on hover/tap, idle tour, keyboard and legend highlighting |
+| `tools/hero-figure/` | Source of the hero drawing (`build.mjs`) and the vendored Anatomy kit it uses (MIT, see `kit/SOURCE.txt`). The site never loads these files |
 | `assets/fonts/` | Self-hosted Inter and Space Grotesk (SIL Open Font License, see `LICENSE.txt`) |
 | `assets/img/` | Favicons, app icons and the social-share image (`og-image.png`) |
 | `brand/` | Logo kit: all logo versions as SVG + PNG, colours and usage guide ([brand/README.md](brand/README.md)) |
@@ -44,7 +48,8 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
   `assets/js/` and styles in `main.css`. If you add an external service (analytics, a chat widget, an embedded
   form), add its domain to the policy on each page.
 - **Accessibility target: WCAG 2.2 AA.** Checked with axe-core in both themes on desktop and mobile.
-- **Motion** is limited to short hover/focus transitions and the menu fade; all of it is disabled for visitors who ask for reduced motion.
+- **Motion** is limited to short hover/focus transitions, the menu fade and the hero figure. For visitors who ask for
+  reduced motion the figure snaps between states and the idle tour is off; everything else is disabled.
 
 ## Design system
 
@@ -58,8 +63,29 @@ The look is an engineering drawing, derived from the circuit-trace logo:
   (`.overline`, step numbers, form legends). Sizes come from the `--fs-*` scale; body text is capped at `--measure`.
 - **Spacing:** the `--space-*` scale and `--section-y` for section padding.
 - **Controls:** 6px radius (`--radius`), at least 44px tall, visible focus ring from `--accent`.
-- **Hero drawing:** inline SVG (exploded view of a prototype) coloured by the `.d-*` classes, so it follows the theme.
+- **Hero drawing:** an isometric prototype that comes apart (see below). Its colours come from site tokens in `figure.css`, so it follows the theme.
 - **Breakpoints:** 1080px (tablet), 900px (navigation collapses, single-column hero), 640px (phone).
+
+## Hero figure
+
+The homepage drawing is an isometric prototype (enclosure, PCB, microcontroller module, antenna, sitting on a cutting mat
+next to the paper sketch it started from). Hover it (or tap it on a phone) and the screws, cover and circuit board lift
+off in turn; when nobody is touching it, it tours itself: apart, each part highlighted, back together. The four legend
+buttons under it highlight one part each. Keyboard: focus the drawing, then Space/Enter takes it apart or puts it back,
+arrow keys step through the parts and Escape clears the highlight.
+
+It's drawn with [Anatomy](https://github.com/wheresryan22/anatomy), a kit for isometric figures, so the geometry is real:
+every part is a 3D solid and the build checks that no part ever draws in front of something it's behind, in every frame
+of the motion.
+
+- **Edit the drawing:** change `tools/hero-figure/build.mjs` (parts, sizes and which assembly lifts how far are at the
+  top), then run `node tools/hero-figure/build.mjs --audit` (Node 18+). It checks the geometry and, if it passes, rewrites
+  the SVG in `index.html` between the `<!-- hero-figure:start -->` / `<!-- hero-figure:end -->` markers. Never edit
+  that SVG by hand; it's overwritten on the next build.
+- **Edit the motion or labels:** `assets/js/hero-figure.js` (the readout text, the tour timing). Spring constants and
+  the order the assemblies lift come from the build, as `data-*` attributes on the SVG.
+- **Edit colours or line weights:** `assets/css/figure.css`.
+- Bump the `?v=` on `figure.css` / `hero-figure.js` in `index.html` after changing them.
 
 ## Going live on projectifyzone.com
 

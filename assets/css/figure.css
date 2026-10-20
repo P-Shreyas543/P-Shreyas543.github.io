@@ -1,0 +1,155 @@
+/* Hero figure: an Anatomy kit drawing (tools/hero-figure, MIT kit) themed with the site's tokens.
+   The drawing rules below are the kit's ISO_CSS; only the token values and the card are the site's own. */
+
+/* ---------- Tokens: dark ---------- */
+.iso {
+  --anatomy-paper: var(--surface); --anatomy-face: #18202f; --anatomy-top: #1a2333;
+  --anatomy-shade-0: #0a0f18; --anatomy-shade-1: #0d131d; --anatomy-shade-2: #111824; --anatomy-shade-3: #141c2a;
+  --anatomy-lit-top: #26324a; --anatomy-lit-shade: #1d273a;
+  --pz-hi: #d7dee8; --pz-mid: #75829a; --pz-lo: #404b5e; --pz-faint: #263042;
+  --anatomy-hi: var(--pz-hi); --anatomy-mid: var(--pz-mid); --anatomy-lo: var(--pz-lo); --anatomy-faint: var(--pz-faint);
+  --anatomy-lit: #ffffff; --anatomy-halo: #000000; --anatomy-halo-opacity: .85; --anatomy-dot: #e6ebf2;
+  --anatomy-red: var(--brand-b); --anatomy-green: var(--success); --anatomy-blue: var(--brand-a);
+  --anatomy-weight: .6px; --anatomy-mono: var(--font-mono);
+}
+/* ---------- Tokens: light ---------- */
+[data-theme='light'] .iso {
+  --anatomy-face: #ffffff; --anatomy-top: #ffffff;
+  --anatomy-shade-0: #d9dfe8; --anatomy-shade-1: #e3e8ef; --anatomy-shade-2: #ecf0f5; --anatomy-shade-3: #f4f6f9;
+  --anatomy-lit-top: #ffffff; --anatomy-lit-shade: #eaf3f6;
+  --pz-hi: #1b2433; --pz-mid: #7b879a; --pz-lo: #b1bac9; --pz-faint: #d5dbe4;
+  --anatomy-lit: #000000; --anatomy-halo: #5d6b80; --anatomy-halo-opacity: .3; --anatomy-dot: #3a4456;
+}
+
+/* ---------- Kit drawing rules ---------- */
+.iso-svg{display:block;width:100%;height:auto;overflow:visible}
+.iso-svg path,.iso-svg circle{vector-effect:non-scaling-stroke}
+.iso-fill{fill:var(--anatomy-paper);stroke:none}
+.iso-solid[data-lit]>.iso-fill{fill:var(--anatomy-face)}
+.iso-shade,.iso-top{stroke:none}
+.iso-shade[data-shade="0"]{fill:var(--anatomy-shade-0)}
+.iso-shade[data-shade="1"]{fill:var(--anatomy-shade-1)}
+.iso-shade[data-shade="2"]{fill:var(--anatomy-shade-2)}
+.iso-shade[data-shade="3"]{fill:var(--anatomy-shade-3)}
+.iso-top{fill:var(--anatomy-top)}
+.iso-solid[data-lit]>.iso-top{fill:var(--anatomy-lit-top)}
+.iso-solid[data-lit]>.iso-shade{fill:var(--anatomy-lit-shade)}
+.iso-solid[data-seamless]>.iso-shade,.iso-solid[data-seamless]>.iso-top{stroke-width:.4;stroke-linejoin:round}
+.iso-solid[data-seamless]>.iso-shade[data-shade="0"]{stroke:var(--anatomy-shade-0)}
+.iso-solid[data-seamless]>.iso-shade[data-shade="1"]{stroke:var(--anatomy-shade-1)}
+.iso-solid[data-seamless]>.iso-shade[data-shade="2"]{stroke:var(--anatomy-shade-2)}
+.iso-solid[data-seamless]>.iso-shade[data-shade="3"]{stroke:var(--anatomy-shade-3)}
+.iso-solid[data-seamless]>.iso-top{stroke:var(--anatomy-top)}
+.iso-solid[data-seamless][data-lit]>.iso-top{stroke:var(--anatomy-lit-top)}
+.iso-solid[data-seamless][data-lit]>.iso-shade{stroke:var(--anatomy-lit-shade)}
+.iso-solid[data-lit]>.iso-edge{stroke:var(--anatomy-lit)}
+.iso-halo{fill:var(--anatomy-halo);stroke:none;filter:blur(9px);opacity:var(--anatomy-halo-opacity);transform:translateY(3px)}
+.iso-line{fill:none;stroke:var(--anatomy-lo);stroke-width:var(--anatomy-weight);stroke-linecap:round;stroke-linejoin:round}
+.iso-line[data-tone="hi"]{stroke:var(--anatomy-hi)}
+.iso-line[data-tone="mid"]{stroke:var(--anatomy-mid)}
+.iso-line[data-tone="lo"]{stroke:var(--anatomy-lo)}
+.iso-line[data-tone="faint"]{stroke:var(--anatomy-faint)}
+.iso-line[data-tone="lit"]{stroke:var(--anatomy-lit)}
+.iso-line[data-tone="red"]{stroke:var(--anatomy-red)}
+.iso-line[data-tone="green"]{stroke:var(--anatomy-green)}
+.iso-line[data-tone="blue"]{stroke:var(--anatomy-blue)}
+.iso-line[data-dotted]{stroke-dasharray:.01 3.5;stroke-width:1}
+.iso-line[data-dashed]{stroke-dasharray:3 3}
+.iso-line[data-flow]{stroke-dasharray:2 6}
+.iso-wire-end{fill:var(--anatomy-paper);stroke:var(--anatomy-lo);stroke-width:var(--anatomy-weight)}
+.iso-wire[data-tone="hi"] .iso-wire-end{stroke:var(--anatomy-hi)}
+.iso-wire[data-tone="mid"] .iso-wire-end{stroke:var(--anatomy-mid)}
+.iso-wire[data-tone="faint"] .iso-wire-end{stroke:var(--anatomy-faint)}
+.iso-wire[data-tone="lit"] .iso-wire-end{stroke:var(--anatomy-lit)}
+.iso-dots circle{fill:var(--anatomy-dot);stroke:none;opacity:.32}
+.iso-dots[data-tone="hi"] circle{opacity:.85}
+.iso-dots[data-tone="mid"] circle{opacity:.45}
+.iso-dots[data-tone="lo"] circle{opacity:.22}
+.iso-dots[data-tone="faint"] circle{opacity:.12}
+.iso-face-text{fill:var(--anatomy-mid);font-family:var(--anatomy-mono);letter-spacing:.04em}
+.iso-face-text[data-tone="hi"]{fill:var(--anatomy-hi)}
+.iso-face-text[data-tone="lo"]{fill:var(--anatomy-lo)}
+.iso-face-text[data-tone="faint"]{fill:var(--anatomy-faint)}
+.tb-body{fill:var(--anatomy-shade-2);stroke:none}
+.tb-shine{fill:var(--anatomy-top);stroke:none}
+.tb-shade{fill:var(--anatomy-shade-0);stroke:none}
+.tb-ring{fill:none;stroke:var(--anatomy-lo);stroke-width:.45;stroke-linecap:butt;stroke-linejoin:round}
+.tb-ring[data-tone="mid"]{stroke:var(--anatomy-mid)}
+.tb-ring[data-tone="faint"]{stroke:var(--anatomy-faint)}
+.tb-ring[data-tone="hi"]{stroke:var(--anatomy-hi)}
+@keyframes iso-flow{to{stroke-dashoffset:-32}}
+@keyframes iso-pulse{0%,100%{opacity:.18}12%{opacity:1}40%{opacity:.18}}
+.iso-line[data-flow]{animation:iso-flow 1600ms linear infinite}
+.iso-dots circle[data-pulse]{animation:iso-pulse 1600ms steps(1,end) infinite;animation-delay:var(--pulse-at,0ms)}
+@media (prefers-reduced-motion:reduce){.iso-line[data-flow],.iso-dots circle[data-pulse]{animation:none}}
+
+/* ---------- Site additions ---------- */
+.pz-hole { fill: var(--anatomy-shade-0); stroke: none; }
+.pz-glass { fill: var(--anatomy-shade-0); stroke: none; }
+.pz-led > .iso-top, .pz-led > .iso-shade { fill: var(--anatomy-red); }
+.pz-led > .iso-fill { fill: var(--anatomy-red); }
+
+/* Highlighting one assembly: it becomes the lit accent, everything else steps down one tone */
+.pz-figure[data-focus] .it:not([data-on]) {
+  --anatomy-hi: var(--pz-mid); --anatomy-mid: var(--pz-lo); --anatomy-lo: var(--pz-faint);
+  --anatomy-blue: var(--pz-lo); --anatomy-red: var(--pz-lo);
+}
+.it[data-on] .iso-solid > .iso-edge { stroke: var(--anatomy-lit); }
+.it[data-on] .iso-solid > .iso-top { fill: var(--anatomy-lit-top); }
+.it[data-on] .iso-solid > .iso-shade { fill: var(--anatomy-lit-shade); }
+
+/* ---------- Card ---------- */
+.pz-plate {
+  position: relative;
+  padding: 2.75rem 1rem 2.75rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+.pz-corner {
+  position: absolute;
+  margin: 0;
+  font: 500 .6875rem/1 var(--font-mono);
+  letter-spacing: .06em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.pz-fig { top: 1rem; left: 1.1rem; color: var(--ink); }
+.pz-title { top: 1rem; right: 1.1rem; text-transform: uppercase; letter-spacing: .1em; }
+.pz-hint { bottom: 1rem; left: 1.1rem; text-transform: uppercase; letter-spacing: .1em; }
+.pz-readout { bottom: 1rem; right: 1.1rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+.pz-hint-touch { display: none; }
+@media (hover: none) { .pz-hint-touch { display: inline; } .pz-hint-pointer { display: none; } }
+
+.pz-stage { border-radius: var(--radius); touch-action: pan-y; cursor: pointer; }
+.pz-stage:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.pz-stage .iso-svg { max-width: 560px; margin-inline: auto; }
+
+/* Legend: the same key as before, now buttons that highlight each assembly */
+.pz-legend button {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: baseline;
+  width: 100%;
+  min-height: 44px;
+  padding: 6px 8px;
+  margin: -6px -8px;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color .15s;
+}
+.pz-legend button:hover { background: var(--surface); }
+.pz-legend button[aria-pressed='true'] { background: var(--surface); }
+.pz-legend button[aria-pressed='true'] .legend-num { background: var(--brand-b); border-color: var(--brand-b); color: #fff; }
+
+@media (max-width: 640px) {
+  .pz-plate { padding: 2.5rem .5rem 2.75rem; }
+  /* Not enough width for four corners: the labels give way and the readout takes the top line */
+  .pz-fig, .pz-title { display: none; }
+  .pz-readout { top: 1rem; bottom: auto; left: 1.1rem; }
+}

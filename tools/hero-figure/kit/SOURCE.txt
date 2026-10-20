@@ -1,0 +1,2 @@
+Vendored from https://github.com/wheresryan22/anatomy (commit 1482e84), MIT licence (see LICENSE).
+Only the modules the hero figure build needs; unmodified.
