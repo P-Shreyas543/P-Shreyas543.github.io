@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
-<title>Projectify Zone: Hardware Prototypes for Startup Founders</title>
-<meta name="description" content="Hardware prototyping for startup founders in Bengaluru (Bangalore): firmware, PCB and IoT, from idea to investor-ready prototype. NDA first, 100% your IP.">
+<title>Projectify Zone: Hardware Prototypes &amp; Embedded Engineering</title>
+<meta name="description" content="Hardware prototypes and embedded engineering for startup founders in Bengaluru (Bangalore), from idea to investor-ready device. NDA first, 100% your IP.">
 <meta name="author" content="Shreyas P, Projectify Zone">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#07090f" media="(prefers-color-scheme: dark)">
@@ -63,7 +63,7 @@
     "addressRegion": "Karnataka",
     "addressCountry": "IN"
   },
-  "knowsAbout": ["Embedded Systems", "Internet of Things", "PCB Design", "Firmware Development", "Robotics", "Hardware Prototyping"]
+  "knowsAbout": ["Embedded Systems", "ARM Cortex-M", "Firmware Development", "PCB Design", "Internet of Things", "CAN Bus", "Ethernet and TCP/IP", "Robotics", "Hardware Prototyping"]
 }
 </script>
 <script type="application/ld+json">
@@ -77,6 +77,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Not at all. Most founders I work with aren't. You explain the problem and who it's for; I translate that into a technical plan and explain every decision in plain language."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you work with my chip, sensor or protocol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost certainly. The work is platform-agnostic: any microcontroller family, RTOS, sensor, display or interface, wired or wireless. If something you have in mind is a poor fit for the product, the feasibility sprint says so and suggests a better option."
       }
     },
     {
@@ -219,8 +227,8 @@
           <ol class="legend pz-legend">
             <li><button type="button" data-select="enclosure" aria-pressed="false"><span class="legend-num" aria-hidden="true">1</span><span><strong>Enclosure</strong> 3D-printed, demo-ready</span></button></li>
             <li><button type="button" data-select="pcb" aria-pressed="false"><span class="legend-num" aria-hidden="true">2</span><span><strong>Custom PCB</strong> schematic to fab-ready files</span></button></li>
-            <li><button type="button" data-select="firmware" aria-pressed="false"><span class="legend-num" aria-hidden="true">3</span><span><strong>Firmware</strong> ESP32, STM32, nRF</span></button></li>
-            <li><button type="button" data-select="connectivity" aria-pressed="false"><span class="legend-num" aria-hidden="true">4</span><span><strong>Connectivity</strong> Wi-Fi, BLE, LoRa, 4G</span></button></li>
+            <li><button type="button" data-select="firmware" aria-pressed="false"><span class="legend-num" aria-hidden="true">3</span><span><strong>Firmware</strong> any microcontroller</span></button></li>
+            <li><button type="button" data-select="connectivity" aria-pressed="false"><span class="legend-num" aria-hidden="true">4</span><span><strong>Connectivity</strong> any wired or wireless link</span></button></li>
           </ol>
           <p class="sr-only" role="status" id="pz-status">Prototype shown taken apart: screws, cover and circuit board lifted.</p>
         </figcaption>
@@ -372,15 +380,15 @@
   <section id="services" class="section" aria-labelledby="services-title">
     <div class="container">
       <div class="section-head">
-        <p class="overline">Capabilities</p>
+        <p class="overline">Embedded capabilities</p>
         <h2 id="services-title">Everything between the idea and the device.</h2>
-        <p class="lede">One engineer across the whole stack means no hand-offs and nothing lost between teams.</p>
+        <p class="lede">If it&rsquo;s embedded, it&rsquo;s in scope: any microcontroller, sensor, interface or protocol, from the first schematic to the cloud dashboard. One engineer across the whole stack means no hand-offs and nothing lost between teams.</p>
       </div>
 
       <div class="matrix">
         <article class="cell">
           <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 10h4v4h-4zM9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>Embedded firmware</h3>
-          <p>Reliable firmware for ESP32, STM32, nRF and AVR, from bare-metal to FreeRTOS.</p>
+          <p>Firmware for any microcontroller, 8-bit to 32-bit, whether ARM Cortex-M, ESP32 or anything else from NXP, ST, Espressif, Nordic and beyond. Bare-metal or RTOS.</p>
           <p class="cell-detail">Sensor &amp; peripheral drivers · low-power design · bootloaders &amp; OTA updates</p>
         </article>
         <article class="cell">
@@ -389,9 +397,9 @@
           <p class="cell-detail">Multi-layer layout · design-rule checks · fab-ready files · board bring-up</p>
         </article>
         <article class="cell">
-          <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="18" r="1.4" fill="currentColor" stroke="none"/><path d="M8.5 14.5a5 5 0 0 1 7 0M5.5 11.5a9.2 9.2 0 0 1 13 0M2.5 8.5a13.4 13.4 0 0 1 19 0"/></svg>IoT &amp; cloud</h3>
-          <p>Wi-Fi, BLE, LoRa and cellular devices connected to dashboards your users can see.</p>
-          <p class="cell-detail">MQTT/HTTP &amp; AWS IoT Core · live dashboards &amp; alerts · provisioning &amp; security</p>
+          <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="18" r="1.4" fill="currentColor" stroke="none"/><path d="M8.5 14.5a5 5 0 0 1 7 0M5.5 11.5a9.2 9.2 0 0 1 13 0M2.5 8.5a13.4 13.4 0 0 1 19 0"/></svg>Connectivity &amp; IoT</h3>
+          <p>Any link your product needs, wireless or wired: Wi-Fi, Bluetooth, cellular, CAN bus, Ethernet, industrial serial or a custom protocol, connected to dashboards your users can see.</p>
+          <p class="cell-detail">TCP/IP &amp; cloud IoT platforms · live dashboards &amp; alerts · provisioning &amp; security</p>
         </article>
         <article class="cell">
           <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6.3 6.3l2 2M15.7 15.7l2 2M6.3 17.7l2-2M15.7 8.3l2-2"/></svg>Sensors &amp; edge intelligence</h3>
@@ -411,10 +419,11 @@
       </div>
 
       <div class="toolbar">
-        <h3 class="toolbar-title">Tools &amp; platforms</h3>
+        <h3 class="toolbar-title">Platforms &amp; interfaces, for example</h3>
         <ul class="inline-list">
-          <li>ESP32</li><li>STM32</li><li>nRF52</li><li>Arduino / AVR</li><li>MSP430</li><li>Raspberry Pi</li><li>FreeRTOS</li>
-          <li>C / C++</li><li>Python</li><li>KiCad</li><li>MATLAB / Simulink</li><li>MQTT</li><li>Modbus / RS485</li><li>AWS IoT Core</li>
+          <li>ARM Cortex-M</li><li>ESP32</li><li>8/16/32-bit MCUs</li><li>Single-board computers</li><li>RTOS</li>
+          <li>C / C++</li><li>Python</li><li>KiCad</li><li>MATLAB / Simulink</li>
+          <li>CAN bus</li><li>Ethernet &amp; TCP/IP</li><li>Industrial serial &amp; fieldbus</li><li>Wireless &amp; IoT protocols</li><li>Cloud IoT</li><li>and more</li>
         </ul>
       </div>
     </div>
@@ -456,8 +465,9 @@
         <p class="overline">About</p>
         <h2 id="about-title">You work directly with the engineer building your product.</h2>
         <p>
-          I'm Shreyas, an embedded systems engineer in Bengaluru. I've built firmware on ESP32, STM32, MSP430 and ARM
-          microcontrollers, designed PCBs in KiCad, connected devices to the cloud, worked with radar and vision sensors,
+          I'm Shreyas, an embedded systems engineer in Bengaluru. I've built firmware for ARM Cortex-M and other
+          microcontrollers, designed PCBs in KiCad, built CAN bus and Ethernet communication, connected devices to the
+          cloud, worked with radar and vision sensors,
           and written the desktop tools used to test and monitor hardware.
         </p>
         <p>
@@ -485,6 +495,10 @@
         <details>
           <summary>I'm not technical. Is that a problem?</summary>
           <p>Not at all. Most founders I work with aren't. You explain the problem and who it's for; I translate that into a technical plan and explain every decision in plain language.</p>
+        </details>
+        <details>
+          <summary>Can you work with my chip, sensor or protocol?</summary>
+          <p>Almost certainly. The work is platform-agnostic: any microcontroller family, RTOS, sensor, display or interface, wired or wireless. If something you have in mind is a poor fit for the product, the feasibility sprint says so and suggests a better option.</p>
         </details>
         <details>
           <summary>How involved do I need to be?</summary>
