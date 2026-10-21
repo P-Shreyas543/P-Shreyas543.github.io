@@ -37,9 +37,9 @@
 
 <link rel="preload" href="assets/fonts/space-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/main.css?v=5">
+<link rel="stylesheet" href="assets/css/main.css?v=6">
 <link rel="stylesheet" href="assets/css/figure.css?v=3">
-<script src="assets/js/theme-init.js?v=5"></script>
+<script src="assets/js/theme-init.js?v=6"></script>
 
 <script type="application/ld+json">
 {
@@ -63,7 +63,7 @@
     "addressRegion": "Karnataka",
     "addressCountry": "IN"
   },
-  "knowsAbout": ["Embedded Systems", "ARM Cortex-M", "Firmware Development", "PCB Design", "Internet of Things", "CAN Bus", "Ethernet and TCP/IP", "Robotics", "Hardware Prototyping"]
+  "knowsAbout": ["Embedded Systems", "ARM Cortex-M", "Firmware Development", "PCB Design", "Internet of Things", "CAN Bus", "Ethernet and TCP/IP", "MQTT", "Robotics", "Hardware Prototyping"]
 }
 </script>
 <script type="application/ld+json">
@@ -399,7 +399,7 @@
         <article class="cell">
           <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="18" r="1.4" fill="currentColor" stroke="none"/><path d="M8.5 14.5a5 5 0 0 1 7 0M5.5 11.5a9.2 9.2 0 0 1 13 0M2.5 8.5a13.4 13.4 0 0 1 19 0"/></svg>Connectivity &amp; IoT</h3>
           <p>Any link your product needs, wireless or wired: Wi-Fi, Bluetooth, cellular, CAN bus, Ethernet, industrial serial or a custom protocol, connected to dashboards your users can see.</p>
-          <p class="cell-detail">TCP/IP &amp; cloud IoT platforms · live dashboards &amp; alerts · provisioning &amp; security</p>
+          <p class="cell-detail">MQTT, HTTP/REST &amp; WebSockets · TCP/IP &amp; cloud IoT platforms · live dashboards &amp; alerts · provisioning &amp; security</p>
         </article>
         <article class="cell">
           <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6.3 6.3l2 2M15.7 15.7l2 2M6.3 17.7l2-2M15.7 8.3l2-2"/></svg>Sensors &amp; edge intelligence</h3>
@@ -423,9 +423,10 @@
         <ul class="inline-list">
           <li>ARM Cortex-M</li><li>ESP32</li><li>8/16/32-bit MCUs</li><li>Single-board computers</li><li>RTOS</li>
           <li>C / C++</li><li>Python</li><li>KiCad</li><li>MATLAB / Simulink</li>
-          <li>CAN bus</li><li>Ethernet &amp; TCP/IP</li><li>Industrial serial &amp; fieldbus</li><li>Wireless &amp; IoT protocols</li><li>Cloud IoT</li><li>and more</li>
+          <li>CAN bus</li><li>Ethernet &amp; TCP/IP</li><li>Industrial serial &amp; fieldbus</li><li>Wi-Fi, Bluetooth &amp; cellular</li><li>MQTT, HTTP &amp; WebSockets</li><li>Cloud IoT</li><li>and more</li>
         </ul>
       </div>
+      <p class="note"><a href="embedded-systems-development.html" class="link-arrow">More on embedded systems development <span aria-hidden="true">&rarr;</span></a></p>
     </div>
   </section>
 
@@ -511,10 +512,12 @@
         <details>
           <summary>What does a hardware prototype cost?</summary>
           <p>Feasibility sprints start at ₹15,000, proofs of concept at ₹50,000 and investor-ready prototypes at ₹1,50,000. You get a fixed quote before each phase. Components and fabrication are billed at cost with receipts.</p>
+          <p><a href="hardware-prototype-cost-india.html">Full guide: what a hardware prototype costs in India</a></p>
         </details>
         <details>
           <summary>Is a prototype the same as an MVP?</summary>
           <p>Not quite. A proof of concept shows the core idea works on the bench. A prototype looks and behaves like the product, which is what investors want to see. An MVP goes further: a small batch real customers can use. Most founders need the prototype first; it's also the starting point for MVP and product development once you've raised.</p>
+          <p><a href="poc-vs-prototype-vs-mvp.html">Full guide: PoC vs prototype vs MVP</a></p>
         </details>
         <details>
           <summary>What if my idea isn't technically feasible?</summary>
@@ -708,6 +711,8 @@
     </div>
     <nav class="footer-col" aria-label="Footer: more">
       <p class="footer-title">More</p>
+      <a href="embedded-systems-development.html">Embedded development</a>
+      <a href="insights.html">Founder guides</a>
       <a href="students.html">Student mentorship</a>
       <a href="privacy.html">Privacy policy</a>
     </nav>
@@ -718,7 +723,7 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=5" defer></script>
+<script src="assets/js/main.js?v=6" defer></script>
 <script src="assets/js/hero-figure.js?v=2" defer></script>
 </body>
 </html>

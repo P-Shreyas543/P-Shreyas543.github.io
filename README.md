@@ -18,6 +18,9 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 | `assets/fonts/` | Self-hosted Inter and Space Grotesk (SIL Open Font License, see `LICENSE.txt`) |
 | `assets/img/` | Favicons, app icons and the social-share image (`og-image.png`) |
 | `brand/` | Logo kit: all logo versions as SVG + PNG, colours and usage guide ([brand/README.md](brand/README.md)) |
+| `embedded-systems-development.html` | Service page: embedded systems development (any microcontroller, CAN, Ethernet, MQTT, wireless). Linked from the homepage capabilities section and the footer |
+| `insights.html` | List of founder guides (articles), linked from the footer |
+| `hardware-prototype-cost-india.html`, `poc-vs-prototype-vs-mvp.html` | Founder guides (articles), linked from the homepage FAQ |
 | `students.html` | Student mentorship page (linked from the footer only) |
 | `thanks.html` | Shown after sending the project brief if JavaScript is off |
 | `CNAME` | Custom domain for GitHub Pages (`projectifyzone.com`) |
@@ -38,8 +41,13 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 - **After content changes**: update `<lastmod>` in `sitemap.xml`.
 - **FAQ**: the questions also appear as `FAQPage` structured data in a `<script type="application/ld+json">` block in
   the `<head>` of `index.html`. When you add or change a question, change it there too so the two match word for word.
-- **Header or footer**: the same markup is repeated in all five HTML pages (no build step), so change it in each.
-- **After editing CSS or JS**: bump the `?v=5` suffix on the `main.css`, `main.js` and `theme-init.js`
+- **Header or footer**: the same markup is repeated in every HTML page (no build step), so change it in each.
+- **Adding a guide (article)**: copy an existing guide such as `poc-vs-prototype-vs-mvp.html`, then change the
+  `<title>`, description, canonical URL, Open Graph tags, the `BlogPosting` and `BreadcrumbList` data in the `<head>`,
+  and the content. Add it to `insights.html` (the list and its `Blog` data) and to `sitemap.xml`. Keep the
+  description under about 155 characters and the title under about 60.
+- **Prices** also appear in the service page and the cost guide, as well as `index.html`.
+- **After editing CSS or JS**: bump the `?v=6` suffix on the `main.css`, `main.js` and `theme-init.js`
   links in every HTML page so returning visitors don't get a stale cached copy.
 
 ## Engineering notes
