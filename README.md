@@ -15,7 +15,7 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 | `assets/css/figure.css` | Styles for the hero figure (line weights, theme colours, corner labels, legend buttons) |
 | `assets/js/hero-figure.js` | Hero figure motion: takes the prototype apart on hover/tap, idle tour, keyboard and legend highlighting |
 | `tools/hero-figure/` | Source of the hero drawing (`build.mjs`) and the vendored Anatomy kit it uses (MIT, see `kit/SOURCE.txt`). The site never loads these files |
-| `assets/fonts/` | Self-hosted Inter and Space Grotesk (SIL Open Font License, see `LICENSE.txt`) |
+| `assets/fonts/` | Self-hosted Archivo, variable weight and width (SIL Open Font License, see `LICENSE.txt`). The rupee sign is in a separate 2 KB file |
 | `assets/img/` | Favicons, app icons and the social-share image (`og-image.png`) |
 | `brand/` | Logo kit: all logo versions as SVG + PNG, colours and usage guide ([brand/README.md](brand/README.md)) |
 | `embedded-systems-development.html` | Service page: embedded systems development (any microcontroller, CAN, Ethernet, MQTT, wireless). Linked from the homepage capabilities section and the footer |
@@ -63,14 +63,20 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 
 ## Design system
 
-The look is an engineering drawing, derived from the circuit-trace logo:
+The look is an engineering drawing on a soldermask-blue board, derived from the circuit-trace logo. The hero drawing is
+the one bold element; everything else stays quiet.
 
-- **Colour roles:** cyan (`--brand-a`, `--accent`) for traces, links and primary actions; pink (`--brand-b`) only for
+- **Colour roles:** dark theme background is soldermask blue (`--bg: #0a1628`); the light theme's text uses the same
+  blue. Cyan (`--brand-a`, `--accent`) for traces, links and primary actions; pink (`--brand-b`) only for
   small "pads": highlights, the featured-tier flag, required markers. Neutrals carry everything else. No gradients.
 - **Structure:** hairline rules (`--line`) separate content instead of cards with shadows. Cards with a border are
   reserved for things that really are objects: the pricing table, the profile and the form.
-- **Type:** Space Grotesk for headings, Inter for text, the system monospace for datasheet-style labels
-  (`.overline`, step numbers, form legends). Sizes come from the `--fs-*` scale; body text is capped at `--measure`.
+- **Type:** one family, Archivo, in three widths. Headlines (`h1`, `h2`, prices) are expanded (`--wdth-display`), like an
+  equipment nameplate. Text is normal width. Specs, labels, tables and step numbers are condensed (`--wdth-data`,
+  family `--font-data`), like a datasheet. Sizes come from the `--fs-*` scale; body text is capped at `--measure`.
+- **Kept out on purpose:** small labels above headings, arrows after link text, "·"-joined phrases, all-caps labels and
+  colour-accented words in headlines. Text links get a cyan underline instead of an arrow (`.link-arrow`). Numbers only
+  mark real sequences (the four steps in "How it works").
 - **Spacing:** the `--space-*` scale and `--section-y` for section padding.
 - **Controls:** 6px radius (`--radius`), at least 44px tall, visible focus ring from `--accent`.
 - **Hero drawing:** an isometric prototype that comes apart (see below). Its colours come from site tokens in `figure.css`, so it follows the theme.
