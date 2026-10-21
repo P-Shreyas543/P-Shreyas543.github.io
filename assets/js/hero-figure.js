@@ -21,10 +21,10 @@
   var STAGGER = spring[0], STIFF = spring[1], DAMP = spring[2], SUB = spring[3];
 
   var NAMES = {
-    enclosure: 'Enclosure · cover, tray and screws',
-    pcb: 'Custom PCB · 86 × 50 mm, 2 layers',
-    firmware: 'Firmware · microcontroller module',
-    connectivity: 'Connectivity · 2.4 GHz antenna'
+    enclosure: 'Enclosure: cover, tray and screws',
+    pcb: 'Custom PCB: 86 × 50 mm, two layers',
+    firmware: 'Firmware: microcontroller module',
+    connectivity: 'Connectivity: 2.4 GHz antenna'
   };
   var SPOKEN = {
     enclosure: 'Enclosure highlighted: the 3D-printed cover, tray and screws.',
@@ -115,8 +115,8 @@
     var pending = ORDER.some(function (id) { return springs[id].pending || springs[id].x !== springs[id].target; });
     var text;
     if (focus) text = NAMES[focus];
-    else if (pending) text = apart ? 'taking apart' : 'closing up';
-    else text = apart ? 'apart · 3 assemblies lifted' : 'assembled · demo-ready';
+    else if (pending) text = apart ? 'Taking apart' : 'Closing up';
+    else text = apart ? 'Apart: three assemblies lifted' : 'Assembled and demo-ready';
     if (readout.textContent !== text) readout.textContent = text;
   }
 

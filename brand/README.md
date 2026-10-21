@@ -43,8 +43,13 @@ The light-background shades are deeper so they stay readable on white paper.
 
 ## Fonts
 
-- Headings: **Space Grotesk** (Google Fonts, free)
-- Body text: **Inter** (Google Fonts, free)
+One family, **Archivo** (Google Fonts, free), in three widths:
+
+- Headings: Archivo **Expanded**, semibold (in Word or Google Docs, choose "Archivo Expanded")
+- Body text: Archivo, regular
+- Tables, specs and small labels: Archivo **Condensed**
+
+Dark backgrounds use soldermask blue `#0A1628` on the website; the logo files keep their own dark tile.
 
 ## Rules
 

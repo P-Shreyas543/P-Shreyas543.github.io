@@ -26,9 +26,8 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/space-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/main.css?v=6">
+<link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css?v=7">
 <script src="assets/js/theme-init.js?v=6"></script>
 <script type="application/ld+json">
 {
@@ -128,8 +127,8 @@
 
     <nav class="nav-links" id="nav-links" aria-label="Primary">
       <a href="./#process">How it works</a>
-      <a href="./#phases">Pricing</a>
-      <a href="./#who">Who it's for</a>
+      <a href="./#estimate">Estimate</a>
+      <a href="./#work">Work</a>
       <a href="./#about">About</a>
       <a href="./#faq">FAQ</a>
       <a href="./#contact" class="btn btn-primary nav-cta-mobile">Start your project</a>
@@ -152,12 +151,11 @@
   <header class="page-head">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="./">Home</a></li><li><span aria-current="page">Embedded systems development</span></li></ol></nav>
-      <p class="overline">Service</p>
       <h1>Embedded systems development for startups</h1>
       <p class="lede">Firmware, electronics and connectivity for any embedded product, from a feasibility check to a device you can demo. One engineer across the whole stack, fixed price per phase, and the IP is yours.</p>
       <div class="actions">
-        <a href="./#contact" class="btn btn-primary">Start your project <span aria-hidden="true">&rarr;</span></a>
-        <a href="./#phases" class="link-arrow">See phases &amp; pricing <span aria-hidden="true">&rarr;</span></a>
+        <a href="./#contact" class="btn btn-primary">Start your project</a>
+        <a href="./#phases" class="link-arrow">See phases &amp; pricing</a>
       </div>
     </div>
   </header>
@@ -165,7 +163,6 @@
   <section class="section" aria-labelledby="scope-title">
     <div class="container">
       <div class="section-head">
-        <p class="overline">What&rsquo;s in scope</p>
         <h2 id="scope-title">If it&rsquo;s embedded, it&rsquo;s in scope.</h2>
         <p class="lede">Any microcontroller, sensor, interface or protocol. Here&rsquo;s what that covers in practice.</p>
       </div>
@@ -173,32 +170,32 @@
         <article class="cell">
           <h3>Firmware</h3>
           <p>Firmware for any microcontroller, 8-bit to 32-bit: ARM Cortex-M, ESP32 and others from NXP, ST, Espressif, Nordic and beyond.</p>
-          <p class="cell-detail">Bare-metal &amp; RTOS · drivers · bootloaders &amp; OTA updates · low-power design</p>
+          <p class="cell-detail">Bare-metal &amp; RTOS, drivers, bootloaders &amp; OTA updates, low-power design</p>
         </article>
         <article class="cell">
           <h3>Electronics &amp; PCB</h3>
           <p>Schematics, component selection and custom boards in KiCad, then bring-up on the bench.</p>
-          <p class="cell-detail">Power circuits · sensor front-ends · design-rule checks · fab-ready files</p>
+          <p class="cell-detail">Power circuits, sensor front-ends, design-rule checks, fab-ready files</p>
         </article>
         <article class="cell">
           <h3>Wired interfaces</h3>
           <p>CAN bus, Ethernet with TCP/IP, RS-485 and other industrial serial links, USB, and the on-board buses every design needs.</p>
-          <p class="cell-detail">CAN · Ethernet &amp; TCP/IP · RS-485 &amp; fieldbus · USB · I²C, SPI &amp; UART</p>
+          <p class="cell-detail">CAN, Ethernet &amp; TCP/IP, RS-485 &amp; fieldbus, USB, I²C, SPI &amp; UART</p>
         </article>
         <article class="cell">
           <h3>Wireless &amp; IoT</h3>
           <p>Wi-Fi, Bluetooth, cellular and long-range radio, talking to the cloud over the protocol that fits.</p>
-          <p class="cell-detail">MQTT · HTTP/REST · WebSockets · cloud IoT platforms · provisioning &amp; security</p>
+          <p class="cell-detail">MQTT, HTTP/REST, WebSockets, cloud IoT platforms, provisioning &amp; security</p>
         </article>
         <article class="cell">
           <h3>Sensors, motion &amp; control</h3>
           <p>Clean data from sensors, motors that do what they&rsquo;re told, and decisions made on the device.</p>
-          <p class="cell-detail">Sensor selection &amp; calibration · motor control &amp; PID · on-device processing</p>
+          <p class="cell-detail">Sensor selection &amp; calibration, motor control &amp; PID, on-device processing</p>
         </article>
         <article class="cell">
           <h3>Test &amp; tooling</h3>
           <p>Test setups and desktop tools to check every board and watch the device at work.</p>
-          <p class="cell-detail">Test jigs &amp; scripts · desktop monitoring tools · logging &amp; diagnostics</p>
+          <p class="cell-detail">Test jigs &amp; scripts, desktop monitoring tools, logging &amp; diagnostics</p>
         </article>
       </div>
     </div>
@@ -207,7 +204,6 @@
   <section class="section section-tint" aria-labelledby="who-title">
     <div class="container split">
       <div class="split-head">
-        <p class="overline">Who it&rsquo;s for</p>
         <h2 id="who-title">Three ways founders use this.</h2>
       </div>
       <ul class="rows">
@@ -230,7 +226,6 @@
   <section class="section" aria-labelledby="terms-title">
     <div class="container split">
       <div class="split-head">
-        <p class="overline">How it works</p>
         <h2 id="terms-title">Fixed price, NDA first, your IP.</h2>
         <p class="lede"><a href="./#process">The full process</a> and <a href="./#phases">phase pricing</a> are on the home page.</p>
       </div>
@@ -247,7 +242,6 @@
   <section class="section section-tint" aria-labelledby="sfaq-title">
     <div class="container split">
       <div class="split-head">
-        <p class="overline">FAQ</p>
         <h2 id="sfaq-title">Questions about embedded work.</h2>
         <p class="lede">More answers in the <a href="./#faq">main FAQ</a> and the <a href="./insights.html">founder guides</a>.</p>
       </div>
@@ -278,8 +272,9 @@
         <h2 id="cta-title">Tell me what you&rsquo;re building.</h2>
         <p class="lede">Share a short brief and I&rsquo;ll reply within one working day to set up a free 30-minute discovery call.</p>
         <div class="actions">
-          <a href="./#contact" class="btn btn-primary">Start your project <span aria-hidden="true">&rarr;</span></a>
-          <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener" class="link-arrow">WhatsApp <span aria-hidden="true">&rarr;</span><span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="./#contact" class="btn btn-primary">Start your project</a>
+          <a href="./#estimate" class="link-arrow">Estimate my prototype</a>
+          <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener" class="link-arrow">WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
       </div>
     </div>
@@ -298,7 +293,8 @@
       <p class="footer-title">Explore</p>
       <a href="./#process">How it works</a>
       <a href="./#phases">Pricing</a>
-      <a href="./#demo-kit">Investor Demo Kit</a>
+      <a href="./#estimate">Cost estimator</a>
+      <a href="./#work">Work</a>
       <a href="./#about">About</a>
       <a href="./#faq">FAQ</a>
     </nav>
@@ -319,10 +315,10 @@
   </div>
   <div class="container footer-bottom">
     <p>&copy; <span id="year">2026</span> Projectify Zone. Engineered in Bengaluru.</p>
-    <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+    <a href="#top">Back to top</a>
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=6" defer></script>
+<script src="assets/js/main.js?v=7" defer></script>
 </body>
 </html>
