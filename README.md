@@ -11,6 +11,7 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 | `index.html` | The landing page (all homepage content lives here) |
 | `assets/css/main.css` | The design system: tokens at the top, then components, responsive rules and print |
 | `assets/js/main.js` | Theme toggle, mobile menu, active nav link, sticky mobile CTA, project brief form |
+| `assets/js/estimator.js` | Prototype cost estimator: the pricing model (top of the file) and the form that shows it. Runs in the browser only |
 | `assets/js/theme-init.js` | Tiny script in `<head>` that applies the saved theme before first paint |
 | `assets/css/figure.css` | Styles for the hero figure (line weights, theme colours, corner labels, legend buttons) |
 | `assets/js/hero-figure.js` | Hero figure motion: takes the prototype apart on hover/tap, idle tour, keyboard and legend highlighting |
@@ -35,7 +36,8 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 - **Project brief form**: the `<form id="brief-form">` in `index.html` posts to FormSubmit (`action` and
   `data-endpoint`). To change provider, update both attributes and the `connect-src` / `form-action` entries in the
   Content-Security-Policy `<meta>` tag.
-- **Prices, contact details**: all in `index.html` (search for `₹`, `99866`, `shreyas@`). Prices also appear in the FAQ.
+- **Prices, contact details**: all in `index.html` (search for `₹`, `99866`, `shreyas@`). Prices also appear in the FAQ,
+  the service page, the cost guide and the estimator model (`MIN_FEE` in `assets/js/estimator.js`): change them together.
 - **Brand colours**: change `--accent-1` / `--accent-2` in `assets/css/main.css` (once for dark, once for light).
 - **Logo**: the header/footer logo is inline SVG in `index.html`; its colours come from `--brand-a` / `--brand-b` in `main.css`. Source files live in `brand/`.
 - **After content changes**: update `<lastmod>` in `sitemap.xml`.
@@ -60,6 +62,42 @@ Plain HTML/CSS/JS: no build step, no dependencies. Push to `main` and it's live.
 - **Accessibility target: WCAG 2.2 AA.** Checked with axe-core in both themes on desktop and mobile.
 - **Motion** is limited to short hover/focus transitions, the menu fade and the hero figure. For visitors who ask for
   reduced motion the figure snaps between states and the idle tour is off; everything else is disabled.
+
+## Estimator, offer and accounts
+
+### Prototype cost estimator
+- The numbers live at the top of `assets/js/estimator.js`: `DAY_RATE`, the base days per stage, and for each answer the
+  engineer-days it adds (`days: [proof of concept, prototype]`) and the parts cost it adds (`parts: [low, high]`).
+  The simplest build always lands on the published "from" prices (`MIN_FEE`).
+- Tune it from real projects: after each project, compare the estimate with the actual effort and adjust the days.
+- The result is labelled an indicative estimate, not a quotation. Keep that wording.
+- "Send this estimate on WhatsApp" opens `wa.me/919986652218` with the answers and the range prefilled. The number is
+  `WA_NUMBER` in the same file.
+
+### Founding-client offer (2 slots, 20% off engineering)
+Only run it while you can deliver the discount and the work. The terms on the page: 20% off the engineering fee for the
+first two client projects, in exchange for permission to publish a case study and to ask for an honest testimonial after
+delivery (never promise or request a positive one). Components and fabrication stay at cost.
+- **One slot left:** in `index.html`, change the heading "Two founding-client slots are open." to "One founding-client slot is open."
+- **Both booked:** delete the `<section id="founding">` block and the "Founding-client project" card in `#work`. The
+  estimator stops showing the discounted price automatically when the section is gone. Remove the founding sentence in
+  `assets/js/estimator.js` only if you also want the code gone.
+
+### Real project photos
+The `#work` section shows real projects only. Each hatched box marked "Photo coming" is a placeholder: replace the
+`<div class="ph">` with `<img src="assets/img/work/name.jpg" alt="what the photo shows" width="1600" height="900"
+loading="lazy">` (16:9, compressed to around 200 KB). Never use stock photos, invented results or client logos you
+don't have permission for.
+
+### LinkedIn, booking link and analytics (add when the accounts exist)
+- **LinkedIn:** in `index.html`, find the `LinkedIn:` comment in the About profile, put your profile URL in the example
+  line and move it out of the comment.
+- **Booking link:** create a booking page (Google Calendar appointment schedule, Cal.com or Calendly), then find the
+  `Booking link:` comment in `#contact`, put the URL in and move it out of the comment.
+- **Analytics:** use a privacy-friendly service that sets no cookies, such as GoatCounter (free for small sites),
+  Cloudflare Web Analytics (free) or Plausible (paid). Add its one script tag before `</body>` on every page, add its
+  script and reporting domains to the `script-src` and `connect-src` parts of the Content-Security-Policy `<meta>` on
+  every page, and add one sentence to `privacy.html` naming the service.
 
 ## Design system
 

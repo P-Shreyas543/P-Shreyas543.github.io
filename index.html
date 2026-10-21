@@ -36,7 +36,7 @@
 <link rel="manifest" href="site.webmanifest">
 
 <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/main.css?v=6">
+<link rel="stylesheet" href="assets/css/main.css?v=7">
 <link rel="stylesheet" href="assets/css/figure.css?v=4">
 <script src="assets/js/theme-init.js?v=6"></script>
 
@@ -80,26 +80,10 @@
     },
     {
       "@type": "Question",
-      "name": "Can you work with my chip, sensor or protocol?",
+      "name": "How accurate is the estimator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Almost certainly. The work is platform-agnostic: any microcontroller family, RTOS, sensor, display or interface, wired or wireless. If something you have in mind is a poor fit for the product, the feasibility sprint says so and suggests a better option."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How involved do I need to be?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "About 30 minutes a week for a demo and feedback call, plus quick answers on WhatsApp when a decision needs you. Everything else, from component sourcing to firmware and PCB, is handled."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who owns the idea and the design?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You do. An NDA is signed before you share sensitive details, and on final payment you receive full ownership of the source code, design files and documentation."
+        "text": "It's a realistic starting point, not a quote. It uses the effort that projects of each scope typically need, and unusual requirements can move it either way. A feasibility sprint or a short scoping call gives you a fixed price before any build starts."
       }
     },
     {
@@ -112,6 +96,14 @@
     },
     {
       "@type": "Question",
+      "name": "Can you work with my chip, sensor or protocol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost certainly. The work is platform-agnostic: any microcontroller family, RTOS, sensor, display or interface, wired or wireless. If something you have in mind is a poor fit for the product, the feasibility sprint says so and suggests a better option."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Is a prototype the same as an MVP?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -120,26 +112,10 @@
     },
     {
       "@type": "Question",
-      "name": "What if my idea isn't technically feasible?",
+      "name": "Who owns the idea and the design?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "That's exactly what the feasibility sprint is for. You find out early, for a small fixed fee, before committing a large budget. If there's a better way to achieve the same goal, you'll hear about it."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you work with grant milestones?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. If your prototype is funded by a grant such as the Startup India Seed Fund or Karnataka ELEVATE, milestones and progress documentation can be structured to match what your incubator needs."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you handle manufacturing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The focus is prototypes. Every investor-ready prototype includes a manufacturing roadmap and design-for-manufacture guidance so you know the path to production and its likely cost."
+        "text": "You do. An NDA is signed before you share sensitive details, and on final payment you receive full ownership of the source code, design files and documentation."
       }
     },
     {
@@ -167,8 +143,8 @@
 
     <nav class="nav-links" id="nav-links" aria-label="Primary">
       <a href="#process">How it works</a>
-      <a href="#phases">Pricing</a>
-      <a href="#who">Who it's for</a>
+      <a href="#estimate">Estimate</a>
+      <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
       <a href="#contact" class="btn btn-primary nav-cta-mobile">Start your project</a>
@@ -193,19 +169,19 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1 id="hero-title">From idea on paper to an <span class="nowrap">investor-ready</span> hardware prototype.</h1>
+        <h1 id="hero-title">Bring investors a working hardware prototype, not slides.</h1>
         <p class="lede">
-          You bring the idea. From Bengaluru, I engineer the firmware, electronics, PCB and enclosure, and hand you
-          a working device you can demo to investors, customers and grant committees, while you focus on building the company.
+          I&rsquo;m Shreyas, an embedded engineer in Bengaluru. I take a founder&rsquo;s idea from a sketch to a device you
+          can put on the table: firmware, electronics, PCB, connectivity and a demo-ready enclosure.
         </p>
         <div class="actions">
-          <a href="#contact" class="btn btn-primary btn-lg">Start your project</a>
-          <a href="#process" class="link-arrow">See how it works</a>
+          <a href="#estimate" class="btn btn-primary btn-lg">Estimate my prototype</a>
+          <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%20have%20a%20hardware%20idea%20I%27d%20like%20to%20discuss%3A%20" target="_blank" rel="noopener" class="link-arrow">WhatsApp me your idea<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
         <dl class="facts">
-          <div><dt>NDA first</dt><dd>Signed before you share anything sensitive</dd></div>
-          <div><dt>100% your IP</dt><dd>Source code, design files and documentation</dd></div>
-          <div><dt>Fixed price</dt><dd>Agreed per phase, paid by milestone</dd></div>
+          <div><dt>Feasibility sprint</dt><dd>From ₹15,000, in 1–2 weeks</dd></div>
+          <div><dt>Investor-ready prototype</dt><dd>From ₹1,50,000, in 6–12 weeks</dd></div>
+          <div><dt>Your IP</dt><dd>NDA first; you own all code and design files</dd></div>
         </dl>
       </div>
 
@@ -234,238 +210,309 @@
     </div>
   </section>
 
-  <!-- WHY -->
-  <section id="why" class="section section-rule" aria-labelledby="why-title">
-    <div class="container split">
-      <div class="split-head">
-        <h2 id="why-title">Hardware is the hardest part of a hardware startup.</h2>
-        <p class="lede">Investors want to see it work. Building it is where most early founders stall.</p>
+  <!-- FOUNDING-CLIENT OFFER: set data-founding="closed" and remove this section when both slots are booked (see README) -->
+  <section id="founding" class="founding" data-founding="open" aria-labelledby="founding-title">
+    <div class="container founding-inner">
+      <div>
+        <h2 id="founding-title">Two <span class="nowrap">founding-client</span> slots are open.</h2>
+        <p>The first two client projects get 20% off the engineering fee. In return, you let me publish a case study and ask you for an honest testimonial after delivery. Components and fabrication stay at cost. The offer closes once two projects are booked.</p>
       </div>
-      <ul class="rows">
-        <li class="row">
-          <h3>No engineering co-founder</h3>
-          <p>You know the market and the problem, but not firmware, circuits or PCB layout, and hiring a full-time engineer before funding isn't realistic.</p>
-        </li>
-        <li class="row">
-          <h3>Agencies built for big budgets</h3>
-          <p>Product design firms quote for corporate projects. You need an early prototype that proves the idea, scoped and priced for a startup.</p>
-        </li>
-        <li class="row">
-          <h3>&ldquo;Show me it working&rdquo;</h3>
-          <p>Slides and renders only go so far. A device on the table answers the investor's first question before it's asked.</p>
-        </li>
-      </ul>
+      <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20is%20a%20founding-client%20slot%20still%20open%3F%20My%20project%3A%20" target="_blank" rel="noopener" class="btn btn-secondary">Ask about a slot<span class="sr-only"> (opens in a new tab)</span></a>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section id="process" class="section section-tint" aria-labelledby="process-title">
+  <!-- ESTIMATOR -->
+  <section id="estimate" class="section section-tint" aria-labelledby="estimate-title">
     <div class="container">
       <div class="section-head">
-        <h2 id="process-title">You stay focused on the company. I build the device.</h2>
-        <p class="lede">Your time commitment: one 30-minute demo call a week. Everything else is handled.</p>
+        <h2 id="estimate-title">What would your prototype cost?</h2>
+        <p class="lede">Answer nine quick questions about your device. You&rsquo;ll see the range I&rsquo;d expect for engineering, parts and time, and you can send it to me on WhatsApp in one tap.</p>
+      </div>
+      <noscript><p class="est-noscript">The estimator needs JavaScript. You can <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype.">describe your idea on WhatsApp</a> instead and get a range from me directly.</p></noscript>
+      <div class="est">
+        <form class="est-form" id="estimator" aria-label="Prototype cost estimator">
+          <fieldset class="est-q">
+            <legend>What do you need first?</legend>
+            <div class="opts">
+            <label class="opt"><input type="radio" name="goal" value="feasibility"><span>Check it can be built<small>Feasibility sprint</small></span></label>
+            <label class="opt"><input type="radio" name="goal" value="poc"><span>Prove the core works<small>Proof of concept on the bench</small></span></label>
+            <label class="opt"><input type="radio" name="goal" value="prototype" checked><span>A device investors can hold<small>Investor-ready prototype</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="est-q">
+            <legend>Where are you starting from?</legend>
+            <div class="opts">
+            <label class="opt"><input type="radio" name="start" value="scratch" checked><span>Just the idea</span></label>
+            <label class="opt"><input type="radio" name="start" value="devboard"><span>A rough dev-board version</span></label>
+            <label class="opt"><input type="radio" name="start" value="hardware"><span>Hardware that needs firmware or fixes</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="est-q">
+            <legend>What does the device do?</legend>
+            <div class="opts">
+            <label class="opt"><input type="radio" name="core" value="monitor"><span>Measures and reports<small>Sensors to data</small></span></label>
+            <label class="opt"><input type="radio" name="core" value="control" checked><span>Measures and acts<small>Outputs, local logic, user interface</small></span></label>
+            <label class="opt"><input type="radio" name="core" value="advanced"><span>Demanding<small>Motor control, signal processing or real-time</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="est-q">
+            <legend>How much sensing?</legend>
+            <div class="opts">
+            <label class="opt"><input type="radio" name="sensing" value="few" checked><span>1–2 standard sensors</span></label>
+            <label class="opt"><input type="radio" name="sensing" value="several"><span>3–6 sensors or inputs</span></label>
+            <label class="opt"><input type="radio" name="sensing" value="specialist"><span>Specialist sensing<small>Camera, radar or precision analog</small></span></label>
+            </div>
+          </fieldset>
+          <fieldset class="est-q">
+            <legend>How does it connect?</legend><p class="est-q-note">Choose any, or none.</p>
+            <div class="opts">
+            <label class="opt"><input type="checkbox" name="links-short" value="short" checked><span>Wi-Fi or Bluetooth</span></label>
+            <label class="opt"><input type="checkbox" name="links-long" value="long"><span>Cellular or LoRa</span></label>
+            <label class="opt"><input type="checkbox" name="links-wired" value="wired"><span>CAN, Ethernet or RS-485</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="est-q">
+            <legend>How is it powered?</legend>
+            <div class="opts">
+            <label class="opt"><input type="radio" name="power" value="mains" checked><span>Mains or USB</span></label>
+            <label class="opt"><input type="radio" name="power" value="battery"><span>Rechargeable battery</span></label>
+            <label class="opt"><input type="radio" name="power" value="lowpower"><span>Months on a battery</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="est-q">
+            <legend>Any moving parts or outputs?</legend>
+            <div class="opts">
+            <label class="opt"><input type="radio" name="motion" value="none" checked><span>None</span></label>
+            <label class="opt"><input type="radio" name="motion" value="simple"><span>Simple outputs<small>Relays, LEDs, display</small></span></label>
+            <label class="opt"><input type="radio" name="motion" value="motors"><span>Motors or mechanisms</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="est-q">
+            <legend>Software beyond the device?</legend>
+            <div class="opts">
+            <label class="opt"><input type="radio" name="software" value="none" checked><span>Device only</span></label>
+            <label class="opt"><input type="radio" name="software" value="dashboard"><span>Cloud dashboard or simple app</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="est-q">
+            <legend>What should it look like?</legend>
+            <div class="opts">
+            <label class="opt"><input type="radio" name="enclosure" value="bench"><span>No enclosure yet</span></label>
+            <label class="opt"><input type="radio" name="enclosure" value="printed" checked><span>3D-printed demo enclosure</span></label>
+            <label class="opt"><input type="radio" name="enclosure" value="rugged"><span>Rugged, sealed or wearable</span></label>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-secondary est-jump">See my estimate</button>
+        </form>
+
+        <aside class="est-result" id="est-result" tabindex="-1" aria-labelledby="est-title">
+          <h3 id="est-title">Indicative estimate</h3>
+          <dl class="est-figures">
+            <div class="est-main"><dt>Engineering</dt><dd><span id="est-fee">Choose your answers</span><small id="est-fee-note">Engineering fee, indicative.</small></dd></div>
+            <div id="est-parts-row"><dt>Parts and fabrication</dt><dd><span id="est-parts">&nbsp;</span><small>Billed at cost, with receipts.</small></dd></div>
+            <div><dt>Timeline</dt><dd id="est-weeks">&nbsp;</dd></div>
+            <div class="est-step"><dt>First step</dt><dd id="est-next">&nbsp;</dd></div>
+          </dl>
+          <p class="est-founding" id="est-founding" hidden></p>
+          <div class="est-actions">
+            <a id="est-whatsapp" href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener" class="btn btn-primary">Send this estimate on WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+            <a id="est-email" href="mailto:shreyas@projectifyzone.com" class="link-arrow">Email it instead</a>
+          </div>
+          <div class="est-drivers" id="est-drivers-row">
+            <p class="est-label">What moves this estimate most</p>
+            <ul id="est-drivers"></ul>
+          </div>
+          <p class="est-disclaimer">An indicative estimate, not a quotation. It&rsquo;s based on the effort typical projects of this scope need; unusual requirements can move it either way. A feasibility sprint or a short scoping call gives you a fixed price before any build starts. Taxes extra, if applicable.</p>
+          <p class="sr-only" role="status" aria-live="polite" id="est-status"></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS AND PRICING -->
+  <section id="process" class="section" aria-labelledby="process-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="process-title">How a project runs</h2>
+        <p class="lede">You spend about 30 minutes a week on a demo call. Each phase has a fixed price agreed before it starts, and you can stop after any phase.</p>
       </div>
 
       <ol class="timeline">
         <li>
           <p class="step-meta"><span class="step-no">01</span> Free, 30 minutes</p>
           <h3>Discovery call</h3>
-          <p>Understand your idea, users and deadline. NDA signed before you share anything sensitive.</p>
+          <p>Your idea, users and deadline. NDA signed before you share anything sensitive.</p>
         </li>
         <li>
           <p class="step-meta"><span class="step-no">02</span> 1–2 weeks</p>
           <h3>Feasibility sprint</h3>
-          <p>Architecture, component choices, cost estimate and risks, ending in a clear go/no-go and a fixed quote for the build.</p>
+          <p>Architecture, components, risks and a fixed quote for the build. A clear go or no-go.</p>
         </li>
         <li>
           <p class="step-meta"><span class="step-no">03</span> Weekly milestones</p>
-          <h3>Build &amp; weekly demos</h3>
-          <p>Milestone-based development. Every week you see real progress on a short video call and give feedback early.</p>
+          <h3>Build and weekly demos</h3>
+          <p>Every week you see real progress on a short video call and steer early.</p>
         </li>
         <li>
           <p class="step-meta"><span class="step-no">04</span> Final delivery</p>
           <h3>Handover</h3>
-          <p>A working hardware prototype plus your Investor Demo Kit, source code and design files. Everything you need to raise.</p>
+          <p>The working prototype, the Investor Demo Kit, source code and design files.</p>
         </li>
       </ol>
-    </div>
-  </section>
 
-  <!-- PHASES / PRICING -->
-  <section id="phases" class="section" aria-labelledby="phases-title">
-    <div class="container">
-      <div class="section-head">
-        <h2 id="phases-title">Start small. Commit only when the idea is proven feasible.</h2>
-        <p class="lede">Every phase has a fixed price agreed upfront. Components and fabrication are billed at cost, with receipts.</p>
-      </div>
-
-      <div class="tiers">
+      <div class="tiers" id="phases">
         <article class="tier">
           <header class="tier-head">
-            <h3>Feasibility Sprint</h3>
+            <h3>Feasibility sprint</h3>
             <p class="tier-time">Typically 1–2 weeks</p>
             <p class="tier-price"><span>from</span> ₹15,000</p>
           </header>
           <ul class="checks">
-            <li>System architecture &amp; block diagram</li>
-            <li>Component selection &amp; prototype BOM</li>
-            <li>Cost &amp; timeline estimate for the build</li>
+            <li>System architecture and block diagram</li>
+            <li>Component selection and prototype BOM</li>
+            <li>Cost and timeline for the build</li>
             <li>Technical risks and how to retire them</li>
-            <li>Go/no-go recommendation</li>
           </ul>
           <a href="#contact" class="btn btn-secondary">Book a sprint</a>
         </article>
         <article class="tier">
           <header class="tier-head">
-            <h3>Proof of Concept</h3>
+            <h3>Proof of concept</h3>
             <p class="tier-time">Typically 3–6 weeks</p>
             <p class="tier-price"><span>from</span> ₹50,000</p>
           </header>
           <ul class="checks">
             <li>Core function working on the bench</li>
             <li>Firmware for the key features</li>
-            <li>Sensor, connectivity &amp; power validation</li>
+            <li>Sensor, connectivity and power tested</li>
             <li>Test results you can share</li>
-            <li>Recommendations for the prototype</li>
           </ul>
-          <a href="#contact" class="btn btn-secondary">Discuss a PoC</a>
+          <a href="#contact" class="btn btn-secondary">Discuss a proof of concept</a>
         </article>
         <article class="tier tier-featured">
           <header class="tier-head">
             <p class="tier-flag">Built for fundraising</p>
-            <h3>Investor-Ready Prototype</h3>
+            <h3>Investor-ready prototype</h3>
             <p class="tier-time">Typically 6–12 weeks</p>
             <p class="tier-price"><span>from</span> ₹1,50,000</p>
           </header>
           <ul class="checks">
-            <li>Custom PCB &amp; production-style firmware</li>
-            <li>Enclosure so it looks like a product</li>
-            <li>App or cloud dashboard where needed</li>
-            <li>Complete Investor Demo Kit</li>
-            <li>Full source code &amp; design files</li>
+            <li>Custom PCB and production-style firmware</li>
+            <li>Enclosure, so it looks like a product</li>
+            <li>Dashboard or simple app where needed</li>
+            <li>Investor Demo Kit</li>
           </ul>
           <a href="#contact" class="btn btn-primary">Start your project</a>
         </article>
       </div>
-      <p class="note">Grant-funded (Startup India Seed Fund, Karnataka ELEVATE and others)? Milestones and documentation can be structured to match your grant's milestones.</p>
-    </div>
-  </section>
-
-  <!-- INVESTOR DEMO KIT -->
-  <section id="demo-kit" class="section section-tint" aria-labelledby="kit-title">
-    <div class="container split">
-      <div class="split-head">
-        <h2 id="kit-title">More than a prototype. Answers to the questions investors ask.</h2>
-        <p class="lede">Investors don&rsquo;t just ask &ldquo;does it work?&rdquo; They ask what it will cost to make, how it gets certified and how it reaches production. Every investor-ready prototype ships with the answers.</p>
-      </div>
-      <dl class="spec">
-        <div><dt>Working prototype</dt><dd>Demo-ready, reliable enough to hand to an investor.</dd></div>
-        <div><dt>Demo video</dt><dd>A short, clean video of the device in action for your deck and emails.</dd></div>
-        <div><dt>One-page spec sheet</dt><dd>Features, specs and architecture, in plain language.</dd></div>
-        <div><dt>Unit cost estimate</dt><dd>Bill of materials priced at 100 and 1,000 units.</dd></div>
-        <div><dt>Certification path</dt><dd>Which approvals apply (e.g. BIS, WPC, CE) and what they involve.</dd></div>
-        <div><dt>Manufacturing roadmap</dt><dd>What changes between prototype and production, and what it costs.</dd></div>
-        <div><dt>Technical walkthrough</dt><dd>A session that prepares you to answer technical questions confidently.</dd></div>
-      </dl>
+      <p class="note"><strong>The Investor Demo Kit</strong> answers what investors ask after &ldquo;does it work?&rdquo;: a demo video, a one-page spec sheet, unit cost at 100 and 1,000 units, which certifications apply (such as BIS, WPC or CE), and a manufacturing roadmap. Grant-funded? Milestones can follow your Startup India Seed Fund or Karnataka ELEVATE schedule.</p>
     </div>
   </section>
 
   <!-- CAPABILITIES -->
-  <section id="services" class="section" aria-labelledby="services-title">
+  <section id="services" class="section section-tint" aria-labelledby="services-title">
     <div class="container">
       <div class="section-head">
-        <h2 id="services-title">Everything between the idea and the device.</h2>
-        <p class="lede">If it&rsquo;s embedded, it&rsquo;s in scope: any microcontroller, sensor, interface or protocol, from the first schematic to the cloud dashboard. One engineer across the whole stack means no hand-offs and nothing lost between teams.</p>
+        <h2 id="services-title">What I build</h2>
+        <p class="lede">Embedded hardware, end to end: any microcontroller, sensor, interface or protocol, from the first schematic to the cloud dashboard. Founders I work with build consumer IoT, agritech, healthtech, industrial IoT, robotics and logistics products.</p>
       </div>
 
-      <div class="matrix">
+      <div class="matrix matrix-3">
         <article class="cell">
-          <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 10h4v4h-4zM9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>Embedded firmware</h3>
-          <p>Firmware for any microcontroller, 8-bit to 32-bit, whether ARM Cortex-M, ESP32 or anything else from NXP, ST, Espressif, Nordic and beyond. Bare-metal or RTOS.</p>
-          <p class="cell-detail">Sensor &amp; peripheral drivers, low-power design, bootloaders &amp; OTA updates</p>
+          <h3>Embedded firmware</h3>
+          <p>Firmware for any microcontroller, 8-bit to 32-bit: ARM Cortex-M, ESP32 and others from NXP, ST, Espressif, Nordic and beyond. Bare-metal or RTOS.</p>
+          <p class="cell-detail">Drivers, low-power design, bootloaders and OTA updates, motor control</p>
         </article>
         <article class="cell">
-          <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M8 8h4l4 4v4M8 13v3h3"/><circle cx="8" cy="8" r="1.5"/><circle cx="16" cy="16" r="1.5"/></svg>Electronics &amp; PCB</h3>
-          <p>Schematics and custom boards in KiCad, designed to be assembled and debugged easily.</p>
-          <p class="cell-detail">Multi-layer layout, design-rule checks, fab-ready files, board bring-up</p>
+          <h3>Electronics and PCB</h3>
+          <p>Schematics, component choices and custom boards in KiCad, designed to be assembled, debugged and tested easily.</p>
+          <p class="cell-detail">Sensor front-ends, power circuits, multi-layer layout, fab-ready files, bring-up</p>
         </article>
         <article class="cell">
-          <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="18" r="1.4" fill="currentColor" stroke="none"/><path d="M8.5 14.5a5 5 0 0 1 7 0M5.5 11.5a9.2 9.2 0 0 1 13 0M2.5 8.5a13.4 13.4 0 0 1 19 0"/></svg>Connectivity &amp; IoT</h3>
-          <p>Any link your product needs, wireless or wired: Wi-Fi, Bluetooth, cellular, CAN bus, Ethernet, industrial serial or a custom protocol, connected to dashboards your users can see.</p>
-          <p class="cell-detail">MQTT, HTTP/REST &amp; WebSockets, TCP/IP &amp; cloud IoT platforms, live dashboards &amp; alerts, provisioning &amp; security</p>
-        </article>
-        <article class="cell">
-          <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6.3 6.3l2 2M15.7 15.7l2 2M6.3 17.7l2-2M15.7 8.3l2-2"/></svg>Sensors &amp; edge intelligence</h3>
-          <p>Getting clean, trustworthy data from the real world, and acting on it locally.</p>
-          <p class="cell-detail">Sensor selection &amp; calibration, radar, vision &amp; motion, on-device processing</p>
-        </article>
-        <article class="cell">
-          <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 8V5M2.5 12.5v3M21.5 12.5v3M9.5 16h5"/><circle cx="12" cy="3.8" r="1.2"/></svg>Robotics &amp; motion</h3>
-          <p>Motors, actuators and control loops for devices that move.</p>
-          <p class="cell-detail">Motor control &amp; PID tuning, mobile robots &amp; arms, ROS-based architectures</p>
-        </article>
-        <article class="cell">
-          <h3><svg class="cell-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20.5 7v10L12 21.5 3.5 17V7z"/><path d="M3.5 7 12 11.5 20.5 7M12 11.5v10"/></svg>Demo-ready packaging</h3>
-          <p>So the prototype looks like a product, not a breadboard, on the investor's table.</p>
-          <p class="cell-detail">3D-printed enclosures, clean assembly &amp; wiring, portable, battery-powered builds</p>
+          <h3>Connectivity and IoT</h3>
+          <p>Any link your product needs: Wi-Fi, Bluetooth, cellular, LoRa, CAN bus, Ethernet, RS-485 or a custom protocol, connected to a dashboard your users can see.</p>
+          <p class="cell-detail">MQTT, HTTP/REST and WebSockets, TCP/IP, cloud IoT platforms, provisioning and security</p>
         </article>
       </div>
 
       <div class="toolbar">
-        <h3 class="toolbar-title">Platforms &amp; interfaces, for example</h3>
+        <h3 class="toolbar-title">Platforms and interfaces, for example</h3>
         <ul class="inline-list">
-          <li>ARM Cortex-M</li><li>ESP32</li><li>8/16/32-bit MCUs</li><li>Single-board computers</li><li>RTOS</li>
-          <li>C / C++</li><li>Python</li><li>KiCad</li><li>MATLAB / Simulink</li>
-          <li>CAN bus</li><li>Ethernet &amp; TCP/IP</li><li>Industrial serial &amp; fieldbus</li><li>Wi-Fi, Bluetooth &amp; cellular</li><li>MQTT, HTTP &amp; WebSockets</li><li>Cloud IoT</li><li>and more</li>
+          <li>ARM Cortex-M</li><li>ESP32</li><li>8/16/32-bit MCUs</li><li>RTOS</li><li>C / C++</li><li>Python</li><li>KiCad</li>
+          <li>CAN bus</li><li>Ethernet &amp; TCP/IP</li><li>RS-485 &amp; fieldbus</li><li>Wi-Fi, Bluetooth &amp; cellular</li><li>MQTT</li><li>Sensors &amp; edge processing</li><li>Motors &amp; motion</li><li>3D-printed enclosures</li>
         </ul>
       </div>
       <p class="note"><a href="embedded-systems-development.html" class="link-arrow">More on embedded systems development</a></p>
     </div>
   </section>
 
-  <!-- WHO IT'S FOR -->
-  <section id="who" class="section section-tint" aria-labelledby="who-title">
-    <div class="container split">
-      <div class="split-head">
-        <h2 id="who-title">Founders building physical products.</h2>
-        <p class="lede">Early-stage, incubated or grant-funded startups that need a working hardware prototype or MVP to move forward.</p>
+  <!-- WORK: real projects only. Replace a placeholder with a real photo (assets/img/work/...) once it exists. -->
+  <section id="work" class="section" aria-labelledby="work-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="work-title">Built on this bench</h2>
+        <p class="lede">Real projects only. Each one gets photos, test results and source code here once it&rsquo;s built and tested; until then, the gaps are marked.</p>
       </div>
-      <ul class="sectors">
-        <li><h3>Consumer IoT &amp; smart home</h3><p>Connected devices, trackers and appliances.</p></li>
-        <li><h3>Agritech</h3><p>Field sensors, irrigation control and farm monitoring.</p></li>
-        <li><h3>Healthtech &amp; wellness</h3><p>Wearables and monitoring devices at the prototype stage.</p></li>
-        <li><h3>Industrial IoT</h3><p>Machine monitoring and retrofits for factories and SMEs.</p></li>
-        <li><h3>Robotics &amp; automation</h3><p>Mobile robots, actuated mechanisms and smart machines.</p></li>
-        <li><h3>Logistics &amp; cold chain</h3><p>Asset tracking and condition monitoring in transit.</p></li>
-      </ul>
+      <div class="work">
+        <article class="work-item">
+          <div class="ph" role="img" aria-label="Photo placeholder: MachineSense hardware build in progress">
+            <span>Photo coming</span>
+            <small>Hardware build in progress</small>
+          </div>
+          <div class="work-body">
+            <h3>MachineSense</h3>
+            <p>A clip-on health monitor for existing machines. It measures vibration, motor current and temperature, learns what normal looks like for that machine, and raises a warning when behaviour drifts.</p>
+            <dl class="work-spec">
+              <div><dt>Status</dt><dd>Firmware v0.1 written; hardware build in progress</dd></div>
+              <div><dt>Built with</dt><dd>ESP32, accelerometer, current and temperature sensors, RS-485</dd></div>
+              <div><dt>Talks over</dt><dd>Modbus RTU, MQTT and Telegram alerts</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="work-item work-open">
+          <div class="ph" role="img" aria-label="Placeholder for a founding-client project">
+            <span>Your project</span>
+            <small>Founding-client slot</small>
+          </div>
+          <div class="work-body">
+            <h3>Founding-client project</h3>
+            <p>The first two client projects get 20% off the engineering fee, in exchange for a published case study and an honest testimonial after delivery. Shown here only with your permission.</p>
+            <p><a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20is%20a%20founding-client%20slot%20still%20open%3F%20My%20project%3A%20" target="_blank" rel="noopener" class="link-arrow">Ask about a slot<span class="sr-only"> (opens in a new tab)</span></a></p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section" aria-labelledby="about-title">
+  <section id="about" class="section section-tint" aria-labelledby="about-title">
     <div class="container about">
       <aside class="profile" aria-label="Profile">
         <div class="monogram" aria-hidden="true"><span>S</span></div>
         <p class="profile-name">Shreyas P</p>
-        <p class="profile-role">Founder &amp; Lead Engineer</p>
+        <p class="profile-role">Founder and embedded engineer</p>
         <dl class="profile-meta">
           <div><dt>Based in</dt><dd>Bengaluru (Bangalore), India</dd></div>
           <div><dt>Works with</dt><dd>Founders across India</dd></div>
           <div><dt>Contact</dt><dd><a href="mailto:shreyas@projectifyzone.com">shreyas@projectifyzone.com</a></dd></div>
+          <!-- LinkedIn: add your profile URL here (see README), for example
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">linkedin.com/in/YOUR-PROFILE<span class="sr-only"> (opens in a new tab)</span></a></dd></div> -->
         </dl>
       </aside>
       <div class="about-copy">
-        <h2 id="about-title">You work directly with the engineer building your product.</h2>
+        <h2 id="about-title">Who you&rsquo;ll work with</h2>
         <p>
-          Namaste, I'm Shreyas, an embedded systems engineer in Bengaluru. I've built firmware for ARM Cortex-M and other
-          microcontrollers, designed PCBs in KiCad, built CAN bus and Ethernet communication, connected devices to the
-          cloud, worked with radar and vision sensors,
-          and written the desktop tools used to test and monitor hardware.
+          Namaste, I&rsquo;m Shreyas, an embedded systems engineer in Bengaluru. I&rsquo;ve built firmware for ARM Cortex-M
+          and other microcontrollers, designed PCBs in KiCad, built CAN bus and Ethernet communication, connected devices to
+          the cloud, worked with radar and vision sensors, and written the desktop tools used to test and monitor hardware.
         </p>
         <p>
-          I started Projectify Zone for founders who have a strong idea and need it working in their hands. There are no
-          account managers or hand-offs: the person on your weekly call is the person writing the firmware and laying
-          out the board. To keep it that way, I take on a limited number of projects at a time.
+          I started Projectify Zone for founders who have a strong idea and need it working in their hands. The person on
+          your weekly call is the person writing the firmware and laying out the board, so I take on a few projects at a time.
+        </p>
+        <p>
+          My work is embedded hardware: firmware, electronics and IoT. If your product is mostly an app or a website,
+          I&rsquo;ll say so on the first call and point you to the right kind of team.
         </p>
         <p class="about-actions">
           <a href="#contact" class="link-arrow">Start a conversation</a>
@@ -476,10 +523,10 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="section section-tint" aria-labelledby="faq-title">
+  <section id="faq" class="section" aria-labelledby="faq-title">
     <div class="container split">
       <div class="split-head">
-        <h2 id="faq-title">Questions founders ask.</h2>
+        <h2 id="faq-title">Questions founders ask</h2>
         <p class="lede">Something else on your mind? <a href="#contact">Send a brief</a> or ask on <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%20have%20a%20question%20about%20a%20hardware%20prototype." target="_blank" rel="noopener">WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>.</p>
       </div>
       <div class="faq">
@@ -488,16 +535,8 @@
           <p>Not at all. Most founders I work with aren't. You explain the problem and who it's for; I translate that into a technical plan and explain every decision in plain language.</p>
         </details>
         <details>
-          <summary>Can you work with my chip, sensor or protocol?</summary>
-          <p>Almost certainly. The work is platform-agnostic: any microcontroller family, RTOS, sensor, display or interface, wired or wireless. If something you have in mind is a poor fit for the product, the feasibility sprint says so and suggests a better option.</p>
-        </details>
-        <details>
-          <summary>How involved do I need to be?</summary>
-          <p>About 30 minutes a week for a demo and feedback call, plus quick answers on WhatsApp when a decision needs you. Everything else, from component sourcing to firmware and PCB, is handled.</p>
-        </details>
-        <details>
-          <summary>Who owns the idea and the design?</summary>
-          <p>You do. An NDA is signed before you share sensitive details, and on final payment you receive full ownership of the source code, design files and documentation.</p>
+          <summary>How accurate is the estimator?</summary>
+          <p>It's a realistic starting point, not a quote. It uses the effort that projects of each scope typically need, and unusual requirements can move it either way. A feasibility sprint or a short scoping call gives you a fixed price before any build starts.</p>
         </details>
         <details>
           <summary>What does a hardware prototype cost?</summary>
@@ -505,21 +544,17 @@
           <p><a href="hardware-prototype-cost-india.html">Full guide: what a hardware prototype costs in India</a></p>
         </details>
         <details>
+          <summary>Can you work with my chip, sensor or protocol?</summary>
+          <p>Almost certainly. The work is platform-agnostic: any microcontroller family, RTOS, sensor, display or interface, wired or wireless. If something you have in mind is a poor fit for the product, the feasibility sprint says so and suggests a better option.</p>
+        </details>
+        <details>
           <summary>Is a prototype the same as an MVP?</summary>
           <p>Not quite. A proof of concept shows the core idea works on the bench. A prototype looks and behaves like the product, which is what investors want to see. An MVP goes further: a small batch real customers can use. Most founders need the prototype first; it's also the starting point for MVP and product development once you've raised.</p>
           <p><a href="poc-vs-prototype-vs-mvp.html">Full guide: PoC vs prototype vs MVP</a></p>
         </details>
         <details>
-          <summary>What if my idea isn't technically feasible?</summary>
-          <p>That's exactly what the feasibility sprint is for. You find out early, for a small fixed fee, before committing a large budget. If there's a better way to achieve the same goal, you'll hear about it.</p>
-        </details>
-        <details>
-          <summary>Can you work with grant milestones?</summary>
-          <p>Yes. If your prototype is funded by a grant such as the Startup India Seed Fund or Karnataka ELEVATE, milestones and progress documentation can be structured to match what your incubator needs.</p>
-        </details>
-        <details>
-          <summary>Do you handle manufacturing?</summary>
-          <p>The focus is prototypes. Every investor-ready prototype includes a manufacturing roadmap and design-for-manufacture guidance so you know the path to production and its likely cost.</p>
+          <summary>Who owns the idea and the design?</summary>
+          <p>You do. An NDA is signed before you share sensitive details, and on final payment you receive full ownership of the source code, design files and documentation.</p>
         </details>
         <details>
           <summary>Do you only work with founders in Bengaluru?</summary>
@@ -530,20 +565,23 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section section-contact" aria-labelledby="contact-title">
+  <section id="contact" class="section section-contact section-tint" aria-labelledby="contact-title">
     <div class="container contact">
       <div class="contact-info">
-        <h2 id="contact-title">Tell me what you're building.</h2>
-        <p class="lede">Share a short brief and I'll reply within one working day to set up a free 30-minute discovery call.</p>
+        <h2 id="contact-title">Tell me what you&rsquo;re building</h2>
+        <p class="lede">WhatsApp is quickest. I reply within one working day and we set up a free 30-minute call.</p>
+        <p class="contact-primary"><a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%20have%20a%20hardware%20idea%20I%27d%20like%20to%20discuss%3A%20" target="_blank" rel="noopener" class="btn btn-primary btn-lg">WhatsApp me your idea<span class="sr-only"> (opens in a new tab)</span></a></p>
+        <!-- Booking link: once you have a booking page (Google Calendar appointment schedule, Cal.com or Calendly), add it here (see README), for example
+        <p><a href="https://cal.com/YOUR-NAME/discovery" target="_blank" rel="noopener" class="link-arrow">Book a 30-minute call<span class="sr-only"> (opens in a new tab)</span></a></p> -->
 
         <ul class="contact-list">
           <li>
-            <span class="contact-label">Email</span>
-            <a href="mailto:shreyas@projectifyzone.com">shreyas@projectifyzone.com</a>
-          </li>
-          <li>
             <span class="contact-label">WhatsApp</span>
             <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener">+91&nbsp;99866&nbsp;52218<span class="sr-only"> (opens in a new tab)</span></a>
+          </li>
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:shreyas@projectifyzone.com">shreyas@projectifyzone.com</a>
           </li>
           <li>
             <span class="contact-label">Phone</span>
@@ -669,7 +707,7 @@
 </main>
 
 <div class="mobile-cta" id="mobile-cta">
-  <a href="#contact" class="btn btn-primary">Start your project</a>
+  <a href="#estimate" class="btn btn-primary">Estimate my prototype</a>
   <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener" class="btn btn-whatsapp" aria-label="Chat on WhatsApp (opens in a new tab)">
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.3-3.8A8.5 8.5 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-1.8-1-1 .8a3.6 3.6 0 0 1-2.4-2.4l.8-1-1-1.8z"/></svg>
   </a>
@@ -687,7 +725,8 @@
       <p class="footer-title">Explore</p>
       <a href="#process">How it works</a>
       <a href="#phases">Pricing</a>
-      <a href="#demo-kit">Investor Demo Kit</a>
+      <a href="#estimate">Cost estimator</a>
+      <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -712,7 +751,8 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=6" defer></script>
+<script src="assets/js/main.js?v=7" defer></script>
 <script src="assets/js/hero-figure.js?v=3" defer></script>
+<script src="assets/js/estimator.js?v=1" defer></script>
 </body>
 </html>

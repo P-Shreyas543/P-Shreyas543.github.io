@@ -91,7 +91,8 @@
   var mobileCta = document.getElementById('mobile-cta');
   if (mobileCta && 'IntersectionObserver' in window) {
     var inView = new Set();
-    var watched = document.querySelectorAll('.hero, #contact, .site-footer');
+    // Hidden over the hero, the estimator (it has its own buttons), the contact section and the footer
+    var watched = document.querySelectorAll('.hero, #estimate, #contact, .site-footer');
     var ctaObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) inView.add(entry.target); else inView.delete(entry.target);
