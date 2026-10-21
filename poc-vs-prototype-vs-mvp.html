@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-IN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>PoC vs Prototype vs MVP for Hardware Startups | Projectify Zone</title>
+<meta name="description" content="Proof of concept, prototype or MVP? What each means for a hardware startup, what investors expect to see, and the mistakes that waste time and money.">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://projectifyzone.com/poc-vs-prototype-vs-mvp.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Projectify Zone">
+<meta property="og:title" content="PoC vs prototype vs MVP: what a hardware startup needs, and when">
+<meta property="og:description" content="Proof of concept, prototype or MVP? What each means for a hardware startup, what investors expect to see, and the mistakes that waste time and money.">
+<meta property="og:url" content="https://projectifyzone.com/poc-vs-prototype-vs-mvp.html">
+<meta property="og:image" content="https://projectifyzone.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Projectify Zone logo with the line From idea on paper to investor-ready prototype">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PoC vs prototype vs MVP: what a hardware startup needs, and when">
+<meta name="twitter:description" content="Proof of concept, prototype or MVP? What each means for a hardware startup, what investors expect to see, and the mistakes that waste time and money.">
+<meta name="twitter:image" content="https://projectifyzone.com/assets/img/og-image.png">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/space-grotesk-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css?v=6">
+<script src="assets/js/theme-init.js?v=6"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "PoC vs prototype vs MVP: what a hardware startup needs, and when",
+  "description": "Proof of concept, prototype or MVP? What each means for a hardware startup, what investors expect to see, and the mistakes that waste time and money.",
+  "datePublished": "2026-10-21",
+  "dateModified": "2026-10-21",
+  "author": {
+    "@type": "Person",
+    "name": "Shreyas P",
+    "jobTitle": "Founder & Lead Engineer",
+    "url": "https://projectifyzone.com/#about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Projectify Zone",
+    "url": "https://projectifyzone.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://projectifyzone.com/assets/img/icon-512.png"
+    }
+  },
+  "image": "https://projectifyzone.com/assets/img/og-image.png",
+  "inLanguage": "en-IN",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://projectifyzone.com/poc-vs-prototype-vs-mvp.html"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://projectifyzone.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://projectifyzone.com/insights.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "PoC vs prototype vs MVP",
+      "item": "https://projectifyzone.com/poc-vs-prototype-vs-mvp.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="./" class="brand" aria-label="Projectify Zone home">
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -17 592.5 74" aria-hidden="true" focusable="false"><g transform="translate(0 -12)"><rect width="64" height="64" rx="14" fill="#0b0f19"/><g fill="none" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#22d3ee" d="M10 50V14H20L26 20V28L20 34H10"/><circle fill="#22d3ee" cx="10" cy="50" r="4.6"/><path stroke="#f472b6" d="M35 14H54V19L35 45V50H54"/><circle fill="#f472b6" cx="54" cy="14" r="4.6"/></g></g><g transform="translate(86 0) scale(1)"><g class="a" transform="translate(0 0)"><path d="M0 40V0H20L28 8V14L20 22H0"/><circle cx="0" cy="40" r="4.4"/></g><g class="a" transform="translate(38 0)"><path d="M0 40V0H20L28 8V14L20 22H0M15 22L28 35V40"/><circle cx="0" cy="40" r="4.4"/></g><g class="a" transform="translate(76 0)"><path d="M8 0H20L28 8V32L20 40H8L0 32V8Z"/></g><g class="a" transform="translate(114 0)"><path d="M8 0H24V32L16 40H8L0 32V28"/><circle cx="0" cy="28" r="4.4"/></g><g class="a" transform="translate(148 0)"><path d="M26 0H0V40H26M0 20H18"/></g><g class="a" transform="translate(184 0)"><path d="M27 0H8L0 8V32L8 40H27"/></g><g class="a" transform="translate(221 0)"><path d="M0 0H28M14 0V40"/><circle cx="14" cy="40" r="4.4"/></g><g class="b" transform="translate(256 0)"><path d="M0 0V40"/></g><g class="b" transform="translate(268.5 0)"><path d="M26 0H0V40M0 20H18"/><circle cx="0" cy="40" r="4.4"/></g><g class="b" transform="translate(304.5 0)"><path d="M0 0V6L14 20L28 6V0M14 20V40"/><circle cx="14" cy="40" r="4.4"/></g></g><g transform="translate(442.5 0) scale(1)"><g class="a" transform="translate(0 0)"><path d="M0 0H28V6L0 34V40H28"/></g><g class="b" transform="translate(38 0)"><path d="M8 0H20L28 8V32L20 40H8L0 32V8Z"/></g><g class="b" transform="translate(76 0)"><path d="M0 40V0H3L25 40H28V0"/></g><g class="b" transform="translate(114 0)"><path d="M26 0H0V40H26M0 20H18"/></g></g></svg>
+    </a>
+
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="./#process">How it works</a>
+      <a href="./#phases">Pricing</a>
+      <a href="./#who">Who it's for</a>
+      <a href="./#about">About</a>
+      <a href="./#faq">FAQ</a>
+      <a href="./#contact" class="btn btn-primary nav-cta-mobile">Start your project</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="./#contact" class="btn btn-primary btn-sm nav-cta">Start your project</a>
+      <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <header class="page-head">
+    <div class="container container-narrow">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="./">Home</a></li><li><a href="./insights.html">Insights</a></li><li><span aria-current="page">PoC vs prototype vs MVP</span></li></ol></nav>
+      <p class="overline">Guide</p>
+      <h1>PoC vs prototype vs MVP: what a hardware startup needs, and when</h1>
+      <p class="lede">Three words founders hear constantly, what they mean for a physical product, and which one you need next.</p>
+      <p class="page-meta">By Shreyas P · 21 October 2026 · 3 min read</p>
+    </div>
+  </header>
+  <article class="container container-narrow prose">
+    <div class="answer">
+      <p><strong>Short answer:</strong> a proof of concept proves the core idea can work, usually on the bench. A prototype looks and works like the product, and it&rsquo;s what investors usually want to hold. An MVP is a small batch that real customers use. Most hardware founders raising a pre-seed or seed round need a working prototype first.</p>
+    </div>
+
+    <h2>Why hardware is different</h2>
+    <p>A software team can ship an MVP in weeks and fix it after launch. In hardware, every iteration means new parts, new boards and a new enclosure, so each stage has a different job. Skipping one usually costs more than it saves.</p>
+
+    <h2>Proof of concept (PoC)</h2>
+    <p><strong>Its job:</strong> retire the biggest technical risk. Can this sensor really detect what you need? Will the radio reach far enough? Does the battery last long enough?</p>
+    <ul>
+      <li><strong>Built with:</strong> dev boards, modules, breadboards and focused test firmware.</li>
+      <li><strong>Who sees it:</strong> you, your engineer, sometimes technical advisors or a grant committee.</li>
+      <li><strong>Done when:</strong> the key function works reliably on the bench, with test results you can share.</li>
+    </ul>
+
+    <h2>Prototype</h2>
+    <p><strong>Its job:</strong> show the product working. Early on, teams sometimes build a &ldquo;looks-like&rdquo; model and a &ldquo;works-like&rdquo; model separately. An investor-ready prototype is both in one device.</p>
+    <ul>
+      <li><strong>Built with:</strong> a custom PCB, production-style firmware, an enclosure, and an app or dashboard where needed.</li>
+      <li><strong>Who sees it:</strong> investors, early customers, pilot partners.</li>
+      <li><strong>Done when:</strong> someone outside the team can use it in a demo without you explaining around it.</li>
+    </ul>
+
+    <h2>Minimum viable product (MVP)</h2>
+    <p><strong>Its job:</strong> learn from real users. Will they use it every day, and will they pay?</p>
+    <ul>
+      <li><strong>Built with:</strong> a small batch of units, designed for reliability, with firmware updates in the field and a way to support users.</li>
+      <li><strong>Who sees it:</strong> pilot and early paying customers.</li>
+      <li><strong>Done when:</strong> users rely on it and you have the data to plan production.</li>
+    </ul>
+
+    <h2>Side by side</h2>
+    <section class="table-wrap" aria-label="PoC, prototype and MVP compared" tabindex="0">
+      <table>
+        <thead><tr><th scope="col"><span class="sr-only">Compared on</span></th><th scope="col">PoC</th><th scope="col">Prototype</th><th scope="col">MVP</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Question it answers</th><td>Can it work?</td><td>Does it work as a product?</td><td>Will people use it and pay?</td></tr>
+          <tr><th scope="row">Who sees it</th><td>You and advisors</td><td>Investors and pilot partners</td><td>Early customers</td></tr>
+          <tr><th scope="row">Built with</th><td>Dev boards and modules</td><td>Custom PCB, enclosure, production-style firmware</td><td>A small batch, field updates, support</td></tr>
+          <tr><th scope="row">Typical time</th><td>3–6 weeks</td><td>6–12 weeks</td><td>Months, depending on batch size</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <h2>After the MVP: EVT, DVT and PVT</h2>
+    <p>Before mass production, manufacturers run three validation stages. Engineering validation (EVT) checks the design works. Design validation (DVT) checks it meets its requirements and can pass certification. Production validation (PVT) checks the factory can build it consistently. You don&rsquo;t need these to raise a seed round, but investors may ask how you&rsquo;ll get there.</p>
+
+    <h2>What investors usually expect</h2>
+    <p>Every investor is different, but as a rule of thumb:</p>
+    <ul>
+      <li><strong>Pre-seed:</strong> a proof of concept or early prototype, and a clear plan.</li>
+      <li><strong>Seed:</strong> a working prototype, early user feedback, a unit cost estimate and a path to manufacturing.</li>
+      <li><strong>Series A:</strong> an MVP or pilot with real users and data.</li>
+    </ul>
+
+    <h2>Common mistakes</h2>
+    <ul>
+      <li>Skipping the PoC, then discovering the core technology doesn&rsquo;t work after paying for a polished prototype.</li>
+      <li>Perfecting the enclosure before the electronics work.</li>
+      <li>Building every feature into the first prototype instead of one convincing demo.</li>
+      <li>Calling a prototype an MVP and putting it in customers&rsquo; hands before it&rsquo;s reliable.</li>
+      <li>Ignoring unit cost and certification until an investor asks.</li>
+    </ul>
+
+    <h2>Which one do you need?</h2>
+    <ul>
+      <li><strong>Not sure the idea can be built:</strong> a feasibility sprint, then a proof of concept.</li>
+      <li><strong>Core technology proven, raising money:</strong> an investor-ready prototype.</li>
+      <li><strong>Funded and ready for pilots:</strong> an MVP, built on the prototype&rsquo;s design.</li>
+    </ul>
+    <p>Projectify Zone&rsquo;s <a href="./#phases">three phases</a> follow the same path: feasibility sprint, proof of concept, investor-ready prototype. The prototype comes with an Investor Demo Kit covering unit cost, certification path and a manufacturing roadmap, so the step to an MVP is already mapped.</p>
+
+    <div class="cta-panel">
+      <h2>Not sure which stage you&rsquo;re at?</h2>
+      <p>Describe your idea in a short brief. On a free 30-minute call you&rsquo;ll find out where you are and what the next step costs.</p>
+      <div class="actions">
+        <a href="./#contact" class="btn btn-primary">Start your project <span aria-hidden="true">&rarr;</span></a>
+        <a href="./hardware-prototype-cost-india.html" class="link-arrow">What a prototype costs <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="./" class="brand" aria-label="Projectify Zone home">
+        <svg class="logo logo-sm" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -17 592.5 74" aria-hidden="true" focusable="false"><g transform="translate(0 -12)"><rect width="64" height="64" rx="14" fill="#0b0f19"/><g fill="none" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="#22d3ee" d="M10 50V14H20L26 20V28L20 34H10"/><circle fill="#22d3ee" cx="10" cy="50" r="4.6"/><path stroke="#f472b6" d="M35 14H54V19L35 45V50H54"/><circle fill="#f472b6" cx="54" cy="14" r="4.6"/></g></g><g transform="translate(86 0) scale(1)"><g class="a" transform="translate(0 0)"><path d="M0 40V0H20L28 8V14L20 22H0"/><circle cx="0" cy="40" r="4.4"/></g><g class="a" transform="translate(38 0)"><path d="M0 40V0H20L28 8V14L20 22H0M15 22L28 35V40"/><circle cx="0" cy="40" r="4.4"/></g><g class="a" transform="translate(76 0)"><path d="M8 0H20L28 8V32L20 40H8L0 32V8Z"/></g><g class="a" transform="translate(114 0)"><path d="M8 0H24V32L16 40H8L0 32V28"/><circle cx="0" cy="28" r="4.4"/></g><g class="a" transform="translate(148 0)"><path d="M26 0H0V40H26M0 20H18"/></g><g class="a" transform="translate(184 0)"><path d="M27 0H8L0 8V32L8 40H27"/></g><g class="a" transform="translate(221 0)"><path d="M0 0H28M14 0V40"/><circle cx="14" cy="40" r="4.4"/></g><g class="b" transform="translate(256 0)"><path d="M0 0V40"/></g><g class="b" transform="translate(268.5 0)"><path d="M26 0H0V40M0 20H18"/><circle cx="0" cy="40" r="4.4"/></g><g class="b" transform="translate(304.5 0)"><path d="M0 0V6L14 20L28 6V0M14 20V40"/><circle cx="14" cy="40" r="4.4"/></g></g><g transform="translate(442.5 0) scale(1)"><g class="a" transform="translate(0 0)"><path d="M0 0H28V6L0 34V40H28"/></g><g class="b" transform="translate(38 0)"><path d="M8 0H20L28 8V32L20 40H8L0 32V8Z"/></g><g class="b" transform="translate(76 0)"><path d="M0 40V0H3L25 40H28V0"/></g><g class="b" transform="translate(114 0)"><path d="M26 0H0V40H26M0 20H18"/></g></g></svg>
+      </a>
+      <p>From idea on paper to investor-ready prototype. Hardware prototyping for startup founders, from Bengaluru.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer: explore">
+      <p class="footer-title">Explore</p>
+      <a href="./#process">How it works</a>
+      <a href="./#phases">Pricing</a>
+      <a href="./#demo-kit">Investor Demo Kit</a>
+      <a href="./#about">About</a>
+      <a href="./#faq">FAQ</a>
+    </nav>
+    <div class="footer-col">
+      <p class="footer-title">Contact</p>
+      <a href="mailto:shreyas@projectifyzone.com">shreyas@projectifyzone.com</a>
+      <a href="tel:+919986652218">+91&nbsp;99866&nbsp;52218</a>
+      <a href="https://wa.me/919986652218?text=Hi%20Shreyas%2C%20I%27d%20like%20to%20discuss%20a%20hardware%20prototype." target="_blank" rel="noopener">WhatsApp<span class="sr-only"> (opens in a new tab)</span></a>
+      <span>Bengaluru, Karnataka, India</span>
+    </div>
+    <nav class="footer-col" aria-label="Footer: more">
+      <p class="footer-title">More</p>
+      <a href="./embedded-systems-development.html">Embedded development</a>
+      <a href="./insights.html">Founder guides</a>
+      <a href="./students.html">Student mentorship</a>
+      <a href="./privacy.html">Privacy policy</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> Projectify Zone. Engineered in Bengaluru.</p>
+    <a href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=6" defer></script>
+</body>
+</html>
