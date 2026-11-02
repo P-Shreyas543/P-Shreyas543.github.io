@@ -79,6 +79,7 @@
   --muted: #a5b3c8;
   --line: rgba(237, 242, 248, .11);
   --line-strong: rgba(237, 242, 248, .24);
+  --control-border: #6a7d9c;   /* control edges: 3:1+ on bg, surface and surface-2 */
   --draw-line: rgba(237, 242, 248, .55);
   --brand-a: #22d3ee;
   --brand-b: #f472b6;
@@ -103,6 +104,7 @@
   --muted: #4a5568;
   --line: rgba(15, 23, 42, .1);
   --line-strong: rgba(15, 23, 42, .2);
+  --control-border: #7b8698;   /* control edges: 3:1+ on bg and surface */
   --draw-line: rgba(15, 23, 42, .6);
   --brand-a: #0891b2;
   --brand-b: #db2777;
@@ -237,7 +239,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
 }
 .btn-primary { background: var(--accent); color: var(--on-accent); }
 .btn-primary:hover { background: var(--accent-hover); }
-.btn-secondary { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+.btn-secondary { background: transparent; color: var(--ink); border-color: var(--control-border); }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent-text); }
 .btn-sm { min-height: 40px; padding: 8px 16px; }
 .btn-lg { min-height: 52px; padding: 14px 24px; font-size: 1rem; }
@@ -263,7 +265,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
   width: 40px;
   height: 40px;
   border-radius: var(--radius);
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--control-border);
   background: transparent;
   color: var(--ink);
   cursor: pointer;
@@ -418,7 +420,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
   flex: 0 0 auto;
   width: 10px;
   height: 10px;
-  border: 1.5px solid var(--line-strong);
+  border: 1.5px solid var(--control-border);
   border-radius: 2px;
   transform: translateY(1px);
   transition: background-color .15s, border-color .15s;
@@ -711,7 +713,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
   width: 100%;
   min-height: 46px;
   padding: 10px 12px;
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--control-border);
   border-radius: var(--radius);
   background: var(--bg);
   color: var(--ink);
@@ -873,7 +875,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
   height: 100%;
   min-height: 3.5rem;
   padding: .6rem 2.1rem .6rem .85rem;
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--control-border);
   border-radius: var(--radius);
   background: var(--surface);
   font-weight: 500;
@@ -889,7 +891,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
   right: .75rem;
   width: 10px;
   height: 10px;
-  border: 1.5px solid var(--line-strong);
+  border: 1.5px solid var(--control-border);
   border-radius: 2px;
   transition: background-color .15s, border-color .15s;
 }
