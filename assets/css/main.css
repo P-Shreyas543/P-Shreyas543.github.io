@@ -825,7 +825,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
 .prose tr:last-child td { border-bottom: 0; }
 
 /* Short answer at the top of an article */
-.answer { padding: var(--space-lg) var(--space-xl); border-left: 2px solid var(--brand-a); background: var(--bg-tint); }
+.answer { padding: var(--space-lg) var(--space-xl); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--bg-tint); }
 .answer p { color: var(--ink); }
 
 /* Closing call to action on content pages */
@@ -854,8 +854,10 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
 /* ---------- Founding-client offer ---------- */
 .founding { padding-block: var(--space-2xl); border-bottom: 1px solid var(--line); }
 .founding-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-lg) var(--space-2xl); }
-.founding-inner > div { max-width: 68ch; padding-left: var(--space-lg); border-left: 3px solid var(--brand-b); }
+.founding-inner > div { max-width: 68ch; }
 .founding h2 { font-size: clamp(1.25rem, 1rem + 1vw, 1.625rem); margin-bottom: var(--space-xs); }
+/* A solder pad, the logo's own mark, flags the offer */
+.founding h2::before { content: ''; display: inline-block; width: .5em; height: .5em; margin-right: .4em; border-radius: 50%; background: var(--brand-b); vertical-align: .1em; }
 .founding p { color: var(--muted); }
 
 /* ---------- Prototype cost estimator ---------- */
@@ -942,7 +944,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
 @media (min-width: 901px) { .est-jump { display: none; } }
 .est-result:focus { outline: none; }
 .est-result:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.est-noscript { margin-bottom: var(--space-xl); padding: var(--space-md) var(--space-lg); border-left: 2px solid var(--brand-b); background: var(--surface); }
+.est-noscript { margin-bottom: var(--space-xl); padding: var(--space-md) var(--space-lg); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 
 .timeline + .tiers { margin-top: var(--space-3xl); }
 
