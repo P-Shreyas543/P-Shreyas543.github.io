@@ -143,8 +143,8 @@
   cursor: pointer;
   transition: background-color .15s;
 }
-.pz-legend button:hover { background: var(--surface); }
-.pz-legend button[aria-pressed='true'] { background: var(--surface); }
+.pz-legend button:hover { background: var(--surface-2); }
+.pz-legend button[aria-pressed='true'] { background: var(--surface-2); }
 .pz-legend button:hover .legend-key { border-color: var(--accent); }
 .pz-legend button[aria-pressed='true'] .legend-key { background: var(--accent); border-color: var(--accent); }
 

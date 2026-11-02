@@ -243,7 +243,10 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent-text); }
 .btn-sm { min-height: 40px; padding: 8px 16px; }
 .btn-lg { min-height: 52px; padding: 14px 24px; font-size: 1rem; }
-.btn[disabled] { opacity: .6; cursor: progress; }
+.btn:active { transform: translateY(1px); }
+.btn[disabled] { opacity: .6; cursor: not-allowed; transform: none; }
+.btn-primary[disabled]:hover { background: var(--accent); }
+.btn-secondary[disabled]:hover { border-color: var(--control-border); color: var(--ink); }
 
 .link-arrow {
   display: inline-flex;
@@ -272,6 +275,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
   transition: border-color .15s;
 }
 .icon-btn:hover { border-color: var(--accent); }
+.icon-btn:active { transform: translateY(1px); }
 [data-theme='dark'] .icon-moon,
 [data-theme='light'] .icon-sun { display: none; }
 
@@ -898,7 +902,8 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
   transition: background-color .15s, border-color .15s;
 }
 .opt input[type='radio'] + span::after { border-radius: 50%; }
-.opt:hover span { border-color: var(--accent); }
+.opt:hover span { border-color: var(--muted); }
+.opt:active span { background: var(--surface-2); }
 .opt input:checked + span { border-color: var(--accent); background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--accent); }
 .opt input:checked + span::after { background: var(--accent); border-color: var(--accent); }
 .opt input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
