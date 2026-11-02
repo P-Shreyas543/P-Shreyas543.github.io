@@ -88,7 +88,6 @@
   --accent-text: #22d3ee;
   --pink-text: #f472b6;
   --on-accent: #06202a;
-  --focus-ring: rgba(34, 211, 238, .35);
   --success: #4ade80;
   --danger: #f87171;
   --shadow-pop: 0 18px 40px -18px rgba(0, 0, 0, .8);
@@ -113,7 +112,6 @@
   --accent-text: #0e7490;
   --pink-text: #be185d;
   --on-accent: #ffffff;
-  --focus-ring: rgba(14, 116, 144, .25);
   --success: #15803d;
   --danger: #b91c1c;
   --shadow-pop: 0 18px 40px -20px rgba(15, 23, 42, .3);
@@ -723,7 +721,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
   color: var(--ink);
   font: inherit;
   font-size: var(--fs-sm);
-  transition: border-color .15s, box-shadow .15s;
+  transition: border-color .15s;
 }
 .brief textarea { min-height: 120px; resize: vertical; }
 .brief select {
@@ -737,11 +735,8 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
   background-repeat: no-repeat;
 }
 .brief input:hover, .brief select:hover, .brief textarea:hover { border-color: var(--muted); }
-.brief input:focus, .brief select:focus, .brief textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--focus-ring);
-}
+/* Same 2px ring as every other control (the global :focus-visible rule), plus an accent edge */
+.brief input:focus-visible, .brief select:focus-visible, .brief textarea:focus-visible { border-color: var(--accent); border-radius: var(--radius); }
 .brief [aria-invalid='true'] { border-color: var(--danger) !important; }
 
 .field-check { grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 10px; margin: var(--space-xs) 0 var(--space-lg); }
