@@ -738,6 +738,8 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
 /* Same 2px ring as every other control (the global :focus-visible rule), plus an accent edge */
 .brief input:focus-visible, .brief select:focus-visible, .brief textarea:focus-visible { border-color: var(--accent); border-radius: var(--radius); }
 .brief [aria-invalid='true'] { border-color: var(--danger) !important; }
+.field-error { margin-top: 6px; font-size: var(--fs-xs); color: var(--danger); }
+.field-check + .field-error { margin: calc(6px - var(--space-lg)) 0 var(--space-lg); padding-left: 34px; }
 
 .field-check { grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 10px; margin: var(--space-xs) 0 var(--space-lg); }
 .field-check input { width: 24px; height: 24px; margin: 0; accent-color: var(--accent); }

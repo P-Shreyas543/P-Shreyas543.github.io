@@ -114,23 +114,56 @@
       statusEl.className = 'form-status' + (kind ? ' ' + kind : '');
     }
 
-    // Clear the error state as soon as a field is corrected
-    form.addEventListener('input', function (e) {
-      if (e.target.getAttribute('aria-invalid') === 'true' && e.target.checkValidity()) {
-        e.target.removeAttribute('aria-invalid');
+    // Per-field error text, wired to the field with aria-describedby
+    function errorText(el) {
+      if (el.validity.typeMismatch && el.type === 'email') return 'Enter an email address like name@company.com.';
+      if (el.type === 'checkbox') return 'Tick this box so I can reply to you.';
+      if (el.name === 'name') return 'Enter your name.';
+      if (el.name === 'email') return 'Enter your email address.';
+      if (el.name === 'idea') return 'Describe what you\u2019re building in a line or two.';
+      return 'This field is required.';
+    }
+
+    function showError(el, msg) {
+      var id = el.id + '-error';
+      var node = document.getElementById(id);
+      if (!msg) {
+        if (node) node.hidden = true;
+        el.removeAttribute('aria-invalid');
+        return;
       }
-    });
+      if (!node) {
+        node = document.createElement('p');
+        node.id = id;
+        node.className = 'field-error';
+        var after = el.type === 'checkbox' ? el.parentNode : el;
+        after.parentNode.insertBefore(node, after.nextSibling);
+        var ids = (el.getAttribute('aria-describedby') || '').split(' ').filter(Boolean);
+        ids.unshift(id);
+        el.setAttribute('aria-describedby', ids.join(' '));
+      }
+      node.textContent = msg;
+      node.hidden = false;
+      el.setAttribute('aria-invalid', 'true');
+    }
+
+    // Clear the error state as soon as a field is corrected
+    function recheck(e) {
+      if (e.target.getAttribute('aria-invalid') === 'true' && e.target.checkValidity()) showError(e.target, '');
+    }
+    form.addEventListener('input', recheck);
+    form.addEventListener('change', recheck);
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
       var invalid = Array.prototype.filter.call(form.elements, function (el) {
         var bad = el.willValidate && !el.checkValidity();
-        if (bad) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid');
+        if (el.id) showError(el, bad ? errorText(el) : '');
         return bad;
       });
       if (invalid.length) {
-        setStatus('Please fill in the highlighted fields.', 'err');
+        setStatus(invalid.length === 1 ? 'Please fix the field marked above.' : 'Please fix the ' + invalid.length + ' fields marked above.', 'err');
         invalid[0].focus();
         return;
       }
