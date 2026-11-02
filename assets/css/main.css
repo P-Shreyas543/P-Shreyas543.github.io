@@ -239,7 +239,7 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
 .btn-primary:hover { background: var(--accent-hover); }
 .btn-secondary { background: transparent; color: var(--ink); border-color: var(--control-border); }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent-text); }
-.btn-sm { min-height: 40px; padding: 8px 16px; }
+.btn-sm { min-height: 44px; padding: 10px 16px; }
 .btn-lg { min-height: 52px; padding: 14px 24px; font-size: 1rem; }
 .btn:active { transform: translateY(1px); }
 .btn[disabled] { opacity: .6; cursor: not-allowed; transform: none; }
@@ -263,8 +263,8 @@ p a:not(.btn):not(.link-arrow):hover, .prose a:not(.btn):not(.link-arrow):hover 
 .icon-btn {
   display: inline-grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius);
   border: 1px solid var(--control-border);
   background: transparent;
