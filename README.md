@@ -166,3 +166,11 @@ Do these in order. Merging to `main` before step 1 would send visitors to a doma
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
+
+## Terms and conditions
+
+`terms.html` holds the website and engagement terms (quotes, 50/50 payment, parts at cost, IP assignment on payment, 30-day defect fixes, liability cap, founding-client offer, student mentorship). Every page's footer links to it. Before relying on it:
+
+- Check the commercial defaults match how you want to work: the 50/50 split and the ₹50,000 full-advance threshold, 7-day invoices, 10-working-day acceptance, the 30-day defect window, 30-day quote validity and the promise not to build a directly competing product during an engagement.
+- Have a lawyer review it once, mainly the IP assignment (section 9) and liability (section 12).
+- When you change it, update the "Last updated" date and the `lastmod` for terms.html in `sitemap.xml`.

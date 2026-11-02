@@ -37,6 +37,12 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://projectifyzone.com/terms.html</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://projectifyzone.com/students.html</loc>
     <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
